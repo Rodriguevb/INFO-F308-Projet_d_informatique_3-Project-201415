@@ -1,0 +1,65 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[a4paper]{geometry}
+\geometry{hscale=0.8,vscale=0.8,centering}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel} % Exposant
+
+
+\usepackage{enumerate} % Listes
+\usepackage{amsmath} % Matrices
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{ulem}
+\usepackage{color}
+
+\usepackage{listings} % Lecture du code
+\usepackage{hyperref} % Hyperlien
+
+
+% Mise en page spéciale fancyhdr pour les en-têtes
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead[C]{} % Rien en haut de page au milieu
+\fancyhead[L]{\leftmark} % Nom du chapitre actuel en haut de page à gauche
+\fancyhead[R]{\thepage} % Numéro de page en haut de page à droite
+
+\renewcommand{\footrulewidth}{0pt}
+\fancyfoot[C]{} % Rien en bas de page au milieu
+\fancyfoot[L]{Open source pour ajout ou modification: https://github.com/Rodriguevb/Resumes-et-formulaires-de-Universite-Libre-de-Bruxelles/} % Numéro de page en bas de page à gauche
+\fancyfoot[R]{\thepage} % Numéro de page en bas de page à droite
+\setlength{\headheight}{12.1638pt}
+
+
+\author{Rodrigue \textsc{Van Brande}} % Auteur
+\date{\today} % Date de compilation du pdf
+
+\pdfinfo{
+    /Author   (Magali Hublet & Nicolas HEREMAN & Rodrigue VAN BRANDE & Julien VANBERGEN)
+    /Creator  (https://github.com/Rodriguevb/ProjetAnnee3)
+}
+
+%Création d'un subsub...section (avec \paragraph{} \subparagraph{})
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{5}
+
+% Titre du PDF
+\title{INFO-F-30x - Projet d'année\\Prénom \textsc{EtNomDuProf}\\Rapport}
+
+\pdfinfo{
+/Title(INFO-F-30x - Projet d'année - Prénom EtNomDuProf - Rapport)
+}
+
+% Profondeur pour la table des matières dans les titres
+\setcounter{tocdepth}{3}
+
+\begin{document}
+    \maketitle       % Titre
+    \newpage         % Saut de page
+    \tableofcontents % Table des matières / Besoin d'une double compilation
+
+    \include{01_intro/text}
+
+\end{document}
