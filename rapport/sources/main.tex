@@ -32,25 +32,27 @@ Ce rapport présente ...
 
 \tableofcontents
 
-
 \chapter{Introduction}
-include{01_introduction/text.tex}
+\input{01_introduction/text.tex}
 
-\chapter{Etat de l'art}
-
-\cite{spampinato2008detecting,trucco2006video}
+\chapter{État de l'art}
+\input{02_etatDeLArt/text.tex}
 
 \chapter{Méthodes implémentées}
+\input{03_methodesImplementees/text.tex}
 
 \chapter{Résultats expérimentaux}
+\input{04_resultatsExperimentaux/text.tex}
 
 \chapter{Discussion}
+\input{05_discussion/text.tex}
 
 \chapter{Conclusion et perspectives}
+\input{06_conclusionEtPerspectives/text.tex}
 
 \bibliographystyle{apalike}
 
-\bibliography{mybiblio}
+%\bibliography{mybiblio}
 \addcontentsline{toc}{chapter}{Bibliographie}
 
 \end{document}
