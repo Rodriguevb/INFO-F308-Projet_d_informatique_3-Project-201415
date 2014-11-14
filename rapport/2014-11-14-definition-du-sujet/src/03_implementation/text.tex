@@ -1,24 +1,26 @@
-Pour résoudre ce problème, nous allons utilisé un algorithme linéaire comme celui présenté dans l'article du European Journal Operational Research \cite{mainref}. 
-L'espace sera organisé sous forme de grille afin de facilité les calculs.
+Pour r\'esoudre ce probl\`eme, nous allons utilis\'e un algorithme lin\'eaire comme celui pr\'esent\'e dans l'article du European Journal Operational Research \cite{mainref}. Nous tenterons de d\'evelopper un programme C++ facile d'utilisation qui permettra de fournir un placement optimis\'e des sources de lumi\`ere d'une route en fonction des donn\'ees re\c ues. L'algorithme se basera sur une grille construite \`a partir d'un r\'eseau routier quelconque et placera de fa\c on optimale les sources de lumi\`ere.
 
+\subparagraph{Valeurs prises en compte par l'algorithme :}
+\begin{description}
+	\item [Type de route], une autoroute demandera moins de lumiÃ¨re qu'une route au centre d'une ville ;
+    \item [Fr\'equentation de la route], car un sentier au milieu d'un champ est peu pertinant ;
+    \item [Vitesse maximale autoris\'ee], car le temps de r\'eaction est clairement influenc\'e par la visibilit\'e ;
+    \item [Type de route] ;
+    \item [Fr\'equentation de la route] ;
+    \item [Vitesse maximale autoris\'ee] ;
+    \item [Co\'efficient de dangerosit\'e] ;
+    \item [M\'et\'eo] ;
+    \item [Lumi\`ere du soleil] (heure) ;
+    \item [Budget \`a disposition].
+\end{description}
 
-Nous tenterons de développer un programme C++ facile d'utilisation qui permettra de fournir un placement optimisé des sources de lumière d'une route en fonction des données reçues.
-L'algorithme se basera sur une grille construite à partir d'un réseau routier quelconque et placera de façon optimale les sources de lumière.
-
-Valeurs prises en compte par l'algorithme :
-- Type de route ;
-- Fréquentation de la route ;
-- Vitesse maximale autorisée ;
-- Coéfficient de dangerosité ;
-- Météo ;
-- Lumière du soleil (heure) ;
-- Budget à disposition.
-
-Résultat de l'algorithme :
-- Matériel utilisé (économique et écologique) ;
-- Intensité de la lampe ;
-- Distance entre les sources des lumières ;
-- Hauteur des sources des lumières ;
-- Coût d'installation ;
-- Coût d'utilisation (graphe en fonction de l'heure) ;
-- Coût de maintenance.
+\subparagraph{R\'esultat de l'algorithme :}
+\begin{description}
+    \item [Mat\'eriel utilis\'e], \'economique mais aussi \'ecologique ;
+    \item [Intensit\'e de la lampe],  ;
+    \item [Distance entre les sources des lumi\`eres] ;
+    \item [Hauteur des sources des lumi\`eres] ;
+    \item [Co\^ut d'installation] ;
+    \item [Co\^ut d'utilisation] (graphe en fonction de l'heure) ;
+    \item [Co\^ut de maintenance].
+\end{description}
