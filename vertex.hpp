@@ -7,10 +7,14 @@
 #include <QSet>
 #include <QPainter>
 #include <QStyleOptionGraphicsItem>
+#include <QGraphicsView>
+#include <QMouseEvent>
+#include <QDebug>
+#include <QWidget>
 
 class Edge;
 
-class Vertex : public QGraphicsEllipseItem
+class Vertex : public QGraphicsItem
 {
 public:
     Vertex();
@@ -27,6 +31,13 @@ public:
 
     void addEdge(Edge* e);
     void removeEdge(Edge* e);
+
+    //Paint
+    QRectF boundingRect() const;
+    void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
+
+    //Override mouse methods
+    void mousePressEvent(QGraphicsSceneMouseEvent *event);
 
 
 

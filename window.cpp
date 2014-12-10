@@ -31,11 +31,11 @@ void Window::Toolbar(){
 
     QMenu *menuEdition = menuBar()->addMenu("&Edition");
 
-    QAction *actionSommet = new QAction("&Ajouter un sommet", this);
-    menuEdition->addAction(actionSommet);
+    QAction *actionMap = new QAction("&Ajouter une carte", this);
+    menuEdition->addAction(actionMap);
 
-    QAction *actionRoute = new QAction("&Ajouter une route", this);
-    menuEdition->addAction(actionRoute);
+    QAction *actionGrid = new QAction("&Calculer la grille", this);
+    menuEdition->addAction(actionGrid);
 
     QMenu *menuOption = menuBar()->addMenu("&Options");
 
@@ -47,8 +47,8 @@ void Window::Toolbar(){
     connect(actionOuvrir, SIGNAL(triggered()), this, SLOT(open()));
     connect(actionQuitter, SIGNAL(triggered()), this, SLOT(quit()));
 
-    connect(actionRoute, SIGNAL(triggered()), this, SLOT(addEdge()));
-    connect(actionSommet, SIGNAL(triggered()), this, SLOT(addVertex()));
+    connect(actionMap, SIGNAL(triggered()), this, SLOT(addMap()));
+    connect(actionGrid, SIGNAL(triggered()), this, SLOT(computeGrid()));
 
     connect(actionOptimize, SIGNAL(triggered()), this, SLOT(Optimize()));
 }
@@ -65,14 +65,13 @@ void Window::open(){
     //TODO
 }
 
-void Window::addEdge(){
-    //TODO
+void Window::addMap(){
+    qDebug() <<"add map from Image";
+    update();
 }
 
-void Window::addVertex(){
-    Vertex *ver = new Vertex();
-    ver->setText("Bruxelles");
-    m_homepage->addVertex(ver);
+void Window::computeGrid(){
+    qDebug() <<"Calcul grille";
     update();
 }
 

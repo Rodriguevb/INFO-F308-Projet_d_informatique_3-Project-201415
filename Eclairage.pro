@@ -16,9 +16,11 @@ SOURCES += main.cpp\
         window.cpp \
     homepage.cpp \
     edge.cpp \
-    vertex.cpp
+    vertex.cpp \
+    myscene.cpp
 
 HEADERS  += window.hpp \
     homepage.hpp \
     edge.hpp \
-    vertex.hpp
+    vertex.hpp \
+    myscene.hpp

@@ -6,7 +6,7 @@ Vertex::Vertex(){
     myBackgroundColor = Qt::white;
 
     setFlags(ItemIsMovable | ItemIsSelectable);
-    this->setFlag(QGraphicsItem::ItemIsMovable);
+    //this->setFlag(QGraphicsItem::ItemIsMovable);
 
     update();
 }
@@ -16,6 +16,30 @@ Vertex::~Vertex(){
         delete e;
 }
 
+
+void Vertex::mousePressEvent(QGraphicsSceneMouseEvent *event)
+{
+    qDebug() << "You clicked on Vertex " << this->getName();
+    //this->setFlag(QGraphicsItem::ItemIsMovable,false);
+    //this->setFlag(QGraphicsItem::ItemIsSelectable,false);
+    update();
+    QGraphicsItem::mousePressEvent(event);;
+
+}
+
+void Vertex::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
+{
+    QRectF rect = boundingRect();
+    QPen pen(Qt::red, 3);
+    painter->setPen(pen);
+    painter->drawEllipse(rect);
+}
+
+QRectF Vertex::boundingRect() const
+{
+    // outer most edges
+    return QRectF(0,0,100,100);
+}
 
 void Vertex::setText(const QString &name){
     prepareGeometryChange();

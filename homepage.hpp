@@ -6,7 +6,7 @@
 #include <QMouseEvent>
 #include <QPoint>
 #include <QGraphicsView>
-#include <QGraphicsScene>
+#include "myscene.hpp"
 #include <QBrush>
 #include <QPen>
 #include <QGraphicsLineItem>
@@ -14,6 +14,7 @@
 #include "vertex.hpp"
 #include "edge.hpp"
 #include <iostream>
+#include <QDebug>
 
 class HomePage : public QGraphicsView
 {
@@ -21,15 +22,14 @@ class HomePage : public QGraphicsView
 public:
     explicit HomePage(QWidget *parent = 0);
 
-    void addVertex(Vertex *v);
-//    void paintEvent ( QPaintEvent * event );
+    void addVertex();
+    void addEdge();
+    void mousePressEvent(QMouseEvent *event);
 
 private:
-    QGraphicsScene *scene;
+    MyScene *scene;
     QPoint point;
-    QGraphicsLineItem *line;
     QGraphicsItem *x;
-    //QGraphicsItem *point;
 
 
 signals:

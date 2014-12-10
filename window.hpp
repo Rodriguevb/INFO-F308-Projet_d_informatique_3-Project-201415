@@ -26,8 +26,8 @@ private slots:
     void quit();
     void open();
     void save();
-    void addVertex();
-    void addEdge();
+    void computeGrid();
+    void addMap();
     void Optimize();
 };
 

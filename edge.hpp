@@ -1,15 +1,18 @@
 #ifndef EDGE_HPP
 #define EDGE_HPP
 
-#include <QGraphicsLineItem>
+#include <QGraphicsItem>
 #include <QPen>
 #include <QColor>
 #include <QLineF>
 #include "vertex.hpp"
+#include <QPainter>
+#include <QStyleOptionGraphicsItem>
 
-class Edge : public QGraphicsLineItem
+class Edge : public QGraphicsItem
 {
 public:
+    Edge();
     Edge(Vertex *start, Vertex *end);
 
     ~Edge();
@@ -21,6 +24,14 @@ public:
     void setColor(const QColor &color);
 
     void trackNodes();
+
+    //Paint
+    QLineF boundingLine() const;
+    QRectF boundingRect() const;
+    void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
+
+    //Override mouse methods
+    void mousePressEvent(QGraphicsSceneMouseEvent *event);
 
 
 private:
