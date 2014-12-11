@@ -67,6 +67,8 @@ void Window::open(){
 
 void Window::addMap(){
     qDebug() <<"add map from Image";
+    QString fileName = QFileDialog::getOpenFileName(this,tr("Open Image"), "/home", tr("Image Files (*.png *.jpg *.bmp)"));
+    m_homepage->setMap(fileName);
     update();
 }
 

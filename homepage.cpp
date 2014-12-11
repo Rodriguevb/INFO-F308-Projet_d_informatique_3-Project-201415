@@ -8,11 +8,17 @@ HomePage::HomePage(QWidget *parent) :
     this->setScene(scene);
 }
 
-void HomePage::addVertex(){
-    qDebug() <<"HomePage : addVertex";
-    Vertex* y = new Vertex();
-    y->setText("BXL");
-    scene->addItem(y);
+void HomePage::setMap(QString file){
+    qDebug() <<"HomePage : setMap";
+    QPixmap fondPlan;
+    fondPlan.load(file);
+    scene->addPixmap(fondPlan);
+    scene->setSceneRect(0,0, fondPlan.width(), fondPlan.height());
+    this->resize(fondPlan.width()+10, fondPlan.height()+10);
+    this->setRenderHints(QPainter::Antialiasing);
+
+    update();
+
 }
 
 void HomePage::addEdge(){

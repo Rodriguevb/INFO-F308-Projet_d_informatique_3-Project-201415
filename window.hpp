@@ -5,6 +5,7 @@
 #include <QMenu>
 #include <QMenuBar>
 #include <QAction>
+#include <QFileDialog>
 #include "homepage.hpp"
 #include "edge.hpp"
 #include "vertex.hpp"

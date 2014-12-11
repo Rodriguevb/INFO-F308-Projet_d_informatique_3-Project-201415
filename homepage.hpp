@@ -15,6 +15,7 @@
 #include "edge.hpp"
 #include <iostream>
 #include <QDebug>
+#include <QPixmap>
 
 class HomePage : public QGraphicsView
 {
@@ -22,7 +23,7 @@ class HomePage : public QGraphicsView
 public:
     explicit HomePage(QWidget *parent = 0);
 
-    void addVertex();
+    void setMap(QString file);
     void addEdge();
     void mousePressEvent(QMouseEvent *event);
 
