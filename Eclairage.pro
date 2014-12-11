@@ -17,10 +17,12 @@ SOURCES += main.cpp\
     homepage.cpp \
     edge.cpp \
     vertex.cpp \
-    myscene.cpp
+    myscene.cpp \
+    grid.cpp
 
 HEADERS  += window.hpp \
     homepage.hpp \
     edge.hpp \
     vertex.hpp \
-    myscene.hpp
+    myscene.hpp \
+    grid.hpp
