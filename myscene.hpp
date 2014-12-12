@@ -19,6 +19,9 @@ public:
     // Dessin de la scene.
     void drawGrid();
 
+    // Event souris
+    void mousePressEvent(QMouseEvent* event);
+
 private:
     Grid m_grid;
 };

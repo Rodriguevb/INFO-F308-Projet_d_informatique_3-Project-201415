@@ -22,6 +22,9 @@ public:
     int get(int line, int column);
     void set(int line, int column, int data);
 
+    int xToColumn(int x);
+    int yToLine(int x);
+
 private:
     void createMatrix();
 

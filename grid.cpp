@@ -63,4 +63,10 @@ int Grid::getCaseSize() {
     return m_caseSize;
 }
 
+int Grid::xToColumn(int x) {
+    return (x / m_caseSize);
+}
 
+int Grid::yToLine(int y) {
+    return (y / m_caseSize);
+}

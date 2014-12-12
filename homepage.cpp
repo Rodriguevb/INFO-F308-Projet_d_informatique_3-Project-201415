@@ -29,7 +29,7 @@ void HomePage::addEdge(){
 
 void HomePage::mousePressEvent(QMouseEvent *event){
 
-    QGraphicsView::mousePressEvent(event);
+    scene->mousePressEvent(event);
 
 }
 
