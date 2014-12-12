@@ -13,10 +13,10 @@ void HomePage::setMap(QString file){
     QPixmap fondPlan;
     fondPlan.load(file);
     scene->addPixmap(fondPlan);
-    scene->setSceneRect(0,0, fondPlan.width(), fondPlan.height());
-    this->resize(fondPlan.width()+10, fondPlan.height()+10);
+    //scene->setSceneRect(0,0, fondPlan.width(), fondPlan.height());
+    //this->resize(fondPlan.width()+10, fondPlan.height()+10);
     this->setRenderHints(QPainter::Antialiasing);
-
+    scene->drawGrid();
     update();
 
 }

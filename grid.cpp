@@ -20,6 +20,7 @@ Grid::~Grid()
 }
 
 void Grid::createMatrix() {
+    m_matrix.clear();
     int nbLine = getNbLine();
     int nbColumn = getNbColumn();
 
@@ -33,11 +34,13 @@ void Grid::createMatrix() {
 }
 
 int Grid::getNbColumn() {
-    return m_width / m_caseSize;
+    int cols = m_width / m_caseSize;
+    return (m_width % m_caseSize == 0) ? cols : cols+1;
 }
 
 int Grid::getNbLine() {
-    return m_height / m_caseSize;
+    int lines = m_height / m_caseSize;
+    return (m_height % m_caseSize == 0) ? lines : lines+1;
 }
 
 int Grid::get(int line, int column) {
@@ -46,6 +49,18 @@ int Grid::get(int line, int column) {
 
 void Grid::set(int line, int column, int data) {
     m_matrix[line][column] = data;
+}
+
+int Grid::getHeight() {
+    return m_height;
+}
+
+int Grid::getWidth() {
+    return m_width;
+}
+
+int Grid::getCaseSize() {
+    return m_caseSize;
 }
 
 

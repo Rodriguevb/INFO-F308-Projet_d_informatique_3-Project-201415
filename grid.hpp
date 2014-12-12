@@ -16,6 +16,9 @@ public:
     int getCaseSize();
     void setCaseSize();
 
+    int getWidth();
+    int getHeight();
+
     int get(int line, int column);
     void set(int line, int column, int data);
 

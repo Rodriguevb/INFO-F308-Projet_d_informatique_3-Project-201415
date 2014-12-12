@@ -5,6 +5,7 @@
 #include "edge.hpp"
 #include "vertex.hpp"
 #include "grid.hpp"
+#include <iostream>
 
 class MyScene : public QGraphicsScene
 {
@@ -14,6 +15,9 @@ public:
     //Ajout objets
     Vertex* addVertex();
     void addEdge(Edge *e);
+
+    // Dessin de la scene.
+    void drawGrid();
 
 private:
     Grid m_grid;
