@@ -1,6 +1,6 @@
 #include "myscene.hpp"
 
-MyScene::MyScene(QGraphicsView *x) : QGraphicsScene(x)
+MyScene::MyScene(QGraphicsView *x) : QGraphicsScene(x), m_grid()
 {
    //TODO
 }
