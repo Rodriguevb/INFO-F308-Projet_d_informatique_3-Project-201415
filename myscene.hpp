@@ -21,9 +21,13 @@ public:
 
     // Event souris
     void mousePressEvent(QMouseEvent* event);
+    void mouseReleaseEvent(QMouseEvent* event);
+    void mouseMoveEvent(QMouseEvent *event);
 
 private:
     Grid m_grid;
+    bool m_mousePressed;
+    int m_dataSetter;
 };
 
 #endif // MYSCENE_HPP

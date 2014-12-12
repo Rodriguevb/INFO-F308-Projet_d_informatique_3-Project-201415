@@ -26,6 +26,8 @@ public:
     void setMap(QString file);
     void addEdge();
     void mousePressEvent(QMouseEvent *event);
+    void mouseReleaseEvent(QMouseEvent *event);
+    void mouseMoveEvent(QMouseEvent *event);
 
 private:
     MyScene *scene;

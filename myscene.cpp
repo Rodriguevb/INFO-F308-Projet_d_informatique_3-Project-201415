@@ -2,7 +2,9 @@
 
 MyScene::MyScene(QGraphicsView *x) :
     QGraphicsScene(0,0,800,600,x),
-    m_grid(32,this->width(),this->height())
+    m_grid(32,this->width(),this->height()),
+    m_mousePressed(false),
+    m_dataSetter(0)
 {
    //TODO
     drawGrid();
@@ -40,7 +42,9 @@ void MyScene::drawGrid() {
                 int x = m_grid.getCaseSize()*c;
                 int y = m_grid.getCaseSize()*l;
 
-                QBrush brush(QColor("red"));
+                QColor color("red");
+                color.setAlphaF(0.5);
+                QBrush brush(color);
                 addRect(x,y, m_grid.getCaseSize(), m_grid.getCaseSize(), QPen(), brush);
 
             }
@@ -51,12 +55,26 @@ void MyScene::drawGrid() {
 
 void MyScene::mousePressEvent(QMouseEvent* event) {
     if ( event->button() == Qt::LeftButton ) {
+        m_mousePressed = true;
         int col = m_grid.xToColumn(event->pos().x());
         int line = m_grid.yToLine(event->pos().y());
         int ex_data = m_grid.get(line,col);
-        int data = (ex_data == 0) ? 1 : 0;
-        m_grid.set(line,col,data);
+        m_dataSetter = (ex_data == 0) ? 1 : 0;
+        m_grid.set(line,col,m_dataSetter);
 
+        drawGrid();
+    }
+}
+
+void MyScene::mouseReleaseEvent(QMouseEvent *event) {
+    m_mousePressed = false;
+}
+
+void MyScene::mouseMoveEvent(QMouseEvent *event) {
+    int col = m_grid.xToColumn(event->pos().x());
+    int line = m_grid.yToLine(event->pos().y());
+    if (m_grid.get(line,col) != m_dataSetter) {
+        m_grid.set(line,col,m_dataSetter);
         drawGrid();
     }
 }

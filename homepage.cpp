@@ -33,3 +33,16 @@ void HomePage::mousePressEvent(QMouseEvent *event){
 
 }
 
+void HomePage::mouseReleaseEvent(QMouseEvent *event){
+
+    scene->mouseReleaseEvent(event);
+
+}
+
+void HomePage::mouseMoveEvent(QMouseEvent *event){
+
+    scene->mouseMoveEvent(event);
+
+}
+
+
