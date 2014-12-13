@@ -13,10 +13,12 @@ public:
     MyScene(QGraphicsView* x);
 
     //Ajout objets
+    void setMap(QString file);
     Vertex* addVertex();
     void addEdge(Edge *e);
 
     // Dessin de la scene.
+    void redraw();
     void drawGrid();
 
     // Event souris
@@ -26,6 +28,7 @@ public:
 
 private:
     Grid m_grid;
+    QPixmap m_map;
     bool m_mousePressed;
     int m_dataSetter;
 };

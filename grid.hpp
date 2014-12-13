@@ -12,6 +12,7 @@ public:
 
     int getNbLine();
     int getNbColumn();
+    bool caseExist(int line, int column);
 
     int getCaseSize();
     void setCaseSize();

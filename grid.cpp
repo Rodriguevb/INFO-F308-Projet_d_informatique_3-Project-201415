@@ -43,6 +43,12 @@ int Grid::getNbLine() {
     return (m_height % m_caseSize == 0) ? lines : lines+1;
 }
 
+bool Grid::caseExist(int line, int column) {
+    bool result = (line >= 0) && (column >= 0);
+    result = result && ( (line < m_matrix.size()) && (column < m_matrix.at(0).size()) );
+    return result;
+}
+
 int Grid::get(int line, int column) {
     return m_matrix.at(line).at(column);
 }
