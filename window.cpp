@@ -5,6 +5,7 @@ Window::Window(QWidget *parent)
 {
     Toolbar();
     m_homepage = new HomePage(this);
+    m_option = new OptionDialog(this);
     setCentralWidget(m_homepage);
 }
 
@@ -78,5 +79,5 @@ void Window::computeGrid(){
 }
 
 void Window::Optimize(){
-    //TODO
+    m_option->show();
 }

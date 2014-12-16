@@ -9,6 +9,7 @@
 #include "homepage.hpp"
 #include "edge.hpp"
 #include "vertex.hpp"
+#include "optiondialog.hpp"
 
 class Window : public QMainWindow
 {
@@ -21,6 +22,7 @@ public:
 private:
     void Toolbar();
     HomePage *m_homepage;
+    OptionDialog *m_option;
 
 
 private slots:

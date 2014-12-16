@@ -18,11 +18,13 @@ SOURCES += main.cpp\
     edge.cpp \
     vertex.cpp \
     myscene.cpp \
-    grid.cpp
+    grid.cpp \
+    optiondialog.cpp
 
 HEADERS  += window.hpp \
     homepage.hpp \
     edge.hpp \
     vertex.hpp \
     myscene.hpp \
-    grid.hpp
+    grid.hpp \
+    optiondialog.hpp
