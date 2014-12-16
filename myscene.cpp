@@ -50,11 +50,10 @@ void MyScene::drawGrid() {
         this->addLine(x,0,x,m_grid.getHeight());
     }
 
-    // On dessine les cases dont la valeur est de 1.
+    // On dessine les cases.
     for(int l(0); l < m_grid.getNbLine();++l) {
         for(int c(0); c < m_grid.getNbColumn();++c) {
-            bool lighted = m_grid.getLighted(l,c);
-            if ( lighted ) {
+            if ( m_grid.getLighted(l,c) ) {
                 int x = m_grid.getCaseSize()*c;
                 int y = m_grid.getCaseSize()*l;
 
@@ -64,6 +63,16 @@ void MyScene::drawGrid() {
                 addRect(x,y, m_grid.getCaseSize(), m_grid.getCaseSize(), QPen(), brush);
 
             }
+
+            if( !m_grid.getFree(l,c) ) {
+                int x0 = m_grid.getCaseSize()*c;
+                int y0 = m_grid.getCaseSize()*l;
+                int x1 = x0 + m_grid.getCaseSize();
+                int y1 = y0 + m_grid.getCaseSize();
+
+                this->addLine(x0,y0,x1,y1);
+                this->addLine(x0,y1,x1,y0);
+            }
         }
     }
 
@@ -72,8 +81,12 @@ void MyScene::drawGrid() {
 void MyScene::mousePressEvent(QMouseEvent* event) {
     if ( event->button() == Qt::LeftButton ) {
         m_mousePressed = true;
-        if ( m_dataType == LIGHTED)
+        if ( m_dataType == LIGHTED) {
             pressLighted(event);
+        }
+        else if ( m_dataType == FREE ) {
+            pressFree(event);
+        }
     }
 }
 
@@ -83,8 +96,12 @@ void MyScene::mouseReleaseEvent(QMouseEvent *event) {
 
 void MyScene::mouseMoveEvent(QMouseEvent *event) {
     if ( m_mousePressed ) {
-        if ( m_dataType == LIGHTED )
+        if ( m_dataType == LIGHTED ) {
             moveLighted(event);
+        }
+        else if ( m_dataType == FREE ) {
+            moveFree(event);
+        }
     }
 
 }
@@ -106,6 +123,27 @@ void MyScene::moveLighted(QMouseEvent *event) {
     int line = m_grid.yToLine(y);
     if ((m_grid.caseExist(line,col)) && (m_grid.getLighted(line,col) != m_dataSetter)) {
         m_grid.setLighted(line,col,m_dataSetter);
+        redraw();
+    }
+}
+
+void MyScene::pressFree(QMouseEvent *event) {
+    int col = m_grid.xToColumn(event->pos().x());
+    int line = m_grid.yToLine(event->pos().y());
+    bool ex_data = m_grid.getFree(line,col);
+    m_dataSetter = (ex_data) ? false : true;
+    m_grid.setFree(line,col,m_dataSetter);
+
+    redraw();
+}
+
+void MyScene::moveFree(QMouseEvent *event) {
+    int x = event->pos().x();
+    int y = event->pos().y();
+    int col = m_grid.xToColumn(x);
+    int line = m_grid.yToLine(y);
+    if ((m_grid.caseExist(line,col)) && (m_grid.getFree(line,col) != m_dataSetter)) {
+        m_grid.setFree(line,col,m_dataSetter);
         redraw();
     }
 }

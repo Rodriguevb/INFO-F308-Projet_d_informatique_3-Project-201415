@@ -35,6 +35,10 @@ public:
     void pressLighted(QMouseEvent* event);
     void moveLighted(QMouseEvent* event);
 
+    // Dessin pour le FREE:
+    void pressFree(QMouseEvent* event);
+    void moveFree(QMouseEvent* event);
+
 private:
     Grid m_grid;
     QPixmap m_map;
