@@ -38,6 +38,12 @@ void Window::Toolbar(){
     QAction *actionGrid = new QAction("&Calculer la grille", this);
     menuEdition->addAction(actionGrid);
 
+    QAction *actionLighted = new QAction("&Modifier les zones à éclairer", this);
+    menuEdition->addAction(actionLighted);
+
+    QAction *actionFree = new QAction("&Modifier les zones à bloquer", this);
+    menuEdition->addAction(actionFree);
+
     QMenu *menuOption = menuBar()->addMenu("&Options");
 
     QAction *actionOptimize = new QAction("&Choix de l'optimisation", this);
@@ -50,6 +56,8 @@ void Window::Toolbar(){
 
     connect(actionMap, SIGNAL(triggered()), this, SLOT(addMap()));
     connect(actionGrid, SIGNAL(triggered()), this, SLOT(computeGrid()));
+    connect(actionLighted, SIGNAL(triggered()), this, SLOT(setLight()));
+    connect(actionFree, SIGNAL(triggered()), this, SLOT(setFree()));
 
     connect(actionOptimize, SIGNAL(triggered()), this, SLOT(Optimize()));
 }
@@ -80,4 +88,12 @@ void Window::computeGrid(){
 
 void Window::Optimize(){
     m_option->show();
+}
+
+void Window::setLight() {
+    m_homepage->setDataType(MyScene::LIGHTED);
+}
+
+void Window::setFree() {
+    m_homepage->setDataType(MyScene::FREE);
 }

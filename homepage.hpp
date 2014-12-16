@@ -29,6 +29,9 @@ public:
     void mouseReleaseEvent(QMouseEvent *event);
     void mouseMoveEvent(QMouseEvent *event);
 
+    // Modification des outils
+    void setDataType(MyScene::DataType dataType);
+
 private:
     MyScene *scene;
     QPoint point;

@@ -10,12 +10,17 @@
 class MyScene : public QGraphicsScene
 {
 public:
+    enum DataType{LIGHTED, FREE};
+public:
     MyScene(QGraphicsView* x);
 
     //Ajout objets
     void setMap(QString file);
     Vertex* addVertex();
     void addEdge(Edge *e);
+
+    // Modification des outils:
+    void setDataType(DataType dataType);
 
     // Dessin de la scene.
     void redraw();
@@ -26,11 +31,17 @@ public:
     void mouseReleaseEvent(QMouseEvent* event);
     void mouseMoveEvent(QMouseEvent *event);
 
+    // Dessin pour le LIGHTED:
+    void pressLighted(QMouseEvent* event);
+    void moveLighted(QMouseEvent* event);
+
 private:
     Grid m_grid;
     QPixmap m_map;
     bool m_mousePressed;
     bool m_dataSetter;
+    DataType m_dataType;
+
 };
 
 #endif // MYSCENE_HPP

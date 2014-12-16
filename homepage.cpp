@@ -41,4 +41,8 @@ void HomePage::mouseMoveEvent(QMouseEvent *event){
 
 }
 
+void HomePage::setDataType(MyScene::DataType dataType) {
+    scene->setDataType(dataType);
+}
+
 

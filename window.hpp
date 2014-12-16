@@ -32,6 +32,8 @@ private slots:
     void computeGrid();
     void addMap();
     void Optimize();
+    void setLight();
+    void setFree();
 };
 
 #endif // WINDOW_HPP
