@@ -25,9 +25,9 @@ void Grid::createMatrix() {
     int nbColumn = getNbColumn();
 
     for(int l = 0; l < nbLine; ++l) {
-        std::vector<int> line;
+        std::vector<GridCase> line;
         for(int c = 0; c < nbColumn; ++c) {
-            line.push_back(0);
+            line.push_back(GridCase());
         }
         m_matrix.push_back(line);
     }
@@ -49,12 +49,20 @@ bool Grid::caseExist(int line, int column) {
     return result;
 }
 
-int Grid::get(int line, int column) {
-    return m_matrix.at(line).at(column);
+bool Grid::getLighted(int line, int column) {
+    return m_matrix.at(line).at(column).isLighted();
 }
 
-void Grid::set(int line, int column, int data) {
-    m_matrix[line][column] = data;
+void Grid::setLighted(int line, int column, bool lighted) {
+    m_matrix[line][column].setLighted(lighted);
+}
+
+bool Grid::getFree(int line, int column) {
+    return m_matrix.at(line).at(column).isFree();
+}
+
+void Grid::setFree(int line, int column, bool free) {
+    m_matrix[line][column].setFree(free);
 }
 
 int Grid::getHeight() {

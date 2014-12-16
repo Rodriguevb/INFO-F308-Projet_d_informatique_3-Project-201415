@@ -30,7 +30,7 @@ private:
     Grid m_grid;
     QPixmap m_map;
     bool m_mousePressed;
-    int m_dataSetter;
+    bool m_dataSetter;
 };
 
 #endif // MYSCENE_HPP

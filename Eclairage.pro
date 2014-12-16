@@ -19,7 +19,8 @@ SOURCES += main.cpp\
     vertex.cpp \
     myscene.cpp \
     grid.cpp \
-    optiondialog.cpp
+    optiondialog.cpp \
+    gridcase.cpp
 
 HEADERS  += window.hpp \
     homepage.hpp \
@@ -27,4 +28,5 @@ HEADERS  += window.hpp \
     vertex.hpp \
     myscene.hpp \
     grid.hpp \
-    optiondialog.hpp
+    optiondialog.hpp \
+    gridcase.hpp

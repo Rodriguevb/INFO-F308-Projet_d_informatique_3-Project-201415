@@ -48,8 +48,8 @@ void MyScene::drawGrid() {
     // On dessine les cases dont la valeur est de 1.
     for(int l(0); l < m_grid.getNbLine();++l) {
         for(int c(0); c < m_grid.getNbColumn();++c) {
-            int data = m_grid.get(l,c);
-            if ( data == 1 ) {
+            bool lighted = m_grid.getLighted(l,c);
+            if ( lighted ) {
                 int x = m_grid.getCaseSize()*c;
                 int y = m_grid.getCaseSize()*l;
 
@@ -69,9 +69,9 @@ void MyScene::mousePressEvent(QMouseEvent* event) {
         m_mousePressed = true;
         int col = m_grid.xToColumn(event->pos().x());
         int line = m_grid.yToLine(event->pos().y());
-        int ex_data = m_grid.get(line,col);
-        m_dataSetter = (ex_data == 0) ? 1 : 0;
-        m_grid.set(line,col,m_dataSetter);
+        bool ex_data = m_grid.getLighted(line,col);
+        m_dataSetter = (ex_data) ? false : true;
+        m_grid.setLighted(line,col,m_dataSetter);
 
         redraw();
     }
@@ -86,8 +86,8 @@ void MyScene::mouseMoveEvent(QMouseEvent *event) {
     int y = event->pos().y();
     int col = m_grid.xToColumn(x);
     int line = m_grid.yToLine(y);
-    if ((m_grid.caseExist(line,col)) && (m_grid.get(line,col) != m_dataSetter)) {
-        m_grid.set(line,col,m_dataSetter);
+    if ((m_grid.caseExist(line,col)) && (m_grid.getLighted(line,col) != m_dataSetter)) {
+        m_grid.setLighted(line,col,m_dataSetter);
         redraw();
     }
 

@@ -2,6 +2,7 @@
 #define GRID_H
 
 #include <vector>
+#include "gridcase.hpp"
 
 class Grid
 {
@@ -20,8 +21,11 @@ public:
     int getWidth();
     int getHeight();
 
-    int get(int line, int column);
-    void set(int line, int column, int data);
+    bool getLighted(int line, int column);
+    void setLighted(int line, int column, bool lighted);
+
+    bool getFree(int line, int column);
+    void setFree(int line, int column, bool free);
 
     int xToColumn(int x);
     int yToLine(int x);
@@ -33,7 +37,7 @@ private:
     int m_caseSize;
     int m_width;
     int m_height;
-    std::vector< std::vector<int> > m_matrix;
+    std::vector< std::vector<GridCase> > m_matrix;
 };
 
 #endif // GRID_H
