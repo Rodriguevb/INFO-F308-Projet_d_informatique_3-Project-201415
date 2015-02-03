@@ -38,6 +38,12 @@ void Window::Toolbar(){
     QAction *actionGrid = new QAction("&Calculer la grille", this);
     menuEdition->addAction(actionGrid);
 
+    QAction *actionEraser = new QAction("&Passer en mode effaceur", this);
+    menuEdition->addAction(actionEraser);
+
+    QAction *actionColor = new QAction("&Passer en mode coloriage", this);
+    menuEdition->addAction(actionColor);
+
     QAction *actionLighted = new QAction("&Modifier les zones à éclairer", this);
     menuEdition->addAction(actionLighted);
 
@@ -58,6 +64,8 @@ void Window::Toolbar(){
     connect(actionGrid, SIGNAL(triggered()), this, SLOT(computeGrid()));
     connect(actionLighted, SIGNAL(triggered()), this, SLOT(setLight()));
     connect(actionFree, SIGNAL(triggered()), this, SLOT(setFree()));
+    connect(actionEraser, SIGNAL(triggered()), this, SLOT(setEraser()));
+    connect(actionColor, SIGNAL(triggered()), this, SLOT(setColor()));
 
     connect(actionOptimize, SIGNAL(triggered()), this, SLOT(Optimize()));
 }
@@ -96,4 +104,12 @@ void Window::setLight() {
 
 void Window::setFree() {
     m_homepage->setDataType(MyScene::FREE);
+}
+
+void Window::setEraser() {
+    m_homepage->setDataSetter(false);
+}
+
+void Window::setColor() {
+    m_homepage->setDataSetter(true);
 }

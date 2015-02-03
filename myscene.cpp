@@ -5,7 +5,7 @@ MyScene::MyScene(QGraphicsView *x) :
     m_grid(32,this->width(),this->height()),
     m_map(),
     m_mousePressed(false),
-    m_dataSetter(false),
+    m_dataSetter(true),
     m_dataType(LIGHTED)
 {
    //TODO
@@ -30,6 +30,10 @@ void MyScene::addEdge(Edge *e){
 
 void MyScene::setDataType(DataType dataType) {
     m_dataType = dataType;
+}
+
+void MyScene::setdataSetter(bool setter) {
+    m_dataSetter = setter;
 }
 
 void MyScene::redraw() {
@@ -109,8 +113,6 @@ void MyScene::mouseMoveEvent(QMouseEvent *event) {
 void MyScene::pressLighted(QMouseEvent *event) {
     int col = m_grid.xToColumn(event->pos().x());
     int line = m_grid.yToLine(event->pos().y());
-    bool ex_data = m_grid.getLighted(line,col);
-    m_dataSetter = (ex_data) ? false : true;
     m_grid.setLighted(line,col,m_dataSetter);
 
     redraw();
@@ -130,8 +132,6 @@ void MyScene::moveLighted(QMouseEvent *event) {
 void MyScene::pressFree(QMouseEvent *event) {
     int col = m_grid.xToColumn(event->pos().x());
     int line = m_grid.yToLine(event->pos().y());
-    bool ex_data = m_grid.getFree(line,col);
-    m_dataSetter = (ex_data) ? false : true;
     m_grid.setFree(line,col,m_dataSetter);
 
     redraw();

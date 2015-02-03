@@ -45,4 +45,8 @@ void HomePage::setDataType(MyScene::DataType dataType) {
     scene->setDataType(dataType);
 }
 
+void HomePage::setDataSetter(bool setter) {
+    scene->setdataSetter(setter);
+}
+
 

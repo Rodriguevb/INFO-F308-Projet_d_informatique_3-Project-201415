@@ -21,6 +21,7 @@ public:
 
     // Modification des outils:
     void setDataType(DataType dataType);
+    void setdataSetter(bool setter);
 
     // Dessin de la scene.
     void redraw();

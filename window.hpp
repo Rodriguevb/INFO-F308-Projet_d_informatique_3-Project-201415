@@ -34,6 +34,8 @@ private slots:
     void Optimize();
     void setLight();
     void setFree();
+    void setEraser();
+    void setColor();
 };
 
 #endif // WINDOW_HPP
