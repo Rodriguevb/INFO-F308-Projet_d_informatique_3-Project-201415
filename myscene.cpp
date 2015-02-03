@@ -132,7 +132,7 @@ void MyScene::moveLighted(QMouseEvent *event) {
 void MyScene::pressFree(QMouseEvent *event) {
     int col = m_grid.xToColumn(event->pos().x());
     int line = m_grid.yToLine(event->pos().y());
-    m_grid.setFree(line,col,m_dataSetter);
+    m_grid.setFree(line,col,!m_dataSetter);
 
     redraw();
 }
@@ -142,8 +142,8 @@ void MyScene::moveFree(QMouseEvent *event) {
     int y = event->pos().y();
     int col = m_grid.xToColumn(x);
     int line = m_grid.yToLine(y);
-    if ((m_grid.caseExist(line,col)) && (m_grid.getFree(line,col) != m_dataSetter)) {
-        m_grid.setFree(line,col,m_dataSetter);
+    if ((m_grid.caseExist(line,col)) && (m_grid.getFree(line,col) == m_dataSetter)) {
+        m_grid.setFree(line,col,!m_dataSetter);
         redraw();
     }
 }

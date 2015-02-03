@@ -11,6 +11,7 @@ class MyScene : public QGraphicsScene
 {
 public:
     enum DataType{LIGHTED, FREE};
+    enum ToolType{PENCIL, RECTANGLE};
 public:
     MyScene(QGraphicsView* x);
 
