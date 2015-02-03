@@ -23,6 +23,7 @@ public:
     // Modification des outils:
     void setDataType(DataType dataType);
     void setdataSetter(bool setter);
+    void setTool(ToolType tool);
 
     // Dessin de la scene.
     void redraw();
@@ -47,6 +48,7 @@ private:
     bool m_mousePressed;
     bool m_dataSetter;
     DataType m_dataType;
+    ToolType m_tool;
 
 };
 

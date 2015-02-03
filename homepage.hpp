@@ -32,6 +32,7 @@ public:
     // Modification des outils
     void setDataType(MyScene::DataType dataType);
     void setDataSetter(bool setter);
+    void setTool(MyScene::ToolType tool);
 
 private:
     MyScene *scene;

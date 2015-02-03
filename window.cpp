@@ -44,6 +44,12 @@ void Window::Toolbar(){
     QAction *actionColor = new QAction("&Passer en mode coloriage", this);
     menuEdition->addAction(actionColor);
 
+    QAction *actionPencil = new QAction("&Outil crayon", this);
+    menuEdition->addAction(actionPencil);
+
+    QAction *actionRectangle = new QAction("&Outil Rectangle", this);
+    menuEdition->addAction(actionRectangle);
+
     QAction *actionLighted = new QAction("&Modifier les zones à éclairer", this);
     menuEdition->addAction(actionLighted);
 
@@ -66,6 +72,8 @@ void Window::Toolbar(){
     connect(actionFree, SIGNAL(triggered()), this, SLOT(setFree()));
     connect(actionEraser, SIGNAL(triggered()), this, SLOT(setEraser()));
     connect(actionColor, SIGNAL(triggered()), this, SLOT(setColor()));
+    connect(actionPencil, SIGNAL(triggered()), this, SLOT(setPencil()));
+    connect(actionRectangle, SIGNAL(triggered()), this, SLOT(setRectangle()));
 
     connect(actionOptimize, SIGNAL(triggered()), this, SLOT(Optimize()));
 }
@@ -112,4 +120,12 @@ void Window::setEraser() {
 
 void Window::setColor() {
     m_homepage->setDataSetter(true);
+}
+
+void Window::setPencil() {
+    m_homepage->setTool(MyScene::PENCIL);
+}
+
+void Window::setRectangle() {
+    m_homepage->setTool(MyScene::RECTANGLE);
 }

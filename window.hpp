@@ -36,6 +36,8 @@ private slots:
     void setFree();
     void setEraser();
     void setColor();
+    void setPencil();
+    void setRectangle();
 };
 
 #endif // WINDOW_HPP

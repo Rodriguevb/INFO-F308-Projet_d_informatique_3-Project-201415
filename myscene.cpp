@@ -6,7 +6,8 @@ MyScene::MyScene(QGraphicsView *x) :
     m_map(),
     m_mousePressed(false),
     m_dataSetter(true),
-    m_dataType(LIGHTED)
+    m_dataType(LIGHTED),
+    m_tool(PENCIL)
 {
    //TODO
     drawGrid();
@@ -34,6 +35,10 @@ void MyScene::setDataType(DataType dataType) {
 
 void MyScene::setdataSetter(bool setter) {
     m_dataSetter = setter;
+}
+
+void MyScene::setTool(ToolType tool) {
+    m_tool = tool;
 }
 
 void MyScene::redraw() {

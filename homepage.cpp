@@ -49,4 +49,8 @@ void HomePage::setDataSetter(bool setter) {
     scene->setdataSetter(setter);
 }
 
+void HomePage::setTool(MyScene::ToolType tool) {
+    scene->setTool(tool);
+}
+
 
