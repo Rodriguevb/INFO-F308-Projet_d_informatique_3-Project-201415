@@ -1,0 +1,10 @@
+# RESET
+reset;
+# LOAD MODEL
+model amplmodel.mod;
+# CHANGE SOLVER
+option solver minos;
+# SOLVE
+solve;
+# SHOW RESULT ( a désactiver vu qu’on affiche dans C++)
+display x_c, x_m;
