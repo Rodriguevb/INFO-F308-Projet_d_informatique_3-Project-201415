@@ -9,26 +9,19 @@ param D{I, J};
 set N := {1..2};
 param B;
 param r;
+param UB;
 
-var ED{I,J};
-var ES{I,J};
 var S{I,J};
-var X{N};
-var Y{N};
+var X{N} integer;
+var Y{N} integer;
+var P{N} integer;
 var Sin{I, N};
 var Sjn{J, N};
+var Sijn{I, J, N};
 # PART 2 OBJECTIVE FUNCTION: name and mathematical expression 
-minimize Equation : sum {i in I} sum {j in J} (ED[i,j]+ES[i,j]) ;
+minimize Equation : sum {i in I} sum {j in J} abs( D[i,j] - S[i,j]) ;
 
 # PART 3 CONSTRAINTS: names and corresponding mathematical expressions 
-#subject to Sij { i in I, j in J }: S[i,j] = sum {x in 1..X} sum {y in 1..Y} ((P[x,y]/r^2) * cos(atan(sqrt((i-x)^2+(j-y)^2)/r)));
-# Contrainte précédente à modifier.
-
-# Contrainte sur ED et ES
-subject to EDMin  { i in I, j in J } : ED[i,j] >= 0;
-subject to ESMin  { i in I, j in J } : ES[i,j] >= 0;
-subject to EDdiff { i in I, j in J } : ED[i,j] >= (D[i,j] - S[i,j]);
-subject to ESdiff { i in I, j in J } : ES[i,j] >= (S[i,j] - D[i,j]);
 
 # Contrainte sur Xn et Yn
 subject to Xmin { n in N } : X[n] >= imin + B;
@@ -36,3 +29,13 @@ subject to Xmax { n in N } : X[n] <= imax + B;
 
 subject to Ymin { n in N } : Y[n] >= jmin + B;
 subject to Ymax { n in N } : Y[n] <= jmax + B;
+
+# Contrainte sur Pn
+subject to Pmin { n in N } : P[n] >= 0;
+subject to Pmax { n in N } : P[n] <= UB;
+
+# Contrainte Sin / Sjn / Sijn:
+subject to Sinc { n in N , i in I} : Sin[i,n] = ( P[n] / (r*r) ) * cos( atan( abs(i - X[n]) / r ) );
+subject to Sjnc { n in N , j in J} : Sin[j,n] = ( P[n] / (r*r) ) * cos( atan( abs(j - Y[n]) / r ) );
+subject to Sijnc { n in N, i in I, j in J} : Sijn[i,j,n] = min(Sin[i,n], Sjn[j,n]);
+subject to Sij { i in I, j in J} : S[i,j] = sum { n in N } Sijn[i,j,n];

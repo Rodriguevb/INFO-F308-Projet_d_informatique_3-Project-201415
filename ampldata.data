@@ -1,14 +1,17 @@
 # Paramètre de taille de matrice.
 param imin := 1;
 param jmin := 1;
-param imax := 3;
-param jmax := 3;
+param imax := 5;
+param jmax := 5;
 # Matrice de la demande.
 param D:
-1 2 3 :=
-1 4 4 4
-2 4 4 4
-3 4 4 4;
+1 2 3 4 5:=
+1 4 4 4 4 4
+2 4 4 4 4 4
+3 4 4 4 4 4
+4 4 4 4 4 4
+5 4 4 4 4 4;
 # Autres:
 param B := 1; # Constante de "bordure"
 param r := 2; # Hauteur de l'éclairage
+param UB := 10; # Limite de Pn

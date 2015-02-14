@@ -9,4 +9,8 @@ data ampldata.data;
 # SOLVE
 solve;
 # SHOW RESULT ( a désactiver vu qu’on affiche dans C++)
+display Equation;
 display S;
+display X;
+display Y;
+display P;
