@@ -3,8 +3,6 @@ param imin := 1;
 param jmin := 1;
 param imax := 3;
 param jmax := 3;
-set I := 1 2 3;
-set J := 1 2 3;
 # Matrice de la demande.
 param D:
 1 2 3 :=
@@ -12,6 +10,5 @@ param D:
 2 4 4 4
 3 4 4 4;
 # Autres:
-set N := 1..2; # Liste des éclairages.
 param B := 1; # Constante de "bordure"
 param r := 2; # Hauteur de l'éclairage

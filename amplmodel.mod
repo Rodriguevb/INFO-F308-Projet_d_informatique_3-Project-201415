@@ -3,10 +3,10 @@ param imin;
 param imax;
 param jmin;
 param jmax;
-set I;
-set J;
+set I := {imin..imax};
+set J := {jmin..jmax};
 param D{I, J};
-set N;
+set N := {1..2};
 param B;
 param r;
 
