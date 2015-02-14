@@ -13,6 +13,10 @@ param r;
 var ED{I,J};
 var ES{I,J};
 var S{I,J};
+var X{N};
+var Y{N};
+var Sin{I, N};
+var Sjn{J, N};
 # PART 2 OBJECTIVE FUNCTION: name and mathematical expression 
 minimize Equation : sum {i in I} sum {j in J} (ED[i,j]+ES[i,j]) ;
 
@@ -20,7 +24,15 @@ minimize Equation : sum {i in I} sum {j in J} (ED[i,j]+ES[i,j]) ;
 #subject to Sij { i in I, j in J }: S[i,j] = sum {x in 1..X} sum {y in 1..Y} ((P[x,y]/r^2) * cos(atan(sqrt((i-x)^2+(j-y)^2)/r)));
 # Contrainte précédente à modifier.
 
-subject to EDMin  { i in I, j in J } : 1 >= 0;
+# Contrainte sur ED et ES
+subject to EDMin  { i in I, j in J } : ED[i,j] >= 0;
 subject to ESMin  { i in I, j in J } : ES[i,j] >= 0;
 subject to EDdiff { i in I, j in J } : ED[i,j] >= (D[i,j] - S[i,j]);
 subject to ESdiff { i in I, j in J } : ES[i,j] >= (S[i,j] - D[i,j]);
+
+# Contrainte sur Xn et Yn
+subject to Xmin { n in N } : X[n] >= imin + B;
+subject to Xmax { n in N } : X[n] <= imax + B;
+
+subject to Ymin { n in N } : Y[n] >= jmin + B;
+subject to Ymax { n in N } : Y[n] <= jmax + B;
