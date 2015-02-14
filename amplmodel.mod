@@ -1,7 +1,18 @@
 # PART 1 DECLARATION OF VARIABLES (variables, parameters, sets etc) 
+param imin;
+param imax;
+param jmin;
+param jmax;
+set I;
+set J;
+param D{I, J};
+set N;
+param B;
+param r;
+
 var ED;
 var ES;
-var S;
+var S{I,J};
 # PART 2 OBJECTIVE FUNCTION: name and mathematical expression 
 minimize Equation : sum {i in 1..n} sum {j in 1..n} (ED[i][j]+ES[i][j]) ;
 
