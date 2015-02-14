@@ -3,8 +3,8 @@ param imin := 1;
 param jmin := 1;
 param imax := 3;
 param jmax := 3;
-set I := imin..imax;
-set J := jmin..jmax;
+set I := 1 2 3;
+set J := 1 2 3;
 # Matrice de la demande.
 param D:
 1 2 3 :=
