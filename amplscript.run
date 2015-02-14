@@ -4,6 +4,8 @@ reset;
 model amplmodel.mod;
 # CHANGE SOLVER
 option solver minos;
+# LOAD DATA
+data ampldata.data;
 # SOLVE
 solve;
 # SHOW RESULT ( a désactiver vu qu’on affiche dans C++)
