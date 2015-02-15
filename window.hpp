@@ -10,6 +10,7 @@
 #include "edge.hpp"
 #include "vertex.hpp"
 #include "optiondialog.hpp"
+#include "ampllauncher.hpp"
 
 class Window : public QMainWindow
 {
@@ -23,6 +24,7 @@ private:
     void Toolbar();
     HomePage *m_homepage;
     OptionDialog *m_option;
+    AmplLauncher m_ampllauncher;
 
 
 private slots:
@@ -38,6 +40,7 @@ private slots:
     void setColor();
     void setPencil();
     void setRectangle();
+    void executeAmpl();
 };
 
 #endif // WINDOW_HPP

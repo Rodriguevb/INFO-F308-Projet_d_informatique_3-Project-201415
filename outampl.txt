@@ -66,8 +66,8 @@ Final objective value               =   2.37183252454256e+01
 Final integrality gap (abs / rel)   = -1.89e+00 /  -7.95e-02 (-7.95%)
 # of nodes processed                =       38
 # of subproblems processed          =       40
-Total program time (secs)           =      16.26171 (    16.259 CPU time)
-Time spent in evaluations (secs)    =       1.33998
+Total program time (secs)           =      16.51840 (    16.494 CPU time)
+Time spent in evaluations (secs)    =       1.37256
 
 ===========================================================================
 

@@ -20,7 +20,8 @@ SOURCES += main.cpp\
     myscene.cpp \
     grid.cpp \
     optiondialog.cpp \
-    gridcase.cpp
+    gridcase.cpp \
+    ampllauncher.cpp
 
 HEADERS  += window.hpp \
     homepage.hpp \
@@ -29,4 +30,5 @@ HEADERS  += window.hpp \
     myscene.hpp \
     grid.hpp \
     optiondialog.hpp \
-    gridcase.hpp
+    gridcase.hpp \
+    ampllauncher.hpp

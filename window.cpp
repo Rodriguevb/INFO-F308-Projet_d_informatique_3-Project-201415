@@ -25,6 +25,9 @@ void Window::Toolbar(){
     menuFichier->addAction(actionSauver);
     actionSauver->setShortcut(QKeySequence("Ctrl+S"));
 
+    QAction *execAmpl = new QAction("&Exécuter l'algorithme", this);
+    menuFichier->addAction(execAmpl);
+
     QAction *actionQuitter = new QAction("&Quitter", this);
     menuFichier->addAction(actionQuitter);
     actionQuitter->setShortcut(QKeySequence("Ctrl+Q"));
@@ -64,6 +67,7 @@ void Window::Toolbar(){
     //connects
     connect(actionSauver, SIGNAL(triggered()), this, SLOT(save()));
     connect(actionOuvrir, SIGNAL(triggered()), this, SLOT(open()));
+    connect(execAmpl, SIGNAL(triggered()), this, SLOT(executeAmpl()));
     connect(actionQuitter, SIGNAL(triggered()), this, SLOT(quit()));
 
     connect(actionMap, SIGNAL(triggered()), this, SLOT(addMap()));
@@ -128,4 +132,8 @@ void Window::setPencil() {
 
 void Window::setRectangle() {
     m_homepage->setTool(MyScene::RECTANGLE);
+}
+
+void Window::executeAmpl() {
+    m_ampllauncher.launch();
 }
