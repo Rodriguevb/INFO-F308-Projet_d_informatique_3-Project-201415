@@ -10,4 +10,5 @@ data ampldata.data;
 solve;
 # SHOW RESULT ( a désactiver vu qu’on affiche dans C++)
 display X, Y, P;
+display imax;
 display S;

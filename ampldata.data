@@ -17,4 +17,4 @@ param D:
 param nmax := 3;
 param B := 1; # Constante de "bordure"
 param r := 4; # Hauteur de l'éclairage
-param UB := 10; # Limite de Pn
+param UB := 50; # Limite de Pn
