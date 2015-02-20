@@ -1,4 +1,5 @@
 #include "window.hpp"
+#include "amplresult.hpp"
 
 Window::Window(QWidget *parent)
     : QMainWindow(parent)
@@ -135,5 +136,5 @@ void Window::setRectangle() {
 }
 
 void Window::executeAmpl() {
-    m_ampllauncher.launch();
+    AmplResult result = m_ampllauncher.launch();
 }

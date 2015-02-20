@@ -6,6 +6,8 @@
 #include <fstream>
 #include <iostream>
 
+#include "amplresult.hpp"
+
 class AmplLauncher
 {
 private:
@@ -13,12 +15,12 @@ private:
     std::string _modelFile = "amplmodel.mod";
 
     void executeAmpl();
-    void readResult();
+    AmplResult readResult();
 public:
     AmplLauncher();
     ~AmplLauncher();
 
-    void launch();
+    AmplResult launch();
     void reset();
 };
 

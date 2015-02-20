@@ -10,10 +10,10 @@ AmplLauncher::~AmplLauncher()
 
 }
 
-void AmplLauncher::launch() {
+AmplResult AmplLauncher::launch() {
     reset();
     executeAmpl();
-    readResult();
+    return readResult();
 }
 
 void AmplLauncher::reset() {
@@ -25,7 +25,8 @@ void AmplLauncher::executeAmpl() {
     system(cmd.c_str());
 }
 
-void AmplLauncher::readResult() {
+AmplResult AmplLauncher::readResult() {
+    AmplResult result;
     std::ifstream file(_OUTFILE.c_str());
     if ( file ) {
         std::string line = "";
@@ -39,7 +40,7 @@ void AmplLauncher::readResult() {
         file >> n;
         while ( n >= i ) {
             file >> x >> y >> p;
-            // TODO: Ajout du traitement de données.
+            result.addLight(x,y,p);
             ++i;
             file >> n;
         }
@@ -64,15 +65,17 @@ void AmplLauncher::readResult() {
         file >> n;
         while ( n >= c ) {
             // On récupère la ligne:
+            std::vector<float> line;
             for ( i = 0; i < imax; ++i ) {
                 file >> sij;
-                // TODO: Traiter résultat.
-                std::cout << sij <<" ";
+                line.push_back(sij);
             }
-            std::cout << std::endl;
+            result.addMatrixLine(line);
             ++c;
             file >> n;
         }
         file.close();
     }
+
+    return result;
 }

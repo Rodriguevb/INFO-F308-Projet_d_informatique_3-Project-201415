@@ -21,7 +21,9 @@ SOURCES += main.cpp\
     grid.cpp \
     optiondialog.cpp \
     gridcase.cpp \
-    ampllauncher.cpp
+    ampllauncher.cpp \
+    ampllight.cpp \
+    amplresult.cpp
 
 HEADERS  += window.hpp \
     homepage.hpp \
@@ -31,4 +33,6 @@ HEADERS  += window.hpp \
     grid.hpp \
     optiondialog.hpp \
     gridcase.hpp \
-    ampllauncher.hpp
+    ampllauncher.hpp \
+    ampllight.hpp \
+    amplresult.hpp
