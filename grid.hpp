@@ -2,6 +2,10 @@
 #define GRID_H
 
 #include <vector>
+#include <QFile>
+#include <QTextStream>
+#include <QString>
+#include <QDebug>
 #include "gridcase.hpp"
 
 class Grid
@@ -30,8 +34,11 @@ public:
     int xToColumn(int x);
     int yToLine(int x);
 
+    void toDemandFile(QString filename);
+
 private:
     void createMatrix();
+    float getValue(int i, int j);
 
 private:
     int m_caseSize;

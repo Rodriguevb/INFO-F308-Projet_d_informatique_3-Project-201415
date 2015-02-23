@@ -3,6 +3,7 @@
 Grid::Grid() : m_caseSize(32), m_width(800), m_height(600), m_matrix()
 {
     createMatrix();
+    this->toDemandFile("x.txt");
 }
 
 Grid::Grid(int caseSize, int width, int height) :
@@ -12,6 +13,7 @@ Grid::Grid(int caseSize, int width, int height) :
     m_matrix()
 {
     createMatrix();
+    this->toDemandFile("./x.txt");
 }
 
 Grid::~Grid()
@@ -83,4 +85,48 @@ int Grid::xToColumn(int x) {
 
 int Grid::yToLine(int y) {
     return (y / m_caseSize);
+}
+
+float Grid::getValue(int i, int j){
+    if(caseExist(i,j) && m_matrix.at(i).at(j).isFree() && m_matrix.at(i).at(j).isLighted()){
+        return 1.50;
+    }
+    else if(caseExist(i,j) && !m_matrix.at(i).at(j).isFree() && m_matrix.at(i).at(j).isLighted()){
+        return 1.0;
+    }
+    else{
+        return 0.0;
+    }
+}
+
+void Grid::toDemandFile(QString filename){
+    QFile fichier(filename);
+    qDebug() << "test qdebug\n";
+    if(fichier.open(stderr,QIODevice::WriteOnly))
+    {
+         //TODO : WRITE INFO
+        QTextStream out(&fichier);
+        out << "# Parametre de taille de matrice."<< endl;
+        out << "param imin := 1;" <<endl << "param jmin := 1;" <<endl;
+        out << "param imax := "<< this->getNbLine() << endl << "param jmax :=" << this->getNbColumn() <<endl;
+        out << "# Matrice de la demande." << endl << "param D:" <<endl;
+        for(int i=1;i<=this->getNbLine();++i){
+            out<< i << " ";
+        }
+        out<< endl;
+        for(int i=1;i<=this->getNbColumn();++i){
+            out << i << " ";
+            for(int j=1;j<=this->getNbLine();++j){
+                out << getValue(i-1,j-1) << " ";
+            }
+            out << endl;
+        }
+
+
+        fichier.close();
+
+    }
+    else {
+        //TODO : HANDLE ERR
+    }
 }
