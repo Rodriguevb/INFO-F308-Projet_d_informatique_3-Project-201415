@@ -37,6 +37,6 @@ subject to Pmax { n in N } : P[n] <= UB;
 
 # Contrainte Sin / Sjn / Sijn:
 subject to Sinc { n in N , i in I} : Sin[i,n] = ( P[n] / (r*r) ) * cos( atan( abs(i - X[n]) / r ) );
-subject to Sjnc { n in N , j in J} : Sin[j,n] = ( P[n] / (r*r) ) * cos( atan( abs(j - Y[n]) / r ) );
+subject to Sjnc { n in N , j in J} : Sjn[j,n] = ( P[n] / (r*r) ) * cos( atan( abs(j - Y[n]) / r ) );
 subject to Sijnc { n in N, i in I, j in J} : Sijn[i,j,n] = min(Sin[i,n], Sjn[j,n]);
 subject to Sij { i in I, j in J} : S[i,j] = sum { n in N } Sijn[i,j,n];
