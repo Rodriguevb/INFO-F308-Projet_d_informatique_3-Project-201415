@@ -5,6 +5,7 @@
 #include "edge.hpp"
 #include "vertex.hpp"
 #include "grid.hpp"
+#include "amplresult.hpp"
 #include <iostream>
 
 class MyScene : public QGraphicsScene
@@ -41,6 +42,9 @@ public:
     // Dessin pour le FREE:
     void pressFree(QMouseEvent* event);
     void moveFree(QMouseEvent* event);
+
+    // Dessin pour les résultats:
+    void drawAmplResult(AmplResult result);
 
 private:
     Grid m_grid;

@@ -152,3 +152,48 @@ void MyScene::moveFree(QMouseEvent *event) {
         redraw();
     }
 }
+
+void MyScene::drawAmplResult(AmplResult result) {
+    int line = result.getNbLine();
+    int col = result.getNbColumn();
+    const int MAX_S = 5;
+
+    // On éfface l'écran:
+    clear();
+
+    // Affichage de la grille
+    for(int l(0); l < line;++l) {
+        int y = 32*l;
+        this->addLine(0,y,32*col,y);
+    }
+
+    for(int c(0); c < col;++c) {
+        int x = 32*c;
+        this->addLine(x,0,x,32*line);
+    }
+
+    // On affiche le résultat de chaque case:
+    for ( int l(0); l < line; ++l ) {
+        for ( int c(0); c < col; ++c ) {
+
+            double s = result.getS(l,c);
+            int a = 255 - ( ( s / MAX_S ) * 255 );
+            std::cout << a << std::endl;
+            QColor color(0,0,0,a);
+            QBrush brush(color);
+            addRect(32*l,32*c, 32, 32, QPen(), brush);
+        }
+    }
+
+    // On affiche les lampadaires:
+    for ( int i = 0; i < result.getNbLight(); ++ i) {
+        AmplLight light = result.getLight(i);
+        if ( light.getP() > 0 ) {
+            QColor color(255,255,0);
+            QBrush brush(color);
+            int x = 32 * light.getX();
+            int y = 32 * light.getY();
+            addEllipse(x,y,32,32,QPen(),brush);
+        }
+    }
+}

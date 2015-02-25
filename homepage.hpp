@@ -34,6 +34,8 @@ public:
     void setDataSetter(bool setter);
     void setTool(MyScene::ToolType tool);
 
+    void drawAmplResult(AmplResult result);
+
 private:
     MyScene *scene;
     QPoint point;

@@ -53,4 +53,8 @@ void HomePage::setTool(MyScene::ToolType tool) {
     scene->setTool(tool);
 }
 
+void HomePage::drawAmplResult(AmplResult result) {
+    scene->drawAmplResult(result);
+}
+
 

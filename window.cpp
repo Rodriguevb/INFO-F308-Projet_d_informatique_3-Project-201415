@@ -137,4 +137,5 @@ void Window::setRectangle() {
 
 void Window::executeAmpl() {
     AmplResult result = m_ampllauncher.launch();
+    m_homepage->drawAmplResult(result);
 }
