@@ -25,19 +25,19 @@ void HomePage::addEdge(){
 
 void HomePage::mousePressEvent(QMouseEvent *event){
 
-    scene->mousePressEvent(event);
+    //scene->mousePressEvent(event);
 
 }
 
 void HomePage::mouseReleaseEvent(QMouseEvent *event){
 
-    scene->mouseReleaseEvent(event);
+    //scene->mouseReleaseEvent(event);
 
 }
 
 void HomePage::mouseMoveEvent(QMouseEvent *event){
 
-    scene->mouseMoveEvent(event);
+    //scene->mouseMoveEvent(event);
 
 }
 

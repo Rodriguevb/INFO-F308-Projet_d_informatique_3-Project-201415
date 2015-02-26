@@ -18,13 +18,13 @@ Window::~Window()
 void Window::Toolbar(){
     QMenu *menuFichier = menuBar()->addMenu("&Fichier");
 
-    QAction *actionOuvrir = new QAction("&Ouvrir", this);
+    /*QAction *actionOuvrir = new QAction("&Ouvrir", this);
     menuFichier->addAction(actionOuvrir);
     actionOuvrir->setShortcut(QKeySequence("Ctrl+O"));
 
     QAction *actionSauver = new QAction("&Sauvegarder", this);
     menuFichier->addAction(actionSauver);
-    actionSauver->setShortcut(QKeySequence("Ctrl+S"));
+    actionSauver->setShortcut(QKeySequence("Ctrl+S"));*/
 
     QAction *execAmpl = new QAction("&Exécuter l'algorithme", this);
     menuFichier->addAction(execAmpl);
@@ -34,7 +34,7 @@ void Window::Toolbar(){
     actionQuitter->setShortcut(QKeySequence("Ctrl+Q"));
 
 
-    QMenu *menuEdition = menuBar()->addMenu("&Edition");
+    /*QMenu *menuEdition = menuBar()->addMenu("&Edition");
 
     QAction *actionMap = new QAction("&Ajouter une carte", this);
     menuEdition->addAction(actionMap);
@@ -58,20 +58,20 @@ void Window::Toolbar(){
     menuEdition->addAction(actionLighted);
 
     QAction *actionFree = new QAction("&Modifier les zones à bloquer", this);
-    menuEdition->addAction(actionFree);
+    menuEdition->addAction(actionFree);*/
 
-    QMenu *menuOption = menuBar()->addMenu("&Options");
+    /*QMenu *menuOption = menuBar()->addMenu("&Options");
 
     QAction *actionOptimize = new QAction("&Choix de l'optimisation", this);
-    menuOption->addAction(actionOptimize);
+    menuOption->addAction(actionOptimize);*/
 
     //connects
-    connect(actionSauver, SIGNAL(triggered()), this, SLOT(save()));
-    connect(actionOuvrir, SIGNAL(triggered()), this, SLOT(open()));
+    //connect(actionSauver, SIGNAL(triggered()), this, SLOT(save()));
+    //connect(actionOuvrir, SIGNAL(triggered()), this, SLOT(open()));
     connect(execAmpl, SIGNAL(triggered()), this, SLOT(executeAmpl()));
     connect(actionQuitter, SIGNAL(triggered()), this, SLOT(quit()));
 
-    connect(actionMap, SIGNAL(triggered()), this, SLOT(addMap()));
+   /* connect(actionMap, SIGNAL(triggered()), this, SLOT(addMap()));
     connect(actionGrid, SIGNAL(triggered()), this, SLOT(computeGrid()));
     connect(actionLighted, SIGNAL(triggered()), this, SLOT(setLight()));
     connect(actionFree, SIGNAL(triggered()), this, SLOT(setFree()));
@@ -80,7 +80,7 @@ void Window::Toolbar(){
     connect(actionPencil, SIGNAL(triggered()), this, SLOT(setPencil()));
     connect(actionRectangle, SIGNAL(triggered()), this, SLOT(setRectangle()));
 
-    connect(actionOptimize, SIGNAL(triggered()), this, SLOT(Optimize()));
+    connect(actionOptimize, SIGNAL(triggered()), this, SLOT(Optimize()));*/
 }
 
 void Window::quit(){

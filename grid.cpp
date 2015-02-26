@@ -3,7 +3,7 @@
 Grid::Grid() : m_caseSize(32), m_width(800), m_height(600), m_matrix()
 {
     createMatrix();
-    this->toDemandFile("x.txt");
+    //this->toDemandFile("x.txt");
 }
 
 Grid::Grid(int caseSize, int width, int height) :
@@ -13,7 +13,7 @@ Grid::Grid(int caseSize, int width, int height) :
     m_matrix()
 {
     createMatrix();
-    this->toDemandFile("./x.txt");
+    //this->toDemandFile("./x.txt");
 }
 
 Grid::~Grid()
