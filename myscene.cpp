@@ -155,6 +155,7 @@ void MyScene::moveFree(QMouseEvent *event) {
 void MyScene::drawAmplResult(AmplResult result) {
     int line = result.getNbLine();
     int col = result.getNbColumn();
+    int caseSize = 64;
     const int MAX_S = 3;
 
     // On éfface l'écran:
@@ -162,13 +163,13 @@ void MyScene::drawAmplResult(AmplResult result) {
 
     // Affichage de la grille
     for(int l(0); l < line;++l) {
-        int y = 32*l;
-        this->addLine(0,y,32*col,y);
+        int y = caseSize*l;
+        this->addLine(0,y,caseSize*col,y);
     }
 
     for(int c(0); c < col;++c) {
-        int x = 32*c;
-        this->addLine(x,0,x,32*line);
+        int x = caseSize*c;
+        this->addLine(x,0,x,caseSize*line);
     }
 
     // On affiche le résultat de chaque case:
@@ -179,11 +180,11 @@ void MyScene::drawAmplResult(AmplResult result) {
             int a = 255 - ( ( s / MAX_S ) * 255 );
             QColor color(0,0,0,a);
             QBrush brush(color);
-            addRect(32*l,32*c, 32, 32, QPen(), brush);
+            addRect(caseSize*l,caseSize*c, caseSize, caseSize, QPen(), brush);
 
             // On écrit les chiffres
             QGraphicsTextItem *text = new QGraphicsTextItem();
-            text->setPos(32*l, 32 *c);
+            text->setPos(caseSize*l + caseSize/4, caseSize *c + caseSize/4);
             text->setPlainText(QString("%1").arg(roundDouble(s)));
             addItem(text);
         }
@@ -195,9 +196,9 @@ void MyScene::drawAmplResult(AmplResult result) {
         if ( light.getP() > 0 ) {
             QColor color(255,255,0,100);
             QBrush brush(color);
-            int x = 32 * light.getX();
-            int y = 32 * light.getY();
-            addEllipse(x,y,32,32,QPen(),brush);
+            int x = caseSize * light.getX();
+            int y = caseSize * light.getY();
+            addEllipse(x,y,caseSize,caseSize,QPen(),brush);
         }
     }
 }
@@ -277,7 +278,7 @@ AmplResult MyScene::generateDemand() {
     line.push_back(0.60);
     line.push_back(0.60);
     line.push_back(0.50);
-    line.push_back(0.60);
+    line.push_back(0.00);
     result.addMatrixLine(line);
 
     return result;
