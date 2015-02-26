@@ -197,8 +197,8 @@ void MyScene::drawAmplResult(AmplResult result, bool showLight) {
         if ( light.getP() > 0 ) {
             QColor color(255,255,0,100);
             QBrush brush(color);
-            int x = caseSize * light.getX();
-            int y = caseSize * light.getY();
+            int x = caseSize * (light.getX()-1);
+            int y = caseSize * (light.getY()-1);
             addEllipse(x,y,caseSize,caseSize,QPen(),brush);
             str += "( %1 , %2 ) : P = %3 \n";
             str = str.arg(light.getX()).arg(light.getY()).arg(light.getP());
