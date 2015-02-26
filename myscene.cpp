@@ -9,7 +9,7 @@ MyScene::MyScene(QGraphicsView *x) :
     m_dataType(LIGHTED),
     m_tool(PENCIL)
 {
-    drawAmplResult(generateDemand());
+    drawAmplResult(generateDemand(),false);
 }
 
 void MyScene::setMap(QString file) {
@@ -152,7 +152,7 @@ void MyScene::moveFree(QMouseEvent *event) {
     }
 }
 
-void MyScene::drawAmplResult(AmplResult result) {
+void MyScene::drawAmplResult(AmplResult result, bool showLight) {
     int line = result.getNbLine();
     int col = result.getNbColumn();
     int caseSize = 64;
@@ -191,6 +191,7 @@ void MyScene::drawAmplResult(AmplResult result) {
     }
 
     // On affiche les lampadaires:
+    QString str = "";
     for ( int i = 0; i < result.getNbLight(); ++ i) {
         AmplLight light = result.getLight(i);
         if ( light.getP() > 0 ) {
@@ -199,7 +200,15 @@ void MyScene::drawAmplResult(AmplResult result) {
             int x = caseSize * light.getX();
             int y = caseSize * light.getY();
             addEllipse(x,y,caseSize,caseSize,QPen(),brush);
+            str += "( %1 , %2 ) : P = %3 \n";
+            str = str.arg(light.getX()).arg(light.getY()).arg(light.getP());
         }
+    }
+    if ( showLight ) {
+        QMessageBox msgBox;
+        msgBox.setText("Puissance des lampadaires");
+        msgBox.setInformativeText(str);
+        msgBox.exec();
     }
 }
 

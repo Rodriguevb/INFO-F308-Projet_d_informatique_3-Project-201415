@@ -7,6 +7,7 @@
 #include "grid.hpp"
 #include "amplresult.hpp"
 #include <iostream>
+#include <QMessageBox>
 
 class MyScene : public QGraphicsScene
 {
@@ -44,7 +45,7 @@ public:
     void moveFree(QMouseEvent* event);
 
     // Dessin pour les résultats:
-    void drawAmplResult(AmplResult result);
+    void drawAmplResult(AmplResult result, bool showLight = true);
     double roundDouble(double toround);
     AmplResult generateDemand();
 
