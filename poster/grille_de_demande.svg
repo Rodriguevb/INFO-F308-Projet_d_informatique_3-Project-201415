@@ -14,7 +14,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="src_images.svg">
+   sodipodi:docname="grille_de_demande.svg">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -24,9 +24,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="11.313709"
-     inkscape:cx="367.9669"
-     inkscape:cy="377.57251"
+     inkscape:zoom="5.6568545"
+     inkscape:cx="328.02088"
+     inkscape:cy="364.37228"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -52,7 +52,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -458,96 +458,6 @@
          y="663.35278">100%</tspan></text>
     <rect
        style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-       id="rect2987-84"
-       width="10"
-       height="10"
-       x="380"
-       y="667.36218" />
-    <text
-       xml:space="preserve"
-       style="font-size:2.82949018px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Century Gothic;-inkscape-font-specification:Century Gothic"
-       x="381.38025"
-       y="673.35278"
-       id="text3001-0"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan3003-76"
-         x="381.38025"
-         y="673.35278">100%</tspan></text>
-    <rect
-       style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-       id="rect2987-36"
-       width="10"
-       height="10"
-       x="370"
-       y="667.36218" />
-    <text
-       xml:space="preserve"
-       style="font-size:2.82949018px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Century Gothic;-inkscape-font-specification:Century Gothic"
-       x="371.38025"
-       y="673.35278"
-       id="text3001-15"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan3003-420"
-         x="371.38025"
-         y="673.35278">100%</tspan></text>
-    <rect
-       style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-       id="rect2987-97"
-       width="10"
-       height="10"
-       x="360"
-       y="667.36218" />
-    <text
-       xml:space="preserve"
-       style="font-size:2.82949018px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Century Gothic;-inkscape-font-specification:Century Gothic"
-       x="361.38025"
-       y="673.35278"
-       id="text3001-37"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan3003-26"
-         x="361.38025"
-         y="673.35278">100%</tspan></text>
-    <rect
-       style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-       id="rect2987-01"
-       width="10"
-       height="10"
-       x="350"
-       y="667.36218" />
-    <text
-       xml:space="preserve"
-       style="font-size:2.82949018px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Century Gothic;-inkscape-font-specification:Century Gothic"
-       x="351.38025"
-       y="673.35278"
-       id="text3001-65"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan3003-75"
-         x="351.38025"
-         y="673.35278">100%</tspan></text>
-    <rect
-       style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-       id="rect2987-41"
-       width="10"
-       height="10"
-       x="340"
-       y="667.36218" />
-    <text
-       xml:space="preserve"
-       style="font-size:2.82949018px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Century Gothic;-inkscape-font-specification:Century Gothic"
-       x="341.38025"
-       y="673.35278"
-       id="text3001-20"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan3003-01"
-         x="341.38025"
-         y="673.35278">100%</tspan></text>
-    <rect
-       style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
        id="rect2987-46"
        width="10"
        height="10"
@@ -637,152 +547,62 @@
          x="331.38025"
          y="703.35278">100%</tspan></text>
     <rect
-       style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-       id="rect2987-83"
-       width="10"
-       height="10"
-       x="340"
-       y="697.36218" />
-    <text
-       xml:space="preserve"
-       style="font-size:2.82949018px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Century Gothic;-inkscape-font-specification:Century Gothic"
-       x="341.38025"
-       y="703.35278"
-       id="text3001-51"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan3003-20"
-         x="341.38025"
-         y="703.35278">100%</tspan></text>
-    <rect
-       style="fill:#000000;fill-opacity:0.78431374;fill-rule:nonzero;stroke:none"
+       style="fill:#000000;fill-opacity:0.78431373;fill-rule:nonzero;stroke:none"
        id="rect2987-16"
        width="10"
        height="10"
-       x="350"
-       y="697.36218" />
+       x="340"
+       y="687.36218" />
     <text
        xml:space="preserve"
        style="font-size:2.82949018px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Century Gothic;-inkscape-font-specification:Century Gothic"
-       x="352.26447"
-       y="703.35278"
+       x="342.26447"
+       y="693.35278"
        id="text3001-40"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan3003-61"
-         x="352.26447"
-         y="703.35278">70%</tspan></text>
+         x="342.26447"
+         y="693.35278">70%</tspan></text>
     <rect
-       style="fill:#000000;fill-opacity:0.39215687;fill-rule:nonzero;stroke:none"
+       style="fill:#000000;fill-opacity:0.39215686;fill-rule:nonzero;stroke:none"
        id="rect2987-89"
        width="10"
        height="10"
-       x="360"
-       y="697.36218" />
+       x="350"
+       y="687.36218" />
     <text
        xml:space="preserve"
        style="font-size:2.82949018px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Century Gothic;-inkscape-font-specification:Century Gothic"
-       x="362.33008"
-       y="703.35278"
+       x="352.33008"
+       y="693.35278"
        id="text3001-84"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan3003-14"
-         x="362.33008"
-         y="703.35278">40%</tspan></text>
+         x="352.33008"
+         y="693.35278">40%</tspan></text>
     <rect
        style="fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none"
        id="rect2987-39"
        width="10"
        height="10"
-       x="370"
-       y="697.36218" />
+       x="360"
+       y="687.36218" />
     <text
        xml:space="preserve"
        style="font-size:2.82949018px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Century Gothic;-inkscape-font-specification:Century Gothic"
-       x="373.10583"
-       y="703.35278"
+       x="363.10583"
+       y="693.35278"
        id="text3001-88"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan3003-08"
-         x="373.10583"
-         y="703.35278">0%</tspan></text>
+         x="363.10583"
+         y="693.35278">0%</tspan></text>
     <rect
-       style="fill:#000000;fill-opacity:0.39215687;fill-rule:nonzero;stroke:none"
+       style="fill:#000000;fill-opacity:0.39215686;fill-rule:nonzero;stroke:none"
        id="rect2987-77"
-       width="10"
-       height="10"
-       x="380"
-       y="697.36218" />
-    <text
-       xml:space="preserve"
-       style="font-size:2.82949018px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Century Gothic;-inkscape-font-specification:Century Gothic"
-       x="382.33008"
-       y="703.35278"
-       id="text3001-83"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan3003-83"
-         x="382.33008"
-         y="703.35278">40%</tspan></text>
-    <rect
-       style="fill:#000000;fill-opacity:0.58823532;fill-rule:nonzero;stroke:none"
-       id="rect2987-71"
-       width="10"
-       height="10"
-       x="380"
-       y="687.36218" />
-    <text
-       xml:space="preserve"
-       style="font-size:2.82949018px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Century Gothic;-inkscape-font-specification:Century Gothic"
-       x="382.30865"
-       y="693.35278"
-       id="text3001-073"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan3003-496"
-         x="382.30865"
-         y="693.35278">50%</tspan></text>
-    <rect
-       style="fill:#000000;fill-opacity:0.88235295;fill-rule:nonzero;stroke:none"
-       id="rect2987-34"
-       width="10"
-       height="10"
-       x="380"
-       y="677.36218" />
-    <text
-       xml:space="preserve"
-       style="font-size:2.82949018px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Century Gothic;-inkscape-font-specification:Century Gothic"
-       x="382.31833"
-       y="683.35278"
-       id="text3001-849"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan3003-92"
-         x="382.31833"
-         y="683.35278">80%</tspan></text>
-    <rect
-       style="fill:#000000;fill-opacity:0.78431374;fill-rule:nonzero;stroke:none"
-       id="rect2987-55"
-       width="10"
-       height="10"
-       x="370"
-       y="677.36218" />
-    <text
-       xml:space="preserve"
-       style="font-size:2.82949018px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Century Gothic;-inkscape-font-specification:Century Gothic"
-       x="372.26447"
-       y="683.35278"
-       id="text3001-33"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan3003-37"
-         x="372.26447"
-         y="683.35278">70%</tspan></text>
-    <rect
-       style="fill:#000000;fill-opacity:0.39215687;fill-rule:nonzero;stroke:none"
-       id="rect2987-43"
        width="10"
        height="10"
        x="370"
@@ -792,66 +612,120 @@
        style="font-size:2.82949018px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Century Gothic;-inkscape-font-specification:Century Gothic"
        x="372.33008"
        y="693.35278"
+       id="text3001-83"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3003-83"
+         x="372.33008"
+         y="693.35278">40%</tspan></text>
+    <rect
+       style="fill:#000000;fill-opacity:0.58823529;fill-rule:nonzero;stroke:none"
+       id="rect2987-71"
+       width="10"
+       height="10"
+       x="370"
+       y="677.36218" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.82949018px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Century Gothic;-inkscape-font-specification:Century Gothic"
+       x="372.30865"
+       y="683.35278"
+       id="text3001-073"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3003-496"
+         x="372.30865"
+         y="683.35278">50%</tspan></text>
+    <rect
+       style="fill:#000000;fill-opacity:0.88235294;fill-rule:nonzero;stroke:none"
+       id="rect2987-34"
+       width="10"
+       height="10"
+       x="370"
+       y="667.36218" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.82949018px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Century Gothic;-inkscape-font-specification:Century Gothic"
+       x="372.31833"
+       y="673.35278"
+       id="text3001-849"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3003-92"
+         x="372.31833"
+         y="673.35278">80%</tspan></text>
+    <rect
+       style="fill:#000000;fill-opacity:0.78431373;fill-rule:nonzero;stroke:none"
+       id="rect2987-55"
+       width="10"
+       height="10"
+       x="360"
+       y="667.36218" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.82949018px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Century Gothic;-inkscape-font-specification:Century Gothic"
+       x="362.26447"
+       y="673.35278"
+       id="text3001-33"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3003-37"
+         x="362.26447"
+         y="673.35278">70%</tspan></text>
+    <rect
+       style="fill:#000000;fill-opacity:0.39215686;fill-rule:nonzero;stroke:none"
+       id="rect2987-43"
+       width="10"
+       height="10"
+       x="360"
+       y="677.36218" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.82949018px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Century Gothic;-inkscape-font-specification:Century Gothic"
+       x="362.33008"
+       y="683.35278"
        id="text3001-80"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan3003-88"
-         x="372.33008"
-         y="693.35278">40%</tspan></text>
+         x="362.33008"
+         y="683.35278">40%</tspan></text>
     <rect
-       style="fill:#000000;fill-opacity:0.58823532;fill-rule:nonzero;stroke:none"
+       style="fill:#000000;fill-opacity:0.58823529;fill-rule:nonzero;stroke:none"
        id="rect2987-068"
        width="10"
        height="10"
-       x="360"
-       y="687.36218" />
+       x="350"
+       y="677.36218" />
     <text
        xml:space="preserve"
        style="font-size:2.82949018px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Century Gothic;-inkscape-font-specification:Century Gothic"
-       x="362.30865"
-       y="693.35278"
+       x="352.30865"
+       y="683.35278"
        id="text3001-19"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan3003-89"
-         x="362.30865"
-         y="693.35278">50%</tspan></text>
+         x="352.30865"
+         y="683.35278">50%</tspan></text>
     <rect
-       style="fill:#000000;fill-opacity:0.88235295;fill-rule:nonzero;stroke:none"
+       style="fill:#000000;fill-opacity:0.88235294;fill-rule:nonzero;stroke:none"
        id="rect2987-72"
        width="10"
        height="10"
-       x="350"
-       y="687.36218" />
+       x="340"
+       y="677.36218" />
     <text
        xml:space="preserve"
        style="font-size:2.82949018px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Century Gothic;-inkscape-font-specification:Century Gothic"
-       x="352.31833"
-       y="693.35278"
+       x="342.31833"
+       y="683.35278"
        id="text3001-28"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan3003-28"
-         x="352.31833"
-         y="693.35278">80%</tspan></text>
-    <rect
-       style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-       id="rect2987-90"
-       width="10"
-       height="10"
-       x="340"
-       y="687.36218" />
-    <text
-       xml:space="preserve"
-       style="font-size:2.82949018px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Century Gothic;-inkscape-font-specification:Century Gothic"
-       x="341.38025"
-       y="693.35278"
-       id="text3001-781"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan3003-58"
-         x="341.38025"
-         y="693.35278">100%</tspan></text>
+         x="342.31833"
+         y="683.35278">80%</tspan></text>
     <rect
        style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
        id="rect2987-61"
@@ -889,58 +763,184 @@
          x="331.38025"
          y="683.35278">100%</tspan></text>
     <rect
-       style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-       id="rect2987-92"
-       width="10"
-       height="10"
-       x="340"
-       y="677.36218" />
-    <text
-       xml:space="preserve"
-       style="font-size:2.82949018px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Century Gothic;-inkscape-font-specification:Century Gothic"
-       x="341.38025"
-       y="683.35278"
-       id="text3001-46"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan3003-182"
-         x="341.38025"
-         y="683.35278">100%</tspan></text>
-    <rect
-       style="fill:#000000;fill-opacity:0.88235295;fill-rule:nonzero;stroke:none"
+       style="fill:#000000;fill-opacity:0.88235294;fill-rule:nonzero;stroke:none"
        id="rect2987-20"
        width="10"
        height="10"
-       x="360"
-       y="677.36218" />
+       x="350"
+       y="667.36218" />
     <text
        xml:space="preserve"
        style="font-size:2.82949018px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Century Gothic;-inkscape-font-specification:Century Gothic"
-       x="362.31833"
-       y="683.35278"
+       x="352.31833"
+       y="673.35278"
        id="text3001-039"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan3003-181"
-         x="362.31833"
-         y="683.35278">80%</tspan></text>
+         x="352.31833"
+         y="673.35278">80%</tspan></text>
     <rect
        style="fill:#000000;fill-opacity:0.94117647;fill-rule:nonzero;stroke:none"
        id="rect2987-95"
        width="10"
        height="10"
-       x="350"
-       y="677.36218" />
+       x="340"
+       y="667.36218" />
     <text
        xml:space="preserve"
        style="font-size:2.82949018px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Century Gothic;-inkscape-font-specification:Century Gothic"
-       x="352.29694"
-       y="683.35278"
+       x="342.29694"
+       y="673.35278"
        id="text3001-32"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan3003-52"
-         x="352.29694"
-         y="683.35278">90%</tspan></text>
+         x="342.29694"
+         y="673.35278">90%</tspan></text>
+    <rect
+       style="fill:#000000;fill-opacity:0.78431373;fill-rule:nonzero;stroke:none"
+       id="rect2987-16-1"
+       width="10"
+       height="10"
+       x="380"
+       y="687.36218" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.82949018px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Century Gothic;-inkscape-font-specification:Century Gothic"
+       x="382.26447"
+       y="693.35278"
+       id="text3001-40-7"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3003-61-4"
+         x="382.26447"
+         y="693.35278">70%</tspan></text>
+    <rect
+       style="fill:#000000;fill-opacity:0.88235294;fill-rule:nonzero;stroke:none"
+       id="rect2987-72-0"
+       width="10"
+       height="10"
+       x="380"
+       y="677.36218" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.82949018px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Century Gothic;-inkscape-font-specification:Century Gothic"
+       x="382.31833"
+       y="683.35278"
+       id="text3001-28-9"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3003-28-4"
+         x="382.31833"
+         y="683.35278">80%</tspan></text>
+    <rect
+       style="fill:#000000;fill-opacity:0.94117647;fill-rule:nonzero;stroke:none"
+       id="rect2987-95-8"
+       width="10"
+       height="10"
+       x="380"
+       y="667.36218" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.82949018px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Century Gothic;-inkscape-font-specification:Century Gothic"
+       x="382.29694"
+       y="673.35278"
+       id="text3001-32-8"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3003-52-2"
+         x="382.29694"
+         y="673.35278">90%</tspan></text>
+    <rect
+       style="fill:#000000;fill-opacity:0.58823529;fill-rule:nonzero;stroke:none"
+       id="rect2987-71-2"
+       width="10"
+       height="10"
+       x="370"
+       y="697.36218" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.82949018px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Century Gothic;-inkscape-font-specification:Century Gothic"
+       x="372.30865"
+       y="703.35278"
+       id="text3001-073-2"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3003-496-1"
+         x="372.30865"
+         y="703.35278">50%</tspan></text>
+    <rect
+       style="fill:#000000;fill-opacity:0.39215686;fill-rule:nonzero;stroke:none"
+       id="rect2987-43-6"
+       width="10"
+       height="10"
+       x="360"
+       y="697.36218" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.82949018px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Century Gothic;-inkscape-font-specification:Century Gothic"
+       x="362.33008"
+       y="703.35278"
+       id="text3001-80-8"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3003-88-5"
+         x="362.33008"
+         y="703.35278">40%</tspan></text>
+    <rect
+       style="fill:#000000;fill-opacity:0.58823529;fill-rule:nonzero;stroke:none"
+       id="rect2987-068-7"
+       width="10"
+       height="10"
+       x="350"
+       y="697.36218" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.82949018px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Century Gothic;-inkscape-font-specification:Century Gothic"
+       x="352.30865"
+       y="703.35278"
+       id="text3001-19-6"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3003-89-1"
+         x="352.30865"
+         y="703.35278">50%</tspan></text>
+    <rect
+       style="fill:#000000;fill-opacity:0.88235294;fill-rule:nonzero;stroke:none"
+       id="rect2987-72-8"
+       width="10"
+       height="10"
+       x="340"
+       y="697.36218" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.82949018px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Century Gothic;-inkscape-font-specification:Century Gothic"
+       x="342.31833"
+       y="703.35278"
+       id="text3001-28-92"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3003-28-7"
+         x="342.31833"
+         y="703.35278">80%</tspan></text>
+    <rect
+       style="fill:#000000;fill-opacity:0.88235294;fill-rule:nonzero;stroke:none"
+       id="rect2987-72-0-9"
+       width="10"
+       height="10"
+       x="380"
+       y="697.36218" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.82949018px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Century Gothic;-inkscape-font-specification:Century Gothic"
+       x="382.31833"
+       y="703.35278"
+       id="text3001-28-9-5"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3003-28-4-4"
+         x="382.31833"
+         y="703.35278">80%</tspan></text>
   </g>
 </svg>
