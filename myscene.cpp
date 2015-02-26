@@ -9,8 +9,6 @@ MyScene::MyScene(QGraphicsView *x) :
     m_dataType(LIGHTED),
     m_tool(PENCIL)
 {
-   //TODO
-    drawGrid();
 }
 
 void MyScene::setMap(QString file) {
@@ -156,7 +154,7 @@ void MyScene::moveFree(QMouseEvent *event) {
 void MyScene::drawAmplResult(AmplResult result) {
     int line = result.getNbLine();
     int col = result.getNbColumn();
-    const int MAX_S = 5;
+    const int MAX_S = 3;
 
     // On éfface l'écran:
     clear();
@@ -175,13 +173,18 @@ void MyScene::drawAmplResult(AmplResult result) {
     // On affiche le résultat de chaque case:
     for ( int l(0); l < line; ++l ) {
         for ( int c(0); c < col; ++c ) {
-
+            // On dessine le carré gris.
             double s = result.getS(l,c);
             int a = 255 - ( ( s / MAX_S ) * 255 );
-            std::cout << a << std::endl;
             QColor color(0,0,0,a);
             QBrush brush(color);
             addRect(32*l,32*c, 32, 32, QPen(), brush);
+
+            // On écrit les chiffres
+            QGraphicsTextItem *text = new QGraphicsTextItem();
+            text->setPos(32*l, 32 *c);
+            text->setPlainText(QString("%1").arg(roundDouble(s)));
+            addItem(text);
         }
     }
 
@@ -189,11 +192,17 @@ void MyScene::drawAmplResult(AmplResult result) {
     for ( int i = 0; i < result.getNbLight(); ++ i) {
         AmplLight light = result.getLight(i);
         if ( light.getP() > 0 ) {
-            QColor color(255,255,0);
+            QColor color(255,255,0,100);
             QBrush brush(color);
             int x = 32 * light.getX();
             int y = 32 * light.getY();
             addEllipse(x,y,32,32,QPen(),brush);
         }
     }
+}
+
+
+double MyScene::roundDouble(double toround) {
+    int entier = (int) ( (0.005 + toround) * 100.0 );
+    return (double) (entier/100.0);
 }
