@@ -46,6 +46,7 @@ public:
     // Dessin pour les résultats:
     void drawAmplResult(AmplResult result);
     double roundDouble(double toround);
+    AmplResult generateDemand();
 
 private:
     Grid m_grid;

@@ -9,6 +9,7 @@ MyScene::MyScene(QGraphicsView *x) :
     m_dataType(LIGHTED),
     m_tool(PENCIL)
 {
+    drawAmplResult(generateDemand());
 }
 
 void MyScene::setMap(QString file) {
@@ -205,4 +206,79 @@ void MyScene::drawAmplResult(AmplResult result) {
 double MyScene::roundDouble(double toround) {
     int entier = (int) ( (0.005 + toround) * 100.0 );
     return (double) (entier/100.0);
+}
+
+AmplResult MyScene::generateDemand() {
+    AmplResult result;
+    std::vector<float> line;
+    line.push_back(2.10);
+    line.push_back(2.40);
+    line.push_back(2.40);
+    line.push_back(2.30);
+    line.push_back(2.20);
+    line.push_back(1.60);
+    line.push_back(0.50);
+    result.addMatrixLine(line);
+
+    line.clear();
+    line.push_back(2.40);
+    line.push_back(2.50);
+    line.push_back(2.60);
+    line.push_back(2.40);
+    line.push_back(2.30);
+    line.push_back(1.60);
+    line.push_back(0.50);
+    result.addMatrixLine(line);
+
+    line.clear();
+    line.push_back(2.40);
+    line.push_back(2.60);
+    line.push_back(2.50);
+    line.push_back(2.40);
+    line.push_back(2.40);
+    line.push_back(1.70);
+    line.push_back(0.60);
+    result.addMatrixLine(line);
+
+    line.clear();
+    line.push_back(2.40);
+    line.push_back(2.40);
+    line.push_back(2.50);
+    line.push_back(2.50);
+    line.push_back(2.50);
+    line.push_back(1.80);
+    line.push_back(0.60);
+    result.addMatrixLine(line);
+
+    line.clear();
+    line.push_back(2.30);
+    line.push_back(2.40);
+    line.push_back(2.40);
+    line.push_back(2.60);
+    line.push_back(2.50);
+    line.push_back(1.90);
+    line.push_back(0.60);
+    result.addMatrixLine(line);
+
+    line.clear();
+    line.push_back(1.70);
+    line.push_back(1.70);
+    line.push_back(1.70);
+    line.push_back(1.80);
+    line.push_back(1.90);
+    line.push_back(1.20);
+    line.push_back(0.50);
+    result.addMatrixLine(line);
+
+    line.clear();
+    line.push_back(0.60);
+    line.push_back(0.60);
+    line.push_back(0.60);
+    line.push_back(0.60);
+    line.push_back(0.60);
+    line.push_back(0.50);
+    line.push_back(0.60);
+    result.addMatrixLine(line);
+
+    return result;
 }
