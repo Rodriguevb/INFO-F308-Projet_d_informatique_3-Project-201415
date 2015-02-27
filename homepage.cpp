@@ -6,13 +6,14 @@ HomePage::HomePage(QWidget *parent) :
 
     scene = new MyScene(this);
     this->setScene(scene);
+    setMap("terrain.jpg");
 }
 
 void HomePage::setMap(QString file){
     qDebug() <<"HomePage : setMap";
     this->setRenderHints(QPainter::Antialiasing);
     scene->setMap(file);
-    scene->redraw();
+    scene->drawAmplResult(scene->generateDemand(),false);
     update();
 
 }

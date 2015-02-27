@@ -34,12 +34,12 @@ void Window::Toolbar(){
     actionQuitter->setShortcut(QKeySequence("Ctrl+Q"));
 
 
-    /*QMenu *menuEdition = menuBar()->addMenu("&Edition");
+    QMenu *menuEdition = menuBar()->addMenu("&Edition");
 
     QAction *actionMap = new QAction("&Ajouter une carte", this);
     menuEdition->addAction(actionMap);
 
-    QAction *actionGrid = new QAction("&Calculer la grille", this);
+    /*QAction *actionGrid = new QAction("&Calculer la grille", this);
     menuEdition->addAction(actionGrid);
 
     QAction *actionEraser = new QAction("&Passer en mode effaceur", this);
@@ -71,8 +71,8 @@ void Window::Toolbar(){
     connect(execAmpl, SIGNAL(triggered()), this, SLOT(executeAmpl()));
     connect(actionQuitter, SIGNAL(triggered()), this, SLOT(quit()));
 
-   /* connect(actionMap, SIGNAL(triggered()), this, SLOT(addMap()));
-    connect(actionGrid, SIGNAL(triggered()), this, SLOT(computeGrid()));
+    connect(actionMap, SIGNAL(triggered()), this, SLOT(addMap()));
+    /*connect(actionGrid, SIGNAL(triggered()), this, SLOT(computeGrid()));
     connect(actionLighted, SIGNAL(triggered()), this, SLOT(setLight()));
     connect(actionFree, SIGNAL(triggered()), this, SLOT(setFree()));
     connect(actionEraser, SIGNAL(triggered()), this, SLOT(setEraser()));

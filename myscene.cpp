@@ -9,12 +9,12 @@ MyScene::MyScene(QGraphicsView *x) :
     m_dataType(LIGHTED),
     m_tool(PENCIL)
 {
-    drawAmplResult(generateDemand(),false);
+    //drawAmplResult(generateDemand(),false);
 }
 
 void MyScene::setMap(QString file) {
     m_map.load(file);
-    m_map = m_map.scaled(m_grid.getWidth(),m_grid.getHeight(),Qt::KeepAspectRatio);
+    m_map = m_map.scaled(448,448,Qt::KeepAspectRatio);
 }
 
 Vertex* MyScene::addVertex(){
@@ -160,6 +160,7 @@ void MyScene::drawAmplResult(AmplResult result, bool showLight) {
 
     // On éfface l'écran:
     clear();
+    this->addPixmap(m_map);
 
     // Affichage de la grille
     for(int l(0); l < line;++l) {
