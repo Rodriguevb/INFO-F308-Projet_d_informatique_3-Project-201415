@@ -1,9 +1,0 @@
-# LaTeX compiles files
-*.aux
-*.bbl
-*.blg
-*.out
-*.toc
-*.log
-
-*.pdf

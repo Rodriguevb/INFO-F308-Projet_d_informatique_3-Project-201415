@@ -1,5 +1,0 @@
-# Évaluation temporaire (le 15/12/2014 et 16/12/2014)
-
-Tous les groupes présentent l’état de leur projet (logiciel et partie scientifique) pendant 10 minutes (en utilisant des slides).  Nous vous poserons quelques questions pour vérifier que votre projet avance bien.  Nous exigeons que le prototype de votre logiciel montre déjà clairement les fonctionnalités que vous voulez réaliser pour les PdS. 
-
-Avant cette évaluation vous nous enverrez un draft du chapitre “l’état de l’art” (entre 8 et 10 pages), qui fait partie de votre rapport final, pour qu’on puise vérifier que vous avez trouvé toutes les recherches importantes.  Ce chapitre doit faire référence aux articles que vous avez consulté.  Regardez dans le document redacSci.pdf (en bas) comment de faire des références. Il est important que vous consultez plus que ces 8-10 articles que vous avez trouves au début.

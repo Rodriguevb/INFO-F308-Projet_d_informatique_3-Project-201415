@@ -1,8 +1,0 @@
-eclipse.preferences.version=1
-environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.1153687140/PATH/delimiter=;
-environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.1153687140/PATH/operation=replace
-environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.1153687140/PATH/value=C\:\\Users\\julien\\Desktop\\eclipse;C\:/Program Files/Java/jre1.8.0_25/bin/server;C\:/Program Files/Java/jre1.8.0_25/bin;C\:/Program Files/Java/jre1.8.0_25/lib/amd64;C\:\\ProgramData\\Oracle\\Java\\javapath;C\:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C\:\\Program Files (x86)\\Intel\\iCLS Client\\;C\:\\Program Files\\Intel\\iCLS Client\\;C\:\\Windows\\system32;C\:\\Windows;C\:\\Windows\\System32\\Wbem;C\:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C\:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C\:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C\:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C\:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C\:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C\:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C\:\\Program Files\\MATLAB\\R2011a\\runtime\\win64;C\:\\Program Files\\MATLAB\\R2011a\\bin;C\:\\Program Files\\MiKTeX 2.9\\miktex\\bin\\x64\\;C\:\\MinGW\\bin
-environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.1153687140/append=true
-environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.1153687140/appendContributed=true
-environment/project/cdt.managedbuild.config.gnu.cross.exe.release.1753870378/append=true
-environment/project/cdt.managedbuild.config.gnu.cross.exe.release.1753870378/appendContributed=true

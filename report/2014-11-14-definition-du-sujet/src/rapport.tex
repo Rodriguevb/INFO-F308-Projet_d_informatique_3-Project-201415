@@ -1,0 +1,46 @@
+\documentclass[a4paper,10pt]{report}
+\usepackage[french]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[left=2.5cm,top=2cm,right=2.5cm,nohead,nofoot]{geometry}
+\usepackage{url}
+
+\linespread{1.1}
+
+
+
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+\textbf{\textsc{UNIVERSIT\'E LIBRE DE BRUXELLES}}\\
+\textbf{\textsc{Facult\'e des Sciences}}\\
+\textbf{\textsc{D\'epartement d'Informatique}}
+\vfill{}\vfill{}
+\begin{center}{\Huge \'Eclairage public}\end{center}{\Huge \par}
+\begin{center}{\large \textsc{Hereman} Nicolas,\\\textsc{Hublet} Magali,\\\textsc{Vanbergen} Julien,\\\textsc{Van Brande} Rodrigue.}\end{center}{\Huge \par}
+\vfill{}\vfill{}
+\begin{flushleft}{\large \textbf{Superviseurs : \textsc{Labbe} Martine, \textsc{Porretta} Luciano}}\hfill{}\end{flushleft}{\large\par}
+\vfill{}\vfill{}\enlargethispage{3cm}
+\textbf{Ann\'ee acad\'emique 2014~-~2015}
+\end{center}
+\end{titlepage}
+
+
+
+\tableofcontents
+
+
+\chapter{D\'efinition du projet}
+\input{01_definitionDuProjet/text.tex}
+
+\chapter{Articles de r\'ef\'erence}
+\input{02_articlesDeReference/text.tex}
+
+\chapter{Impl\'ementation}
+\input{03_implementation/text.tex}
+
+\bibliographystyle{plain}
+\bibliography{bibli}
+\addcontentsline{toc}{chapter}{Bibliographie}
+
+\end{document}

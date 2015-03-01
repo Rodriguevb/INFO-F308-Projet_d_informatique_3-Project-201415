@@ -1,0 +1,3 @@
+# Définition du sujet (pour le 14/11/2014)
+
+Chaque groupe remettra un document (en PDF) de maximum de 5 pages détaillant de façon plus précise le sujet qui sera étudié, une bibliographie de 8-10 articles scientifiques qui seront utilisés, un petit paragraphe pour chaque article qui explique l’importance et la pertinence pour le projet,  et une description de l’implémentation qui sera réalisée. L’équipe encadrante pourra alors éventuellement “rectifier le tir”, ou adapter la proposition aux difficultés exigées.

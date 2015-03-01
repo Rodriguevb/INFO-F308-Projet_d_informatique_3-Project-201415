@@ -1,0 +1,2 @@
+# Poster final  (pour le 16/03/2015)
+Chaque groupe nous remet le poster  qui sera utilisé lors de l’Expo.  Les informations concernant la taille du poster peuvent être trouvées ici.  Envoyez-nous aussi  une page A4 avec la description approfondie.

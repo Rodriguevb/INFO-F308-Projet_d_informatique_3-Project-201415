@@ -1,0 +1,14 @@
+# RESET
+reset;
+# LOAD MODEL
+model amplmodel.mod;
+# CHANGE SOLVER
+option solver knitroampl;
+# LOAD DATA
+data ampldata.data;
+# SOLVE
+solve;
+# SHOW RESULT ( a désactiver vu qu’on affiche dans C++)
+display X, Y, P;
+display imax;
+display S;
