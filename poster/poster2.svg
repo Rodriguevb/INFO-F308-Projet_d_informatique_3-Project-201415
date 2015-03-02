@@ -2998,24 +2998,25 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.22627417"
-     inkscape:cx="1641.2269"
-     inkscape:cy="1768.5474"
+     inkscape:cx="1390.8231"
+     inkscape:cy="1813.9007"
      inkscape:document-units="px"
-     inkscape:current-layer="g5553"
+     inkscape:current-layer="layer1"
      showgrid="false"
      borderlayer="true"
      inkscape:showpageshadow="false"
      inkscape:snap-bbox="true"
-     inkscape:bbox-paths="true"
-     inkscape:bbox-nodes="true"
+     inkscape:bbox-paths="false"
+     inkscape:bbox-nodes="false"
      inkscape:snap-bbox-edge-midpoints="false"
-     inkscape:snap-bbox-midpoints="true"
+     inkscape:snap-bbox-midpoints="false"
      inkscape:window-width="1846"
      inkscape:window-height="1058"
      inkscape:window-x="1912"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:snap-global="true">
+     inkscape:snap-global="true"
+     inkscape:snap-nodes="false">
     <inkscape:grid
        type="xygrid"
        id="grid2985"
@@ -3032,7 +3033,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -3049,7 +3050,8 @@
          height="1026.292"
          width="756.85437"
          id="rect4830-6-8-1"
-         style="fill:#2e009f;fill-opacity:0.1491713;fill-rule:nonzero;stroke:none" />
+         style="fill:#2e009f;fill-opacity:0.1491713;fill-rule:nonzero;stroke:none"
+         ry="100" />
       <flowRoot
          transform="matrix(1.3617662,0,0,1.3617662,868.64142,-3483.4493)"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Century Gothic';-inkscape-font-specification:'Century Gothic';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
@@ -3262,7 +3264,8 @@
          height="1026.292"
          width="1159.3337"
          id="rect4830-6-8"
-         style="fill:#42ffff;fill-opacity:0.19607843;fill-rule:nonzero;stroke:none" />
+         style="fill:#42ffff;fill-opacity:0.19607843;fill-rule:nonzero;stroke:none"
+         ry="110.44733" />
       <flowRoot
          transform="matrix(1.3617662,0,0,1.3617662,-1176.039,-3488.8111)"
          style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Century Gothic;-inkscape-font-specification:Century Gothic"
@@ -3829,7 +3832,8 @@
          height="1437.6542"
          width="746.13904"
          id="rect4830-6-8-1-7"
-         style="fill:#800080;fill-opacity:0.19607843;fill-rule:nonzero;stroke:none" />
+         style="fill:#800080;fill-opacity:0.19607843;fill-rule:nonzero;stroke:none"
+         ry="81.25" />
       <path
          style="fill:#800080;fill-opacity:0.38121547;stroke-width:0.2;stroke-linejoin:round"
          inkscape:connector-curvature="0"
@@ -3861,7 +3865,8 @@
            width="1344.4163"
            height="999.93213"
            x="641.18677"
-           y="-269.71545" />
+           y="-269.71545"
+           ry="93.75" />
         <flowRoot
            transform="translate(621.2994,-285.18347)"
            xml:space="preserve"
@@ -7169,7 +7174,8 @@
          height="972.54346"
          width="795.87878"
          id="rect4830-6-8-1-2"
-         style="fill:#80ff80;fill-opacity:0.19607843;fill-rule:nonzero;stroke:none" />
+         style="fill:#80ff80;fill-opacity:0.19607843;fill-rule:nonzero;stroke:none"
+         ry="100" />
       <path
          id="path4539"
          d="m 1625.7751,-1854.9623 c -56.5026,45.2012 -33.9013,67.8024 -45.2017,101.7036 -11.3009,33.9013 0,45.2017 -45.2021,79.1029 -57.8865,43.4149 -107.3534,16.9506 -107.3534,16.9506 -11.3009,11.3004 -53.6777,31.0764 -53.6777,31.0764 l -12.5364,-24.9848 c 45.2016,-11.3 54.9132,-25.867 54.9132,-25.867 -11.3004,-22.6009 -28.251,-64.9776 5.6502,-121.4802 33.9013,-56.5015 203.4078,-56.5015 203.4078,-56.5015 z m -192.1075,158.2057 11.3009,11.3009 c 0,0 22.6003,-11.3009 33.9012,-45.2026 11.2999,-33.9012 67.8025,-90.4028 67.8025,-90.4028 -22.6008,11.3 -67.8025,56.5016 -79.1034,90.4028 -11.3003,33.9017 -33.9012,33.9017 -33.9012,33.9017 z"
@@ -7269,7 +7275,8 @@
            width="795.87878"
            height="521.76288"
            x="-45.153503"
-           y="1760.897" />
+           y="1760.897"
+           ry="78.125" />
         <path
            style="fill:#0000ff;fill-opacity:0.49171274;stroke-width:0.2;stroke-linejoin:round"
            inkscape:connector-curvature="0"
@@ -7296,7 +7303,23 @@
              id="flowPara5889"
              style="font-weight:normal;font-size:40px;-inkscape-font-specification:'Century Gothic';text-align:justify;text-anchor:start">Les petits étangs ou les rivières ne sont pas non plus à négliger pour les balades nocturnes !</flowPara><flowPara
              style="font-weight:normal;font-size:40px;-inkscape-font-specification:'Century Gothic';text-align:justify;text-anchor:start"
-             id="flowPara4957-3" /></flowRoot>      </g>
+             id="flowPara4957-3" /></flowRoot>        <rect
+           style="opacity:0.8;fill:#cb6a6e;fill-opacity:0.19607843;fill-rule:evenodd;stroke:none;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="rect5399"
+           width="1119.478"
+           height="631.25012"
+           x="-1222.3335"
+           y="1617.3182"
+           ry="118.25995" />
+        <rect
+           style="opacity:0.8;fill:#9fcb0a;fill-opacity:0.19607843;fill-rule:evenodd;stroke:none;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="rect5399-8"
+           width="563.22803"
+           height="1012.5001"
+           x="-1219.5725"
+           y="2307.9431"
+           ry="120.25803" />
+      </g>
     </g>
   </g>
 </svg>
