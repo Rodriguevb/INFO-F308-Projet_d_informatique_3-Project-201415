@@ -23,7 +23,8 @@ SOURCES += main.cpp\
     gridcase.cpp \
     ampllauncher.cpp \
     ampllight.cpp \
-    amplresult.cpp
+    amplresult.cpp \
+    backtrack.cpp
 
 HEADERS  += window.hpp \
     homepage.hpp \
@@ -35,4 +36,5 @@ HEADERS  += window.hpp \
     gridcase.hpp \
     ampllauncher.hpp \
     ampllight.hpp \
-    amplresult.hpp
+    amplresult.hpp \
+    backtrack.hpp
