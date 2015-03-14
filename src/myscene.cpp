@@ -156,7 +156,7 @@ void MyScene::drawAmplResult(AmplResult result, bool showLight) {
     int line = result.getNbLine();
     int col = result.getNbColumn();
     int caseSize = 64;
-    const int MAX_S = 3;
+    const int MAX_S = 6;
 
     // On éfface l'écran:
     clear();

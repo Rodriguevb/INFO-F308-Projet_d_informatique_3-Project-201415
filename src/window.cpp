@@ -17,6 +17,7 @@ Window::~Window()
 
 void Window::Toolbar(){
     QMenu *menuFichier = menuBar()->addMenu("&Fichier");
+    QMenu *menuAlgo = menuBar()->addMenu("&Algorithmes");
 
     /*QAction *actionOuvrir = new QAction("&Ouvrir", this);
     menuFichier->addAction(actionOuvrir);
@@ -26,8 +27,15 @@ void Window::Toolbar(){
     menuFichier->addAction(actionSauver);
     actionSauver->setShortcut(QKeySequence("Ctrl+S"));*/
 
-    QAction *execAmpl = new QAction("&Exécuter l'algorithme", this);
-    menuFichier->addAction(execAmpl);
+    QAction *execAmpl = new QAction("&Exécuter l'algorithme AMPL (optimal)", this);
+    menuAlgo->addAction(execAmpl);
+
+    QAction *execBack = new QAction("&Exécuter l'algorithme backtrack (optimal)", this);
+    menuAlgo->addAction(execBack);
+
+    QAction *execNonOpti = new QAction("&Trouver une solution acceptable", this);
+    menuAlgo->addAction(execNonOpti);
+
 
     QAction *actionQuitter = new QAction("&Quitter", this);
     menuFichier->addAction(actionQuitter);
@@ -69,6 +77,8 @@ void Window::Toolbar(){
     //connect(actionSauver, SIGNAL(triggered()), this, SLOT(save()));
     //connect(actionOuvrir, SIGNAL(triggered()), this, SLOT(open()));
     connect(execAmpl, SIGNAL(triggered()), this, SLOT(executeAmpl()));
+    connect(execBack, SIGNAL(triggered()), this, SLOT(executeBacktrackOptimal()));
+    connect(execNonOpti, SIGNAL(triggered()), this, SLOT(executeBacktrackNonOptimal()));
     connect(actionQuitter, SIGNAL(triggered()), this, SLOT(quit()));
 
     connect(actionMap, SIGNAL(triggered()), this, SLOT(addMap()));
@@ -138,4 +148,155 @@ void Window::setRectangle() {
 void Window::executeAmpl() {
     AmplResult result = m_ampllauncher.launch();
     m_homepage->drawAmplResult(result);
+}
+
+void Window::executeBacktrackNonOptimal() {
+    executeBacktrack(false);
+}
+
+void Window::executeBacktrackOptimal() {
+    executeBacktrack(true);
+}
+
+void Window::executeBacktrack(bool optimal) {
+    // On crée les matrices:
+    std::vector < std::vector < float > > demand;
+    std::vector < std::vector < bool > > free;
+    std::vector<float> line;
+    std::vector<bool> lineb;
+    line.push_back(2.10);
+    lineb.push_back(true);
+    line.push_back(2.40);
+    lineb.push_back(true);
+    line.push_back(2.40);
+    lineb.push_back(true);
+    line.push_back(2.30);
+    lineb.push_back(true);
+    line.push_back(2.20);
+    lineb.push_back(true);
+    line.push_back(1.60);
+    lineb.push_back(true);
+    line.push_back(0.50);
+    lineb.push_back(false);
+    demand.push_back(line);
+    free.push_back(lineb);
+
+    line.clear();
+    line.push_back(2.40);
+    lineb.push_back(true);
+    line.push_back(2.50);
+    lineb.push_back(true);
+    line.push_back(2.60);
+    lineb.push_back(true);
+    line.push_back(2.40);
+    lineb.push_back(true);
+    line.push_back(2.30);
+    lineb.push_back(true);
+    line.push_back(1.60);
+    lineb.push_back(true);
+    line.push_back(0.50);
+    lineb.push_back(false);
+    demand.push_back(line);
+    free.push_back(lineb);
+
+    line.clear();
+    line.push_back(2.40);
+    lineb.push_back(true);
+    line.push_back(2.60);
+    lineb.push_back(true);
+    line.push_back(2.50);
+    lineb.push_back(true);
+    line.push_back(2.40);
+    lineb.push_back(true);
+    line.push_back(2.40);
+    lineb.push_back(true);
+    line.push_back(1.70);
+    lineb.push_back(true);
+    line.push_back(0.60);
+    lineb.push_back(false);
+    demand.push_back(line);
+    free.push_back(lineb);
+
+    line.clear();
+    line.push_back(2.40);
+    lineb.push_back(true);
+    line.push_back(2.40);
+    lineb.push_back(true);
+    line.push_back(2.50);
+    lineb.push_back(true);
+    line.push_back(2.50);
+    lineb.push_back(true);
+    line.push_back(2.50);
+    lineb.push_back(true);
+    line.push_back(1.80);
+    lineb.push_back(true);
+    line.push_back(0.60);
+    lineb.push_back(false);
+    demand.push_back(line);
+    free.push_back(lineb);
+
+    line.clear();
+    line.push_back(2.30);
+    lineb.push_back(true);
+    line.push_back(2.40);
+    lineb.push_back(true);
+    line.push_back(2.40);
+    lineb.push_back(true);
+    line.push_back(2.60);
+    lineb.push_back(true);
+    line.push_back(2.50);
+    lineb.push_back(true);
+    line.push_back(1.90);
+    lineb.push_back(true);
+    line.push_back(0.60);
+    lineb.push_back(false);
+    demand.push_back(line);
+    free.push_back(lineb);
+
+    line.clear();
+    line.push_back(1.70);
+    lineb.push_back(true);
+    line.push_back(1.70);
+    lineb.push_back(true);
+    line.push_back(1.70);
+    lineb.push_back(true);
+    line.push_back(1.80);
+    lineb.push_back(true);
+    line.push_back(1.90);
+    lineb.push_back(true);
+    line.push_back(1.20);
+    lineb.push_back(true);
+    line.push_back(0.50);
+    lineb.push_back(false);
+    demand.push_back(line);
+    free.push_back(lineb);
+
+    line.clear();
+    line.push_back(0.60);
+    lineb.push_back(false);
+    line.push_back(0.60);
+    lineb.push_back(false);
+    line.push_back(0.60);
+    lineb.push_back(false);
+    line.push_back(0.60);
+    lineb.push_back(false);
+    line.push_back(0.60);
+    lineb.push_back(false);
+    line.push_back(0.50);
+    lineb.push_back(false);
+    line.push_back(0.00);
+    lineb.push_back(false);
+    demand.push_back(line);
+    free.push_back(lineb);
+
+    Backtrack backtrack(demand, free, 3);
+    if ( optimal ) {
+        AmplResult result = backtrack.executeOptimal();
+        m_homepage->drawAmplResult(result);
+    } else {
+        AmplResult result = backtrack.findAGoodSolution(0.4);
+        m_homepage->drawAmplResult(result);
+    }
+
+
 }

@@ -13,6 +13,10 @@ Backtrack::Backtrack(std::vector< std::vector<float> > demand, std::vector< std:
     _optimal(true)
 {
 
+    _maxX = _demand.size();
+    if ( _maxX > 0 ) {
+        _maxY = _demand.at(0).size();
+    }
 }
 
 Backtrack::~Backtrack()
@@ -81,7 +85,7 @@ struct Backtrack::Case Backtrack::getNextCase(struct Case actual) {
 }
 
 void Backtrack::checkSoluce() {
-
+    AmplLight light = _lightInTest.at(0);
     std::vector< std::vector< float > > matrix = calculateMatrix();
     float S = calculateS(matrix);
     if ( S < _Ssolution ) {
@@ -104,7 +108,7 @@ std::vector< std::vector< float > > Backtrack::calculateMatrix() {
 
 float Backtrack::calcSij(int i, int j) {
     float Sij = 0.f;
-    for ( int n(0); n < _lightSolution.size(); ++n ) {
+    for ( int n(0); n < _lightInTest.size(); ++n ) {
         Sij += calcSijn(i,j,n);
     }
     return Sij;
@@ -112,24 +116,24 @@ float Backtrack::calcSij(int i, int j) {
 
 
 float Backtrack::calcSijn(int i, int j, int n) {
-    int Sin = calcSin(i,n);
-    int Sjn = calcSjn(j,n);
+    float Sin = calcSin(i,n);
+    float Sjn = calcSjn(j,n);
     return (Sin < Sjn ) ? Sin : Sjn;
 }
 
 float Backtrack::calcSin(int i, int n) {
-    AmplLight light = _lightSolution.at(n);
-    float pn2 = POWER / ( R * R ); // P / r^2
-    float ixr = std::abs(i - light.getX()) / R; // | i - Xn | / r
+    AmplLight light = _lightInTest.at(n);
+    float pn2 = ( (float) POWER) / ( R * R ); // P / r^2
+    float ixr = std::abs(i - light.getX()) / ((float)R); // | i - Xn | / r
     float sin = pn2 * std::cos(std::atan(ixr));
     return sin;
 }
 
 
 float Backtrack::calcSjn(int j, int n) {
-    AmplLight light = _lightSolution.at(n);
-    float pn2 = POWER / ( R * R ); // P / r^2
-    float jyr = std::abs(j - light.getY()) / R; // | j - Yn | / r
+    AmplLight light = _lightInTest.at(n);
+    float pn2 = ( (float) POWER) / ( R * R ); // P / r^2
+    float jyr = std::abs(j - light.getY()) / ((float)R); // | j - Yn | / r
     float sjn = pn2 * std::cos(std::atan(jyr));
     return sjn;
 }
@@ -171,9 +175,11 @@ AmplResult Backtrack::getResult() {
     AmplResult result;
 
     for ( int i(0); i < _lightSolution.size(); ++i ) {
-        result.addLight(_lightSolution.at(i));
+        AmplLight light = _lightSolution.at(i);
+        result.addLight(light.getX()+1, light.getY()+1, light.getP());
     }
 
+    _lightInTest = _lightSolution;
     std::vector < std::vector < float > > matrix = calculateMatrix();
     for ( int y(0); y < _maxY; ++y ) {
         std::vector<float> line;

@@ -3,6 +3,7 @@
 
 #include<vector>
 #include<cmath>
+#include<iostream>
 #include "ampllight.hpp"
 #include "amplresult.hpp"
 

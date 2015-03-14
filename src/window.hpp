@@ -11,6 +11,7 @@
 #include "vertex.hpp"
 #include "optiondialog.hpp"
 #include "ampllauncher.hpp"
+#include "backtrack.hpp"
 
 class Window : public QMainWindow
 {
@@ -22,6 +23,7 @@ public:
 
 private:
     void Toolbar();
+    void executeBacktrack(bool optimal);
     HomePage *m_homepage;
     OptionDialog *m_option;
     AmplLauncher m_ampllauncher;
@@ -41,6 +43,8 @@ private slots:
     void setPencil();
     void setRectangle();
     void executeAmpl();
+    void executeBacktrackOptimal();
+    void executeBacktrackNonOptimal();
 };
 
 #endif // WINDOW_HPP
