@@ -4,6 +4,7 @@
 #include<vector>
 #include<cmath>
 #include "ampllight.hpp"
+#include "amplresult.hpp"
 
 
 class Backtrack
@@ -27,15 +28,19 @@ private:
     std::vector< std::vector<bool> > _free;
     std::vector< AmplLight > _lightSolution;
     std::vector< AmplLight > _lightInTest;
+    int _requiredS;
+    bool _optimal;
 public:
     Backtrack(std::vector< std::vector<float> >, std::vector< std::vector<bool> >, int);
     ~Backtrack();
 
-    void execute();
+    AmplResult executeOptimal();
+    AmplResult findAGoodSolution(float);
 
 private:
-    void execute(int n);
+    bool execute(int n);
     struct Case getNextCase(struct Case);
+    bool isCaseFree(struct Case);
 
     void checkSoluce();
     std::vector< std::vector< float > > calculateMatrix();
@@ -44,6 +49,11 @@ private:
     float calcSijn(int i, int j, int n);
     float calcSin(int i, int n);
     float calcSjn(int j, int n);
+
+    float calculateRequiredS(float pourcentage);
+    bool isSoluceAcceptable();
+
+    AmplResult getResult();
 };
 
 #endif // BACKTRACK_H

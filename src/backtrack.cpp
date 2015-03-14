@@ -8,7 +8,9 @@ Backtrack::Backtrack(std::vector< std::vector<float> > demand, std::vector< std:
     _demand(demand),
     _free(free),
     _lightSolution(),
-    _lightInTest()
+    _lightInTest(),
+    _requiredS(0),
+    _optimal(true)
 {
 
 }
@@ -18,14 +20,22 @@ Backtrack::~Backtrack()
 
 }
 
-void Backtrack::execute() {
+AmplResult Backtrack::executeOptimal() {
+    _optimal = true;
     execute(0);
-    // TODO: Renvoyer un résultat.
+    return getResult();
 }
 
-void Backtrack::execute(int n) {
+AmplResult Backtrack::findAGoodSolution(float pourcentage) {
+    _optimal = false;
+    _requiredS = calculateRequiredS(pourcentage);
+    execute(0);
+    return getResult();
+}
 
-    if ( n >= _maxLight) return;
+bool Backtrack::execute(int n) {
+
+    if ( n >= _maxLight) return false;
 
     struct Case next;
     next.x = 0;
@@ -40,15 +50,22 @@ void Backtrack::execute(int n) {
     }
 
     while ( next.y < _maxY ) {
-        _lightInTest.push_back(AmplLight(next.x,next.y, POWER));
-
-        // TODO: check la solution
-
-        execute(n+1);
-        _lightInTest.pop_back();
+        if ( isCaseFree(next) ) {
+            _lightInTest.push_back(AmplLight(next.x,next.y, POWER));
+            checkSoluce();
+            if ( !_optimal && isSoluceAcceptable() ) {
+                return true;
+            }
+            bool found = execute(n+1);
+            if ( found ) {
+                return true;
+            }
+            _lightInTest.pop_back();
+        }
         next = getNextCase(next);
     }
 
+    return false;
 }
 
 struct Backtrack::Case Backtrack::getNextCase(struct Case actual) {
@@ -128,4 +145,43 @@ float Backtrack::calculateS( std::vector< std::vector< float > > matrix ) {
     }
 
     return sum;
+}
+
+bool Backtrack::isCaseFree(struct Case c) {
+    return _free.at(c.x).at(c.y);
+}
+
+float Backtrack::calculateRequiredS(float pourcentage) {
+    float sum = 0.f;
+    for ( int i(0); i < _maxX; ++i ) {
+        for ( int j(0); j < _maxY; ++j ) {
+            sum += _demand.at(i).at(j);
+        }
+    }
+
+    return pourcentage * sum;
+}
+
+
+bool Backtrack::isSoluceAcceptable() {
+    return _Ssolution <= _requiredS;
+}
+
+AmplResult Backtrack::getResult() {
+    AmplResult result;
+
+    for ( int i(0); i < _lightSolution.size(); ++i ) {
+        result.addLight(_lightSolution.at(i));
+    }
+
+    std::vector < std::vector < float > > matrix = calculateMatrix();
+    for ( int y(0); y < _maxY; ++y ) {
+        std::vector<float> line;
+        for ( int x(0); x < _maxX; ++x ) {
+            line.push_back(matrix.at(x).at(y));
+        }
+        result.addMatrixLine(line);
+    }
+
+    return result;
 }
