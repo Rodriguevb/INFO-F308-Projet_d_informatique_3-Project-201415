@@ -24,7 +24,10 @@ SOURCES += main.cpp\
     ampllauncher.cpp \
     ampllight.cpp \
     amplresult.cpp \
-    backtrack.cpp
+    backtrack.cpp \
+    demandview.cpp \
+    demandscene.cpp \
+    mymainwindow.cpp
 
 HEADERS  += window.hpp \
     homepage.hpp \
@@ -37,4 +40,7 @@ HEADERS  += window.hpp \
     ampllauncher.hpp \
     ampllight.hpp \
     amplresult.hpp \
-    backtrack.hpp
+    backtrack.hpp \
+    demandview.hpp \
+    mymainwindow.hpp \
+    demandscene.hpp
