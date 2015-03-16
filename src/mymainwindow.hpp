@@ -9,13 +9,14 @@
 #include <QRadioButton>
 
 #include "demandview.hpp"
+#include "resultview.hpp"
 
 class MyMainWindow : public QMainWindow
 {
     Q_OBJECT
 private:
     DemandView _viewLeft;
-    QGraphicsView _viewRight;
+    ResultView _viewRight;
     QPushButton _buttonCalculate;
     QPushButton _buttonErase;
     QLabel _mapLabel;

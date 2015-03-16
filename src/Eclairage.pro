@@ -27,7 +27,9 @@ SOURCES += main.cpp\
     backtrack.cpp \
     demandview.cpp \
     demandscene.cpp \
-    mymainwindow.cpp
+    mymainwindow.cpp \
+    resultview.cpp \
+    resultscene.cpp
 
 HEADERS  += window.hpp \
     homepage.hpp \
@@ -43,4 +45,6 @@ HEADERS  += window.hpp \
     backtrack.hpp \
     demandview.hpp \
     mymainwindow.hpp \
-    demandscene.hpp
+    demandscene.hpp \
+    resultview.hpp \
+    resultscene.hpp
