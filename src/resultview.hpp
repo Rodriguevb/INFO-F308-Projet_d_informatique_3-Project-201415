@@ -3,17 +3,22 @@
 
 #include <QGraphicsView>
 #include "resultscene.hpp"
+#include "amplresult.hpp"
 
 class MyMainWindow;
 
 class ResultView : public QGraphicsView
 {
+public:
+    static int const SIZE = 7;
 private:
     MyMainWindow* _window;
     ResultScene _scene;
 public:
     ResultView(MyMainWindow* window);
     ~ResultView();
+
+    void drawResult(AmplResult result);
 };
 
 #include "mymainwindow.hpp"

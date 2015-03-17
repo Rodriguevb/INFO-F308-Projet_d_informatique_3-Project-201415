@@ -10,11 +10,16 @@
 
 #include "demandview.hpp"
 #include "resultview.hpp"
+#include "backtrack.hpp"
 
 class MyMainWindow : public QMainWindow
 {
     Q_OBJECT
 private:
+    static const int AMPL_ALGO = 0;
+    static const int BACKOPTI_ALGO = 1;
+    static const int BACKFIRST_ALGO = 2;
+
     DemandView _viewLeft;
     ResultView _viewRight;
     QPushButton _buttonCalculate;
@@ -27,6 +32,7 @@ private:
     QRadioButton _radioMedium;
     QRadioButton _radioLow;
     QRadioButton _radioBlock;
+    QRadioButton _radioFree;
 public:
     explicit MyMainWindow(QWidget *parent = 0);
 
@@ -37,7 +43,10 @@ private:
 
 signals:
 
-public slots:
+private slots:
+    void changeTool();
+    void clearDemand();
+    void execute();
 };
 
 #endif // MAINWINDOW_H

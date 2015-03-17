@@ -8,8 +8,9 @@ class DemandView;
 
 class DemandScene : public QGraphicsScene
 {
-private:
+public:
     static const int CELL_SIZE = 64;
+private:
 
     DemandView *_view;
     QColor _lowColor;

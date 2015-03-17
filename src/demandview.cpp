@@ -10,7 +10,8 @@ DemandView::DemandView(MyMainWindow *window) :
     _window(window),
     _scene(this),
     _freeGrid(),
-    _demandGrid()
+    _demandGrid(),
+    _tool(HIGH)
 {
     this->setScene(&_scene);
     this->setSceneRect(3,3,440,440);
@@ -24,6 +25,8 @@ DemandView::~DemandView()
 }
 
 void DemandView::initGrids() {
+    _freeGrid.clear();
+    _demandGrid.clear();
     for ( int j(0); j < SIZE; ++j ) {
         std::vector< bool > lineFree;
         std::vector< float > lineDemand;
@@ -40,4 +43,46 @@ void DemandView::initGrids() {
 void DemandView::updateScene() {
     _scene.clear();
     _scene.drawGrids(_demandGrid,_freeGrid);
+}
+
+void DemandView::mousePressEvent(QMouseEvent* event) {
+    setInGrid(event->x(), event->y());
+    updateScene();
+}
+
+void DemandView::setTool(Tool tool) {
+    _tool = tool;
+}
+
+void DemandView::setInGrid(int x, int y) {
+    x = x / _scene.CELL_SIZE;
+    y = y / _scene.CELL_SIZE;
+
+    if ( x >= SIZE ) return;
+    if ( y >= SIZE ) return;
+
+    if ( _tool == HIGH ) {
+        _demandGrid[x][y] = HIGHDEMAND;
+    } else if ( _tool == MEDIUM ) {
+        _demandGrid[x][y] = MEDIUMDEMAND;
+    } else if ( _tool == LOW ) {
+        _demandGrid[x][y] = LOWDEMAND;
+    } else if ( _tool == BLOCKED ) {
+        _freeGrid[x][y] = false;
+    } else if ( _tool == FREE ) {
+        _freeGrid[x][y] = true;
+    }
+}
+
+void DemandView::clearDemand() {
+    initGrids();
+    updateScene();
+}
+
+std::vector< std::vector< bool > > DemandView::getFreeGrid() {
+    return _freeGrid;
+}
+
+std::vector< std::vector < float > > DemandView::getDemandGrid() {
+    return _demandGrid;
 }

@@ -12,7 +12,8 @@ MyMainWindow::MyMainWindow(QWidget *parent) : QMainWindow(parent),
     _radioHigh(this),
     _radioMedium(this),
     _radioLow(this),
-    _radioBlock(this)
+    _radioBlock(this),
+    _radioFree(this)
 {
     setUpUi();
 }
@@ -34,9 +35,11 @@ void MyMainWindow::setUpUi() {
     // On met en place les boutons.
     _buttonCalculate.setText("Calculer");
     _buttonCalculate.setGeometry(470,400,81,32);
+    connect(&_buttonCalculate, SIGNAL(clicked(bool)), this, SLOT(execute()));
 
     _buttonErase.setText("Effacer demande");
     _buttonErase.setGeometry(20,140,131,32);
+    connect(&_buttonErase, SIGNAL(clicked(bool)), this, SLOT(clearDemand()));
 
     // On met en place les combobox et leurs label.
         // Choix de la map
@@ -60,14 +63,55 @@ void MyMainWindow::setUpUi() {
     _radioHigh.setText("Eclairage fort");
     _radioHigh.setGeometry(20,170,111,20);
     _radioHigh.setChecked(true);
+    connect(&_radioHigh,SIGNAL(toggled(bool)),this,SLOT(changeTool()));
 
     _radioMedium.setText("Eclairage medium");
     _radioMedium.setGeometry(130,170,131,20);
+    connect(&_radioMedium,SIGNAL(toggled(bool)),this,SLOT(changeTool()));
 
     _radioLow.setText("Eclairage faible");
     _radioLow.setGeometry(262,170,121,20);
+    connect(&_radioLow,SIGNAL(toggled(bool)),this,SLOT(changeTool()));
 
-    _radioBlock.setText("Bloquer");
+    _radioBlock.setText("Bloqué");
     _radioBlock.setGeometry(382,170,81,20);
+    connect(&_radioBlock,SIGNAL(toggled(bool)),this,SLOT(changeTool()));
+
+    _radioFree.setText("Libre");
+    _radioFree.setGeometry(382,150,81,20);
+    connect(&_radioFree,SIGNAL(toggled(bool)),this,SLOT(changeTool()));
 }
 
+
+void MyMainWindow::changeTool() {
+    if ( _radioHigh.isChecked() ) {
+        _viewLeft.setTool(DemandView::HIGH);
+    } else if ( _radioMedium.isChecked() ) {
+        _viewLeft.setTool(DemandView::MEDIUM);
+    } else if ( _radioLow.isChecked() ) {
+        _viewLeft.setTool(DemandView::LOW);
+    } else if ( _radioBlock.isChecked() ) {
+        _viewLeft.setTool(DemandView::BLOCKED);
+    } else if ( _radioFree.isChecked() ) {
+        _viewLeft.setTool(DemandView::FREE);
+    }
+}
+
+void MyMainWindow::clearDemand() {
+    _viewLeft.clearDemand();
+}
+
+void MyMainWindow::execute() {
+    AmplResult result;
+    int selected = _algoCombo.currentIndex();
+    if ( selected == AMPL_ALGO ) {
+        std::cout << "Cet algorithme n'est pas encore implémenté." << std::endl;
+    } else if ( selected == BACKOPTI_ALGO ) {
+        Backtrack algo(_viewLeft.getDemandGrid(), _viewLeft.getFreeGrid(), 3);
+        result = algo.executeOptimal();
+    } else if ( selected == BACKFIRST_ALGO ) {
+        Backtrack algo(_viewLeft.getDemandGrid(), _viewLeft.getFreeGrid(), 3);
+        result = algo.findAGoodSolution(0.4);
+    }
+    _viewRight.drawResult(result);
+}
