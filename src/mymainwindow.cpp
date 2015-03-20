@@ -105,7 +105,8 @@ void MyMainWindow::execute() {
     AmplResult result;
     int selected = _algoCombo.currentIndex();
     if ( selected == AMPL_ALGO ) {
-        std::cout << "Cet algorithme n'est pas encore implémenté." << std::endl;
+        AmplLauncher ampl;
+        result = ampl.launch(_viewLeft.getDemandGrid());
     } else if ( selected == BACKOPTI_ALGO ) {
         Backtrack algo(_viewLeft.getDemandGrid(), _viewLeft.getFreeGrid(), 3);
         result = algo.executeOptimal();

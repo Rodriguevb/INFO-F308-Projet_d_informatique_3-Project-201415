@@ -11,6 +11,7 @@
 #include "demandview.hpp"
 #include "resultview.hpp"
 #include "backtrack.hpp"
+#include "ampllauncher.hpp"
 
 class MyMainWindow : public QMainWindow
 {

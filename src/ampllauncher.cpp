@@ -10,8 +10,9 @@ AmplLauncher::~AmplLauncher()
 
 }
 
-AmplResult AmplLauncher::launch() {
+AmplResult AmplLauncher::launch(std::vector<std::vector<float> > demand) {
     reset();
+    writeData(demand);
     executeAmpl();
     return readResult();
 }
@@ -75,7 +76,46 @@ AmplResult AmplLauncher::readResult() {
             file >> n;
         }
         file.close();
+    } else  {
+        std::cout << "Impossible d'ouvrir le fichier de résultat" << std::endl;
     }
 
     return result;
+}
+
+
+void AmplLauncher::writeData(std::vector< std::vector<float> > demand) {
+    std::ofstream fichier(_dataFile.c_str(), std::ios::out | std::ios::trunc);
+    if ( fichier ) {
+        fichier << "# Paramètre de taille de matrice." << std::endl;
+        fichier << "param imin := 1;" << std::endl;
+        fichier << "param jmin := 1;" << std::endl;
+        fichier << "param imax := 7;" << std::endl;
+        fichier << "param jmax := 7;" << std::endl;
+        fichier << "# Matrice de la demande." << std::endl;
+        fichier << "param D:" << std::endl;
+        fichier << "1 2 3 4 5 6 7:=" << std::endl;
+
+        for ( int l(0); l < 7; ++l ) {
+            fichier << l+1;
+            for ( int c(0); c < 7; ++c ) {
+                fichier << " " << demand.at(c).at(l);
+            }
+            if ( l == 6 ) {
+                fichier << ";";
+            }
+            fichier << std::endl;
+        }
+
+        fichier << "# Autres:" << std::endl;
+        fichier << "param nmax := 3;" << std::endl;
+        fichier << "param B := 1; # Constante de bordure" << std::endl;
+        fichier << "param r := 4; # Hauteur de l'éclairage" << std::endl;
+        fichier << "param UB := 50; # Limite de Pn" << std::endl;
+
+        fichier.close();
+
+    } else {
+        std::cout << "Erreur lors de l'écriture du fichier de demande" << std::endl;
+    }
 }

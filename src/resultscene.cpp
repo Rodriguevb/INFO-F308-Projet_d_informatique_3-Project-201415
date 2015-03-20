@@ -63,7 +63,6 @@ void ResultScene::drawResult(AmplResult result) {
         }
     }
 
-
 }
 
 double ResultScene::roundDouble(double toround) {
