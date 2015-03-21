@@ -34,6 +34,7 @@ private:
     QRadioButton _radioLow;
     QRadioButton _radioBlock;
     QRadioButton _radioFree;
+    std::vector< QString > _maps;
 public:
     explicit MyMainWindow(QWidget *parent = 0);
 
@@ -41,6 +42,7 @@ public:
 
 private:
     void setUpUi();
+    void setUpMaps();
 
 signals:
 
@@ -48,6 +50,7 @@ private slots:
     void changeTool();
     void clearDemand();
     void execute();
+    void changeMaps(int index);
 };
 
 #endif // MAINWINDOW_H

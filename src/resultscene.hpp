@@ -3,6 +3,7 @@
 
 #include <QGraphicsScene>
 #include <QGraphicsTextItem>
+#include <QPixmap>
 #include "amplresult.hpp"
 
 class ResultView;
@@ -13,11 +14,13 @@ public:
     static const int CELL_SIZE = 64;
 private:
     ResultView* _view;
+    QPixmap _map;
 public:
     ResultScene(ResultView* view);
     ~ResultScene();
 
     void drawResult(AmplResult result);
+    void setMap(QString filename);
 private:
     double roundDouble(double toround);
 };

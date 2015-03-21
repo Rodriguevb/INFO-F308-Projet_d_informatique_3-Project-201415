@@ -5,7 +5,8 @@ QGraphicsScene(view),
 _view(view),
 _lowColor(Qt::black),
 _mediumColor(Qt::blue),
-_highColor(Qt::yellow)
+_highColor(Qt::yellow),
+_map()
 {
     _lowColor.setAlpha(75);
     _mediumColor.setAlpha(75);
@@ -18,6 +19,10 @@ DemandScene::~DemandScene()
 }
 
 void DemandScene::drawGrids(std::vector< std::vector<float> > demand, std::vector< std::vector<bool> > free) {
+
+    clear();
+    this->addPixmap(_map);
+
     // On dessine les lignes :
     for(int l(0); l < _view->SIZE;++l) {
         int y = CELL_SIZE*l;
@@ -58,4 +63,8 @@ void DemandScene::drawGrids(std::vector< std::vector<float> > demand, std::vecto
             }
         }
     }
+}
+
+void DemandScene::setMap(QString filename) {
+    _map.load(filename);
 }

@@ -19,6 +19,7 @@ public:
     ~ResultView();
 
     void drawResult(AmplResult result);
+    void setMap(QString filename);
 };
 
 #include "mymainwindow.hpp"

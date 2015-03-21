@@ -3,6 +3,7 @@
 
 #include <QGraphicsScene>
 #include <QColor>
+#include <QPixmap>
 #include <iostream>
 class DemandView;
 
@@ -16,11 +17,13 @@ private:
     QColor _lowColor;
     QColor _mediumColor;
     QColor _highColor;
+    QPixmap _map;
 public:
     DemandScene(DemandView *view);
     ~DemandScene();
 
     void drawGrids(std::vector< std::vector<float> > demand, std::vector< std::vector<bool> > free);
+    void setMap(QString filename);
 };
 
 

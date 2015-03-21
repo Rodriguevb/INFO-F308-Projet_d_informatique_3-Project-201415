@@ -34,6 +34,8 @@ public:
     std::vector< std::vector< bool > > getFreeGrid();
     std::vector< std::vector < float > > getDemandGrid();
 
+    void setMap(QString filename);
+
 private:
     void initGrids();
     void setInGrid(int x, int y);

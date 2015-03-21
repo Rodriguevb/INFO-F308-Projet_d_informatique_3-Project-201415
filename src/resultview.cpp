@@ -17,3 +17,7 @@ ResultView::~ResultView()
 void ResultView::drawResult(AmplResult result) {
     _scene.drawResult(result);
 }
+
+void ResultView::setMap(QString filename) {
+    _scene.setMap(filename);
+}

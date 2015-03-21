@@ -86,3 +86,8 @@ std::vector< std::vector< bool > > DemandView::getFreeGrid() {
 std::vector< std::vector < float > > DemandView::getDemandGrid() {
     return _demandGrid;
 }
+
+
+void DemandView::setMap(QString filename) {
+    _scene.setMap(filename);
+}

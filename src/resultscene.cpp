@@ -2,7 +2,8 @@
 
 ResultScene::ResultScene(ResultView *view) :
     QGraphicsScene(view),
-    _view(view)
+    _view(view),
+    _map()
 {
 
 }
@@ -17,6 +18,7 @@ void ResultScene::drawResult(AmplResult result) {
 
     // On éfface ce qu'il y a d'afficher à l'écran
     clear();
+    this->addPixmap(_map);
 
     // On dessine les lignes :
     for(int l(0); l < _view->SIZE;++l) {
@@ -68,4 +70,8 @@ void ResultScene::drawResult(AmplResult result) {
 double ResultScene::roundDouble(double toround) {
     int entier = (int) ( (0.005 + toround) * 100.0 );
     return (double) (entier/100.0);
+}
+
+void ResultScene::setMap(QString filename) {
+    _map.load(filename);
 }

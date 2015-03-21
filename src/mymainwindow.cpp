@@ -13,9 +13,11 @@ MyMainWindow::MyMainWindow(QWidget *parent) : QMainWindow(parent),
     _radioMedium(this),
     _radioLow(this),
     _radioBlock(this),
-    _radioFree(this)
+    _radioFree(this),
+    _maps()
 {
     setUpUi();
+    setUpMaps();
 }
 
 MyMainWindow::~MyMainWindow()
@@ -49,6 +51,7 @@ void MyMainWindow::setUpUi() {
     _mapCombo.setGeometry(520,20,341,26);
     _mapCombo.addItem("Carte 1");
     _mapCombo.addItem("Carte 2");
+    connect(&_mapCombo, SIGNAL(currentIndexChanged(int)), this, SLOT(changeMaps(int)));
 
         // Choix de l'algo
     _algoLabel.setText("Choix de l'algorithme");
@@ -80,6 +83,11 @@ void MyMainWindow::setUpUi() {
     _radioFree.setText("Libre");
     _radioFree.setGeometry(382,150,81,20);
     connect(&_radioFree,SIGNAL(toggled(bool)),this,SLOT(changeTool()));
+}
+
+void MyMainWindow::setUpMaps() {
+    _maps.push_back(QString("terrain.png"));
+
 }
 
 
@@ -115,4 +123,9 @@ void MyMainWindow::execute() {
         result = algo.findAGoodSolution(0.4);
     }
     _viewRight.drawResult(result);
+}
+
+void MyMainWindow::changeMaps(int index) {
+    _viewRight.setMap(_maps.at(index));
+    _viewLeft.setMap(_maps.at(index));
 }
