@@ -4,6 +4,7 @@
 #include <QGraphicsScene>
 #include <QGraphicsTextItem>
 #include <QPixmap>
+#include <QMessageBox>
 #include "amplresult.hpp"
 
 class ResultView;
@@ -19,7 +20,7 @@ public:
     ResultScene(ResultView* view);
     ~ResultScene();
 
-    void drawResult(AmplResult result);
+    void drawResult(AmplResult result, bool showlight = false);
     void setMap(QString filename);
 private:
     double roundDouble(double toround);

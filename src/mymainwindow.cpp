@@ -117,14 +117,16 @@ void MyMainWindow::execute() {
     if ( selected == AMPL_ALGO ) {
         AmplLauncher ampl;
         result = ampl.launch(_viewLeft.getDemandGrid());
+        _viewRight.drawResult(result, true);
     } else if ( selected == BACKOPTI_ALGO ) {
         Backtrack algo(_viewLeft.getDemandGrid(), _viewLeft.getFreeGrid(), 3);
         result = algo.executeOptimal();
+        _viewRight.drawResult(result);
     } else if ( selected == BACKFIRST_ALGO ) {
         Backtrack algo(_viewLeft.getDemandGrid(), _viewLeft.getFreeGrid(), 3);
         result = algo.findAGoodSolution(0.35);
+        _viewRight.drawResult(result);
     }
-    _viewRight.drawResult(result);
 }
 
 void MyMainWindow::changeMaps(int index) {

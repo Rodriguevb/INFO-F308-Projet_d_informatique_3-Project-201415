@@ -14,8 +14,8 @@ ResultView::~ResultView()
 
 }
 
-void ResultView::drawResult(AmplResult result) {
-    _scene.drawResult(result);
+void ResultView::drawResult(AmplResult result, bool showlight) {
+    _scene.drawResult(result, showlight);
 }
 
 void ResultView::setMap(QString filename) {

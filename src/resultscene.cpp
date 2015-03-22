@@ -13,7 +13,7 @@ ResultScene::~ResultScene()
 
 }
 
-void ResultScene::drawResult(AmplResult result) {
+void ResultScene::drawResult(AmplResult result, bool showlight) {
     const int MAX_S = 3.5;
 
     // On éfface ce qu'il y a d'afficher à l'écran
@@ -64,6 +64,13 @@ void ResultScene::drawResult(AmplResult result) {
             str += "( %1 , %2 ) : P = %3 \n";
             str = str.arg(light.getX()).arg(light.getY()).arg(light.getP());
         }
+    }
+
+    if ( showlight ) {
+        QMessageBox msgBox;
+        msgBox.setText("Puissance des lampadaires");
+        msgBox.setInformativeText(str);
+        msgBox.exec();
     }
 
 }

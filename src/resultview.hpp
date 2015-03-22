@@ -18,7 +18,7 @@ public:
     ResultView(MyMainWindow* window);
     ~ResultView();
 
-    void drawResult(AmplResult result);
+    void drawResult(AmplResult result, bool showlight = false);
     void setMap(QString filename);
 };
 
