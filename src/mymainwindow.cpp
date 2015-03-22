@@ -18,6 +18,7 @@ MyMainWindow::MyMainWindow(QWidget *parent) : QMainWindow(parent),
 {
     setUpUi();
     setUpMaps();
+    _viewLeft.updateScene();
 }
 
 MyMainWindow::~MyMainWindow()
