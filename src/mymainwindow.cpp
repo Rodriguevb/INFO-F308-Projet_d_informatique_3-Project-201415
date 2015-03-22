@@ -122,7 +122,7 @@ void MyMainWindow::execute() {
         result = algo.executeOptimal();
     } else if ( selected == BACKFIRST_ALGO ) {
         Backtrack algo(_viewLeft.getDemandGrid(), _viewLeft.getFreeGrid(), 3);
-        result = algo.findAGoodSolution(0.4);
+        result = algo.findAGoodSolution(0.35);
     }
     _viewRight.drawResult(result);
 }

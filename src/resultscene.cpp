@@ -14,7 +14,7 @@ ResultScene::~ResultScene()
 }
 
 void ResultScene::drawResult(AmplResult result) {
-    const int MAX_S = 6;
+    const int MAX_S = 3.5;
 
     // On éfface ce qu'il y a d'afficher à l'écran
     clear();
@@ -38,6 +38,7 @@ void ResultScene::drawResult(AmplResult result) {
             // On dessine le carré gris.
             double s = result.getS(l,c);
             int a = 255 - ( ( s / MAX_S ) * 255 );
+            if ( s > MAX_S ) a = 0;
             QColor color(0,0,0,a);
             QBrush brush(color);
             addRect(CELL_SIZE*l,CELL_SIZE*c, CELL_SIZE, CELL_SIZE, QPen(), brush);
