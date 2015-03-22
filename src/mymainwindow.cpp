@@ -49,8 +49,7 @@ void MyMainWindow::setUpUi() {
     _mapLabel.setGeometry(380,23,141,16);
 
     _mapCombo.setGeometry(520,20,341,26);
-    _mapCombo.addItem("Carte 1");
-    _mapCombo.addItem("Carte 2");
+    _mapCombo.addItem("Carte LEGO");
     connect(&_mapCombo, SIGNAL(currentIndexChanged(int)), this, SLOT(changeMaps(int)));
 
         // Choix de l'algo
@@ -86,8 +85,10 @@ void MyMainWindow::setUpUi() {
 }
 
 void MyMainWindow::setUpMaps() {
-    _maps.push_back(QString("terrain.png"));
+    _maps.push_back(QString("terrainlego.png"));
 
+    _viewLeft.setMap(QString("terrainlego.png"));
+    _viewRight.setMap(QString("terrainlego.png"));
 }
 
 
