@@ -130,4 +130,5 @@ void MyMainWindow::execute() {
 void MyMainWindow::changeMaps(int index) {
     _viewRight.setMap(_maps.at(index));
     _viewLeft.setMap(_maps.at(index));
+    _viewLeft.updateScene();
 }
