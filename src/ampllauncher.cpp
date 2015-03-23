@@ -99,7 +99,7 @@ void AmplLauncher::writeData(std::vector< std::vector<float> > demand) {
         for ( int l(0); l < 7; ++l ) {
             fichier << l+1;
             for ( int c(0); c < 7; ++c ) {
-                fichier << " " << demand.at(c).at(l);
+                fichier << " " << demand.at(l).at(c);
             }
             if ( l == 6 ) {
                 fichier << ";";

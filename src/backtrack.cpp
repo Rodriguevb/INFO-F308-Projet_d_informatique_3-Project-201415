@@ -85,7 +85,6 @@ struct Backtrack::Case Backtrack::getNextCase(struct Case actual) {
 }
 
 void Backtrack::checkSoluce() {
-    AmplLight light = _lightInTest.at(0);
     std::vector< std::vector< float > > matrix = calculateMatrix();
     float S = calculateS(matrix);
     if ( S < _Ssolution ) {
@@ -141,9 +140,9 @@ float Backtrack::calcSjn(int j, int n) {
 float Backtrack::calculateS( std::vector< std::vector< float > > matrix ) {
     float sum = 0.f;
 
-    for ( int i(0); i < _maxX; ++i ) {
-        for ( int j(0); j < _maxY; ++j) {
-            float diff = std::abs( _demand.at(i).at(j) - matrix.at(i).at(j));
+    for ( int c(0); c < _maxX; ++c ) {
+        for ( int l(0); l < _maxY; ++l) {
+            float diff = std::abs( _demand.at(l).at(c) - matrix.at(l).at(c));
             sum += diff;
         }
     }
@@ -152,14 +151,14 @@ float Backtrack::calculateS( std::vector< std::vector< float > > matrix ) {
 }
 
 bool Backtrack::isCaseFree(struct Case c) {
-    return _free.at(c.x).at(c.y);
+    return _free.at(c.y).at(c.x);
 }
 
 float Backtrack::calculateRequiredS(float pourcentage) {
     float sum = 0.f;
-    for ( int i(0); i < _maxX; ++i ) {
-        for ( int j(0); j < _maxY; ++j ) {
-            sum += _demand.at(i).at(j);
+    for ( int c(0); c < _maxX; ++c ) {
+        for ( int l(0); l < _maxY; ++l ) {
+            sum += _demand.at(l).at(c);
         }
     }
 

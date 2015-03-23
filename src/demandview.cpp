@@ -62,15 +62,15 @@ void DemandView::setInGrid(int x, int y) {
     if ( y >= SIZE ) return;
 
     if ( _tool == HIGH ) {
-        _demandGrid[x][y] = HIGHDEMAND;
+        _demandGrid[y][x] = HIGHDEMAND;
     } else if ( _tool == MEDIUM ) {
-        _demandGrid[x][y] = MEDIUMDEMAND;
+        _demandGrid[y][x] = MEDIUMDEMAND;
     } else if ( _tool == LOW ) {
-        _demandGrid[x][y] = LOWDEMAND;
+        _demandGrid[y][x] = LOWDEMAND;
     } else if ( _tool == BLOCKED ) {
-        _freeGrid[x][y] = false;
+        _freeGrid[y][x] = false;
     } else if ( _tool == FREE ) {
-        _freeGrid[x][y] = true;
+        _freeGrid[y][x] = true;
     }
 }
 
