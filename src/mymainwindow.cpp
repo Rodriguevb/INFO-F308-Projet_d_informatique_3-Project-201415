@@ -114,7 +114,10 @@ void MyMainWindow::clearDemand() {
 void MyMainWindow::execute() {
     AmplResult result;
     int selected = _algoCombo.currentIndex();
-    if ( selected == AMPL_ALGO ) {
+    if ( isDemandAtZero() ) {
+        _viewRight.drawResult(createEmptyResult());
+    }
+    else if ( selected == AMPL_ALGO ) {
         AmplLauncher ampl;
         result = ampl.launch(_viewLeft.getDemandGrid());
         _viewRight.drawResult(result, true);
@@ -133,4 +136,30 @@ void MyMainWindow::changeMaps(int index) {
     _viewRight.setMap(_maps.at(index));
     _viewLeft.setMap(_maps.at(index));
     _viewLeft.updateScene();
+}
+
+AmplResult MyMainWindow::createEmptyResult() {
+    AmplResult result;
+    for ( int i(0); i < 7; ++i ) {
+        std::vector<float> line;
+        for ( int j(0); j < 7; ++j ) {
+            line.push_back(0.f);
+        }
+        result.addMatrixLine(line);
+    }
+    return result;
+}
+
+
+bool MyMainWindow::isDemandAtZero() {
+    std::vector < std::vector < float > > demand = _viewLeft.getDemandGrid();
+    for ( int l(0); l < demand.size(); ++l) {
+        for ( int c(0); c < demand.at(l).size(); ++c ) {
+            if (demand.at(l).at(c) != 0.f) {
+                return false;
+            }
+        }
+    }
+
+    return true;
 }

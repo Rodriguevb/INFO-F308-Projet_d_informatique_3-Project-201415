@@ -44,6 +44,9 @@ private:
     void setUpUi();
     void setUpMaps();
 
+    AmplResult createEmptyResult();
+    bool isDemandAtZero();
+
 signals:
 
 private slots:

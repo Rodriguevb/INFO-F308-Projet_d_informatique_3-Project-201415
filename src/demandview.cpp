@@ -32,7 +32,7 @@ void DemandView::initGrids() {
         std::vector< float > lineDemand;
         for ( int i(0); i < SIZE; ++i ) {
             lineFree.push_back(true);
-            lineDemand.push_back(0.f);//LOWDEMAND);
+            lineDemand.push_back(LOWDEMAND);
         }
         _freeGrid.push_back(lineFree);
         _demandGrid.push_back(lineDemand);
