@@ -12,7 +12,7 @@ class Backtrack
 {
 private:
     const float S_INIT = 100000.f; // Un S initial assez gros pour ne pas être la meilleure solution
-    const int POWER = 25;
+    const int POWER = 12;
     const int R = 4;
 
     struct Case {
