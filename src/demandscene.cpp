@@ -41,7 +41,7 @@ void DemandScene::drawGrids(std::vector< std::vector<float> > demand, std::vecto
             int x = CELL_SIZE*c;
             int y = CELL_SIZE*l;
             QColor color;
-            float demandF = demand.at(c).at(l);
+            float demandF = demand.at(l).at(c);
             if ( demandF == _view->LOWDEMAND ) {
                 color = _lowColor;
             } else if ( demandF == _view->MEDIUMDEMAND) {
@@ -52,7 +52,7 @@ void DemandScene::drawGrids(std::vector< std::vector<float> > demand, std::vecto
             QBrush brush(color);
             this->addRect(x,y, CELL_SIZE, CELL_SIZE, QPen(), brush);
 
-            if( !free.at(c).at(l) ) {
+            if( !free.at(l).at(c) ) {
                 int x0 = CELL_SIZE*c;
                 int y0 = CELL_SIZE*l;
                 int x1 = x0 + CELL_SIZE;

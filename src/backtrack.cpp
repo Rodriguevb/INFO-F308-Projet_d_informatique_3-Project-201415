@@ -54,7 +54,7 @@ bool Backtrack::execute(int n) {
     }
 
     while ( next.y < _maxY ) {
-        if ( isCaseFree(next) ) {
+        if ( isCaseFree(next) && (next.x != 0) && (next.y != 0) && (next.x < _maxX-1) && (next.y<_maxY-1)) {
             _lightInTest.push_back(AmplLight(next.x,next.y, POWER));
             checkSoluce();
             if ( !_optimal && isSoluceAcceptable() ) {
