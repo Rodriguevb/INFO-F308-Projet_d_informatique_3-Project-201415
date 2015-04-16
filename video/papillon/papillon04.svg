@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="500"
+   height="500"
+   viewBox="0 0 500 500"
+   id="svg3365"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="papillon04.svg"
+   inkscape:export-filename="C:\Users\Rodrigue\GitHub\INFO-F308-Projet_d_informatique_3-Project-201415\video\papillon\papillon04.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs3367" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#000000"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.979899"
+     inkscape:cx="173.37137"
+     inkscape:cy="259.42533"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     borderlayer="true"
+     inkscape:showpageshadow="false"
+     inkscape:window-width="1846"
+     inkscape:window-height="1058"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata3370">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-552.36216)">
+    <g
+       id="g3619"
+       transform="matrix(3.3703674,0,0,3.3703674,-3113.7369,-854.57828)"
+       inkscape:export-filename="C:\Users\Rodrigue\g3619.png"
+       inkscape:export-xdpi="980.87683"
+       inkscape:export-ydpi="980.87683"
+       style="fill:#ffffff">
+      <path
+         style="fill:#ffffff;fill-opacity:1"
+         d="m 1015.616,547.94581 c -3.9391,-4.24843 -8.0291,-10.38214 -10.0022,-15 -3.4992,-8.18913 -5.4632,-9.90084 -5.4632,-4.76128 0,5.29013 -2.23921,4.6916 -3.17521,-0.84872 l -0.89687,-5.30813 -4.71775,9.99032 c -6.04025,12.79071 -14.32276,21.86531 -19.95663,21.86531 -2.46175,0 -5.45588,-1.21019 -7.7315,-3.125 -2.04262,-1.71875 -4.655,-3.13106 -5.80537,-3.13848 -2.35163,-0.0151 -12.71663,-9.42491 -12.71663,-11.54458 0,-0.75355 -0.84112,-2.29959 -1.86925,-3.43564 -1.22375,-1.35221 -2.08837,-5.79135 -2.5035,-12.85428 -0.595,-10.12233 -0.42162,-11.14251 2.80675,-16.51625 1.921,-3.19733 4.6835,-6.04321 6.2535,-6.44215 5.09788,-1.29535 2.93163,-2.94362 -3.86875,-2.94362 -8.17362,0 -10.07325,-1.76243 -13.39162,-12.42421 -3.94588,-12.67822 -5.547,-29.0569 -3.77863,-38.65399 0.83525,-4.5331 2.11238,-8.95746 2.83813,-9.8319 0.72725,-0.87635 3.97225,-1.5899 7.23025,-1.5899 14.59462,0 38.56762,19.95492 50.50312,42.03836 3.97888,7.36171 6.3751,7.10666 5.52982,2.01313 -1.18779,-7.15744 -5.78903,-14.11549 -8.9861,-19.69356 0,0 -2.32623,-6.0637 -0.95907,-3.85668 2.70743,3.14057 5.67867,10.08665 8.27023,14.01587 0.35733,0.54177 2.5083,4.52833 2.77008,4.80783 0,0 1.39137,-0.81399 2.16119,-0.81413 0.62785,-1.1e-4 1.4128,0.89668 1.76287,0.66337 1.22344,-0.81534 1.63474,-1.94367 3.77094,-5.05567 l 9.6658,-14.08105 c 0,0 1.4336,-1.16392 -1.1838,3.16526 -4.4441,7.35045 -9.5062,15.24451 -10.5385,18.08449 l -1.4835,4.08148 c -2.14168,5.89225 2.4637,4.58819 10.1013,-6.89316 8.7482,-13.15089 15.2211,-20.3922 24.3026,-27.18725 11.785,-8.81798 22.162,-12.53204 28.3941,-10.1626 5.8944,2.24103 7.336,15.21926 4.0859,36.78238 -1.8251,12.10817 -5.5365,22.96144 -8.495,24.84155 -0.8326,0.52915 -4.7815,0.97072 -8.7751,0.98124 -4.5183,0.0125 -6.9695,0.49135 -6.4888,1.26914 0.4249,0.6875 1.8374,1.25 3.1388,1.25 1.4077,0 3.98,2.34572 6.3505,5.79101 3.9365,5.72149 3.9756,5.9257 3.2575,17.00898 -0.49,7.56257 -1.3614,11.91917 -2.6743,13.36991 -1.0711,1.18357 -1.9475,2.62596 -1.9475,3.2053 0,1.41412 -10.9818,11.8748 -12.4665,11.8748 -0.6448,0 -3.2447,1.40625 -5.7773,3.125 -7.1074,4.82312 -9.9024,4.17577 -17.5408,-4.0625 z"
+         id="path3411"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="scsccssscssscsssscsssccscasscsssssssccsscsssscs" />
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="500"
+   height="500"
+   viewBox="0 0 500 500"
+   id="svg3365"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="papillon03.svg"
+   inkscape:export-filename="C:\Users\Rodrigue\GitHub\INFO-F308-Projet_d_informatique_3-Project-201415\video\papillon\papillon03.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs3367" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#000000"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="131.83292"
+     inkscape:cy="240.87572"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     borderlayer="true"
+     inkscape:showpageshadow="false"
+     inkscape:window-width="1846"
+     inkscape:window-height="1058"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata3370">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-552.36216)">
+    <path
+       inkscape:connector-curvature="0"
+       id="path3409"
+       d="M 111.35317,937.91407 C 100.85239,930.67887 95.21282,924.48172 89.261908,913.63829 78.81672,894.60572 77.930915,878.65531 85.964358,854.25998 L 91.94377,836.10229 78.401632,829.01796 C 48.949934,813.61082 45.041476,810.47059 35.35907,794.43596 19.542289,768.24239 10.291973,735.3104 9.4059521,702.04047 8.7761611,678.3934 9.8168231,675.60745 21.801218,668.8579 c 13.237503,-7.45534 23.923073,-6.37012 53.108791,5.39375 47.385431,19.09961 100.124901,53.47325 142.057181,92.58761 13.39485,12.49468 16.27801,12.19321 20.35269,-2.12809 2.26637,-7.966 -2.06379,-23.31958 -14.65442,-51.95939 -3.38721,-7.70491 -5.48011,-13.8193 -4.6509,-13.5876 4.7915,1.33889 11.73969,13.69512 18.16011,32.29476 8.33894,24.15739 8.60451,24.57497 15.70568,24.69356 4.75468,0.0795 6.02793,-2.28546 13.69742,-25.44138 4.65059,-14.04092 10.17862,-27.24501 12.28458,-29.34242 2.79756,-2.78622 1.21308,4.16664 -5.88167,25.80991 l -9.71072,29.62341 6.15888,10.35084 6.15885,10.35088 18.93433,-17.56734 c 10.41395,-9.66201 22.7052,-21.17013 27.31402,-25.57359 20.2958,-19.39154 85.32669,-57.37737 114.99697,-67.17198 26.15559,-8.63433 46.55282,-3.55289 51.77869,12.89935 7.37717,23.22483 -2.65127,83.12038 -19.05585,113.81235 -9.38589,17.56045 -9.93276,18.07321 -31.335,29.38 l -21.78247,11.50761 6.41959,12.0949 c 10.65621,20.07715 11.27713,27.20569 4.48425,51.48057 -5.03034,17.97235 -7.46728,23.08886 -14.53743,30.50764 -13.10152,13.74755 -32.40673,23.06345 -48.91984,23.60668 -29.70597,0.97719 -50.53064,-9.97095 -77.53538,-40.76247 -8.26086,-9.41922 -15.49157,-16.86011 -16.06834,-16.5353 -0.57671,0.32483 -2.08189,8.38472 -3.34466,17.91087 -2.19842,16.58357 -7.13448,30.32698 -10.52897,29.3155 -0.88133,-0.26029 -3.95797,-11.04093 -6.83828,-23.95226 l -5.23697,-23.47519 -15.93929,18.23436 c -8.7666,10.02886 -21.04456,22.21319 -27.28432,27.07627 -23.19287,18.07577 -60.52173,17.07585 -88.75557,-2.37764 z"
+       style="fill:#ffffff;fill-opacity:1"
+       inkscape:export-filename="C:\Users\Rodrigue\path3409.png"
+       inkscape:export-xdpi="417.26706"
+       inkscape:export-ydpi="417.26706" />
+  </g>
+</svg>

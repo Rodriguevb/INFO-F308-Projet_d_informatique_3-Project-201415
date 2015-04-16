@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="500"
+   height="500"
+   viewBox="0 0 500 500"
+   id="svg3365"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="papillon07.svg"
+   inkscape:export-filename="C:\Users\Rodrigue\GitHub\INFO-F308-Projet_d_informatique_3-Project-201415\video\papillon\papillon07.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs3367" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#000000"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.7"
+     inkscape:cx="254.38004"
+     inkscape:cy="208.23152"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     borderlayer="true"
+     inkscape:showpageshadow="false"
+     inkscape:window-width="1846"
+     inkscape:window-height="1058"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata3370">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-552.36216)">
+    <path
+       inkscape:connector-curvature="0"
+       id="path3381"
+       d="m 319.36738,993.62744 c -7.07335,-0.81796 -18.62328,-4.75499 -25.6666,-8.74882 -13.9558,-7.91357 -36.51779,-28.92103 -43.54367,-40.54334 -5.51691,-9.12637 -7.17569,-8.55696 -10.8441,3.72238 -3.42805,11.47492 -8.66098,12.11467 -8.47279,1.03591 0.17235,-10.14247 -2.08278,-10.55249 -8.50361,-1.54577 -8.09814,11.35956 -47.28195,40.90141 -60.64957,45.72553 -20.22606,7.29917 -46.18141,1.10702 -63.422452,-15.13071 -19.525498,-18.38923 -27.995239,-43.49917 -25.407616,-75.32495 0.970139,-11.93132 12.304673,-37.46656 17.455791,-39.32552 5.641343,-2.03585 0.01461,-6.30549 -8.935459,-6.77894 C 52.509222,855.1859 36.48847,834.61593 28.53641,788.86804 27.020081,780.14455 21.826783,758.27573 16.995831,740.27063 6.266697,700.28337 5.1911685,689.22267 10.701507,675.54103 l 4.27442,-10.61302 12.741884,0.2915 c 7.008032,0.16037 28.416588,5.06905 47.574543,10.90817 54.462196,16.59951 94.356086,42.80125 128.151906,84.1684 10.94904,13.40199 20.96781,25.20899 22.26392,26.23766 3.49955,2.77763 6.88655,-14.11859 6.06567,-30.25892 -0.96844,-19.04142 -11.28353,-57.18562 -21.8221,-80.69587 -4.73719,-10.56805 -7.80484,-19.50619 -6.81712,-19.86253 4.00087,-1.44323 12.72354,18.97423 25.6172,59.96332 16.55841,52.63926 18.40928,54.03951 30.24306,22.87984 13.17781,-34.6985 35.04303,-81.08386 38.87297,-82.466 1.99779,-0.72095 -1.50008,8.30571 -7.77303,20.05928 -15.69104,29.40013 -31.40564,80.43643 -29.80992,96.81348 0.69089,7.09003 1.8034,13.15286 2.4723,13.47291 0.66893,0.32008 7.93679,-7.05845 16.15083,-16.39674 17.60665,-20.01639 53.02135,-52.07525 73.66583,-66.68541 11.75174,-8.31671 24.79436,-14.02615 66.06477,-28.91979 48.63158,-17.55016 51.91956,-18.40171 60.5855,-15.69085 11.45561,3.58349 13.93612,11.14879 10.90773,33.26703 -3.0336,22.15593 -36.33719,119.41813 -45.50049,132.88278 -9.44484,13.87843 -26.40296,24.63596 -43.13751,27.36478 l -12.65466,2.06354 4.92593,7.26704 c 19.89293,29.34744 13.56414,77.02628 -14.12147,106.38585 -16.27876,17.26296 -41.17775,27.85849 -60.27629,25.64996 z"
+       style="fill:#ffffff;fill-opacity:1"
+       inkscape:export-filename="C:\Users\Rodrigue\path3381.png"
+       inkscape:export-xdpi="628.86267"
+       inkscape:export-ydpi="628.86267" />
+  </g>
+</svg>
