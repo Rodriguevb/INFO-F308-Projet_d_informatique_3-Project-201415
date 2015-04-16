@@ -4,3 +4,38 @@ Afin de pouvoir trouver des m\'{e}thodes pour r\'{e}soudre le probl\`{e}me, il e
 Pour pouvoir r\'{e}soudre le probl\`{e}me, nous devons d'abord le mod\'{e}liser.  Nous divisons l'endroit \`{a} \'{e}clairer sous forme de matrice dont nous remplissons chaque case d'un nombre repr\'{e}sentant la luminosit\'{e} voulue \`{a} cet emplacement.
 
 La taille de cette matrice est en lien direct avec la pr\'{e}cision des r\'{e}sultats et du temps de calcul. Lorsque le nombre de cases augmente, leur taille diminue. Chaque case repr\'{e}sente donc une partie plus pr\'{e}cise de l'endroit \`{a} \'{e}clairer. Le r\'{e}sultat sera donc lui aussi plus pr\'{e}cis. Mais si le nombre de case augmente, le nombre de solution possible et donc de calcul \`{a} effectuer augmente aussi. Le temps d'ex\'{e}cution sera donc plus long.
+
+Pour pouvoir trouver le meilleur positionnement possible de lampadaire, il faut savoir calculer la luminosité qu'ils apportent selon leurs emplacements. Pour cela, nous nous sommes servis du modèle présenté par Noor-E-Alama dans son article dans l'European Journal of Operational Research.
+
+$
+S_{in}=\frac{P_{n}}{r^{2}} cos \left (tan^{-1}\left (\frac{\left |i-x_{n}  \right |}{r}  \right )   \right )
+$
+
+
+$
+S_{jn}=\frac{P_{n}}{r^{2}} cos \left (tan^{-1}\left (\frac{\left |j-y_{n}  \right |}{r}  \right )   \right )
+$
+
+La première formule calcule la luminosité apportée par le n\textsuperscript{ième} lampadaire sur la i\textsuperscript{ième} colonne. La deuxième est identique mais pour la j\textsuperscript{ième} ligne. Les variables \textit{x}$_{n}$ et \textit{y}$_{n}$ sont les coordonnées du n\textsuperscript{ième} lampadaire, \textit{P}$_{n}$ est sa puissance et r la hauteur de ces lampadaires.
+
+La luminosité apportée par le n\textsuperscript{ième} lampadaire sur une case est égal à la plus petite variable entre $S_{in}$ et $S_{jn}$.
+La luminosité totale d'une case est la somme des luminosités apportées par les différents lampadaires.
+On a donc:
+
+$
+S_{ijn}=min(S_{in},S_{jn})
+$
+
+$
+S_{ij}=\sum{S_{ijn}}
+$
+
+\section{Résolution à l'aide d'un solver}
+Notre première implémentation a été de faire appel à un solver. Pour ce projet, Knitro a été utilisé.Il permet de résoudre des problèmes non linéaire utilisant des variables entières et continues.
+
+Afin de faire appel à ce solver, le problème a été formulé dans un langage informatique nommé AMPL. Ce langage utilise un fichier data définissant les paramètres tel que la taille de la matrice, la demande, la puissance maximale des lampadaires, ... 
+Le problème lui même est décrit dans un fichier modèle ( .mod ). Il y est décrit l'objectif du problème ainsi que ces contraintes.
+
+% Continuer ici
+
+
