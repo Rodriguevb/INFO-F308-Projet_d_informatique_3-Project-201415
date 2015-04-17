@@ -1,4 +1,4 @@
-Afin de pouvoir trouver des m\'{e}thodes pour r\'{e}soudre le probl\`{e}me, il est important de le d\'{e}finir correctement. Ce que nous voulons, c'est placer des lampadaires afin d'obtenir une luminosit\'{e} le plus proche possible de ce qui est demand\'{e}.
+Afin de pouvoir trouver des m\'{e}thodes pour r\'{e}soudre le probl\`{e}me, il est important de le d\'{e}finir correctement. Ce que nous voulons, c'est placer un certain nombre de lampadaires de différentes puissances afin d'obtenir une luminosit\'{e} le plus proche possible de ce qui est demand\'{e}.
 
 \section{Mod\'{e}lisation du probl\`{e}me}
 Pour pouvoir r\'{e}soudre le probl\`{e}me, nous devons d'abord le mod\'{e}liser.  Nous divisons l'endroit \`{a} \'{e}clairer sous forme de matrice dont nous remplissons chaque case d'un nombre repr\'{e}sentant la luminosit\'{e} voulue \`{a} cet emplacement.
@@ -36,6 +36,17 @@ Notre première implémentation a été de faire appel à un solver. Pour ce pro
 Afin de faire appel à ce solver, le problème a été formulé dans un langage informatique nommé AMPL. Ce langage utilise un fichier data définissant les paramètres tel que la taille de la matrice, la demande, la puissance maximale des lampadaires, ... 
 Le problème lui même est décrit dans un fichier modèle ( .mod ). Il y est décrit l'objectif du problème ainsi que ces contraintes.
 
-% Continuer ici
+Pour le résoudre, knitro utilise un algorithme branch and bound ( Séparation et évaluation en français ).
+% Expliquer l'algorithme branch and bound.
 
 
+\section{Test de toutes les solutions}
+Une autre méthode de résolution est d'essayer toutes les solutions possibles et de garder la meilleure. Pour cela un algorithme de backtraking est utilisé. Il va placer des lampadaires aux différents emplacements possibles et garder la solution qui apportera la luminosité la plus proche de la demande.
+Cette façon de faire étant très gourmande, il a été décidé de ne pas tenir compte des différentes puissances et d'en définir une fixe pour cette algorithme. Afin d'apporter un autre intérêt à cette méthode,  certaines cases sont bloquées et on ne peut pas y placer de lampadaire. Cela s'avère utile pour éviter d'en placer au milieu d'un lac par exemple.
+
+\section{Une solution moins optimale}
+Le problème avec la méthode précédente c'est que lorsque le problème grandit, le nombre de solution augmente énormément et donc le temps de calcul aussi. Il y a des cas où on ne veut pas spécialement la meilleure solution et qu'il suffit qu'elle soit assez proche de l'optimale. Cela permet de gagner du temps de calcul. 
+
+C'est ce que fait le dernier algorithme présenté ici. Il est très proche du deuxième sauf qu'il s'arrête dès qu'il trouve une solution acceptable. Ce qu'il trouve acceptable dépend d'un paramètre qu'on lui donne qui est un pourcentage d'écart avec la demande.
+
+Si jamais il n'existe aucune solution dans cet écart, l'algorithme va donner la meilleur solution qu'il aura trouver. Dans ce cas, il agit exactement comme le deuxième.
