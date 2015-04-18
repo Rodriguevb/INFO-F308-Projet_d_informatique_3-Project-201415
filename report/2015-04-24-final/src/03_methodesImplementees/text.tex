@@ -5,8 +5,7 @@ Pour pouvoir r\'{e}soudre le probl\`{e}me, nous devons d'abord le mod\'{e}liser.
 
 La taille de cette matrice est en lien direct avec la pr\'{e}cision des r\'{e}sultats et du temps de calcul. Lorsque le nombre de cases augmente, leur taille diminue. Chaque case repr\'{e}sente donc une partie plus pr\'{e}cise de l'endroit \`{a} \'{e}clairer. Le r\'{e}sultat sera donc lui aussi plus pr\'{e}cis. Mais si le nombre de case augmente, le nombre de solution possible et donc de calcul \`{a} effectuer augmente aussi. Le temps d'ex\'{e}cution sera donc plus long.
 
-Pour pouvoir trouver le meilleur positionnement possible de lampadaire, il faut savoir calculer la luminosité qu'ils apportent selon leurs emplacements. Pour cela, nous nous sommes servis du modèle présenté par Noor-E-Alama dans son article dans l'European Journal of Operational Research.
-% Faire un lien vers l'article.
+Pour pouvoir trouver le meilleur positionnement possible de lampadaire, il faut savoir calculer la luminosité qu'ils apportent selon leurs emplacements. Pour cela, nous nous sommes servis du modèle présenté par Noor-E-Alama dans son article dans l'European Journal of Operational Research \cite{mainref}.
 $
 S_{in}=\frac{P_{n}}{r^{2}} cos \left (tan^{-1}\left (\frac{\left |i-x_{n}  \right |}{r}  \right )   \right )
 $
@@ -37,8 +36,7 @@ Afin de faire appel à ce solver, le problème a été formulé dans un langage 
 Le problème lui même est décrit dans un fichier modèle ( .mod ). Il y est décrit l'objectif du problème ainsi que ces contraintes.
 
 Pour le résoudre, knitro utilise un algorithme branch and bound ( Séparation et évaluation en français ).
-Il va commencer par la phase de séparation qui consiste à diviser le problème en un certain nombre de sous problème. Les ensembles de solutions ont une hiérarchie en arbre. Dans la phase d'évaluation, il va déterminer l'optimum de l'ensemble des solutions réalisables d'un ensemble ou prouver que cet ensemble ne contient pas de solution intéressante pour la résolution du problème.
-% Faire un lien vers la source de wikipédia
+Il va commencer par la phase de séparation qui consiste à diviser le problème en un certain nombre de sous problème. Les ensembles de solutions ont une hiérarchie en arbre. Dans la phase d'évaluation, il va déterminer l'optimum de l'ensemble des solutions réalisables d'un ensemble ou prouver que cet ensemble ne contient pas de solution intéressante pour la résolution du problème\cite{branchbound}.
 
 
 \section{Test de toutes les solutions}
