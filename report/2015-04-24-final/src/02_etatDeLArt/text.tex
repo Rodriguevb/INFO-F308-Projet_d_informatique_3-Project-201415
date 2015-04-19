@@ -1,4 +1,4 @@
- \chapter*{1. Introduction}
+ \section*{1. Introduction}
 \bigskip
  
 Afin d'avoir une meilleure vue globale de notre sujet, il nous a été demandé de réaliser un état de l'art. Ceci consiste en une analyse, suivie d'une synthèse de tout ce qui a déjà été fait comme recherches en lien avec notre sujet.
@@ -9,7 +9,7 @@ Pour ce faire, nous allons procéder par étapes. Premièrement, nous allons nou
  
 \clearpage
  
-\chapter*{2. Facility Location Problem}
+\section*{2. Facility Location Problem}
 \bigskip
 
 Le problème d'emplacement d'installations consiste à placer un certains nombres d'installations de manière optimale, et ce, dans le but de minimiser les coûts associés.
@@ -27,7 +27,7 @@ Il est important de savoir qu'il existe deux types différents de modèle permet
 Les recherches les plus significatives ayant eu lieu, au cours des dernières décennies, sur ce sujet sont: Weber Problems (Cooper, 1963), Coverage Problems (Church and ReVelle, 1974) , Uncapacitated Facility Location Problems (Wolsey, 1998) et Capacitated Facility Location Problems (Wolsey, 1998). (MD. Noor-E-Alam, 2013)
 
 
-\section*{2.1. Weber Problem}
+\subsection*{2.1. Weber Problem}
 
 \bigskip
 
@@ -41,7 +41,7 @@ Pour résumer ce problème en quelques mots, le but est de trouver un point n r�
 
 Suite à l'article de Cooper, les recherches n'en sont pas restées là, bien au contraire. En effet, Francis (1964) a proposé un modèle d'installation à deux dimensions ayant pour idée principale de positionner de nouvelles installations tout en tenant compte des installations existantes. Ensuite Wesolowsky (1972) a proposé un modèle utilisant les distances rectilignes tandis que Katz et Cooper (1974) ont eu l'idée d'un problème de Weber multi installations probabiliste (probabilistic multi-facility Weber problem). Sherali et Noradi (1988) et Manzour-al-Ajdad et al. (2012) se sont, quant à eux, concentrés sur un problème de Weber à multi installation et avec capacité (capacitated multi-facility Weber problem). (MD. Noor-E-Alam, 2013)
 
-\section*{2.2. Coverage Problem}
+\subsection*{2.2. Coverage Problem}
 
 \bigskip
 
@@ -51,13 +51,13 @@ Les problème de couvertures sont un type de problème un peu différent de ceux
 
 Church et Revelle (1974) ont été les premiers à étudier ce type de problème. L'étude de cette question est très importante et nous touche bien plus que nous le pensons étant donné que sa résolution permet de placer de manière efficace les services d'urgence, les antennes pour téléphones portables ainsi que bien d'autres éléments capitaux. (MD. Noor-E-Alam, Andrew Mah, John Doucette, 2012)
 
-\section*{2.3. Uncapacitated Facility Location Problem}
+\subsection*{2.3. Uncapacitated Facility Location Problem}
 
 \bigskip
 
 Ce type de problème est similaire au problème de Weber hormis le fait que l'on considère les coûts de transports, ce qui n'était pas le cas auparavant. (Wolsey, 1994) 
 
-\section*{2.4. Capacitated Facility Location Problem}
+\subsection*{2.4. Capacitated Facility Location Problem}
 
 \bigskip
 
@@ -65,39 +65,37 @@ La différence entre ce problème et le précédent réside dans le fait que l'o
 
 \clearpage
 
-\chapter*{3. Différents Modèles}
-\addcontentsline{toc}{chapter}{3. Différents Modèles}% ajoute à la table des matières.
+\section*{3. Différents Modèles}
 
 \bigskip
 
 Différentes méthodes ont déjà été testées afin de trouver la solution optimale pour les problèmes d'emplacement. Voici une liste non exhaustive des différents modèles ou algorithmes proposés, avec pour chacun, une courte explication.
 
-\section*{3.1. Genetic Search Algorithm}
+\subsection*{3.1. Genetic Search Algorithm}
 
 \bigskip
 
 Trouver des solutions aux problèmes d'emplacement à l'aide de ce type d'algorithme a été proposé par Abdinnour-Helm et Venkataramanan (1998) et Taniguchi et al. (1999). Taniguchi a montré qu'un tel algorithme permet d'obtenir une solution quasi optimale pour les problèmes d'emplacement de terminaux logistiques tout en minimisant les coûts logistiques totaux. (MD. Noor-E-Alam, Andrew Mah, John Doucette, 2012)
 
-\section*{3.2. Genetic Algorithm}
+\subsection*{3.2. Genetic Algorithm}
 
 \bigskip
 
 Les algorithmes génétiques (GA) ont été utilisé afin de résoudre des problèmes d'emplacement afin de maximiser la couverture (maximum expected covering location problem). La caractéristique principale de ces problèmes étaient leur grande ampleur. Ces algorithmes permettent donc de résoudre des problèmes d'emplacement à grande échelle. (Aytug et Saydam, 2002) (MD. Noor-E-Alam, Andrew Mah, John Doucette, 2012)
 
-\section*{3.3. SPSA – FDG – VFSA}
-\addcontentsline{toc}{section}{3.3 SPSA – FDG – VFSA}% ajoute à la table de matières.
+\subsection*{3.3. SPSA – FDG – VFSA}
 
 \bigskip
 
 Bangerth et al. (2006) ont comparé et analysé l'efficacité ainsi que la fiabilité des méthodes SPSA (Simultaneous Perturbation Stochastic Approximation), FDG (Finite Difference Gradient) et VFSA (Very Fast Simulated Annealing). La conclusion était qu'aucune de ces méthodes ne peut garantir la solution optimale exacte mais que SPSA et VFSA permettent toutes les deux d'obtenir efficacement une solution quasi optimale, et ce, dans la plupart des cas. (MD. Noor-E-Alam, Andrew Mah, John Doucette, 2012)
 
-\section*{3.4. Autres méthodes}
+\subsection*{3.4. Autres méthodes}
 
 \bigskip
 
 D'autres méthodes existent également comme par exemple le modèle de gravité (Kubis et Hartmann, 2007), les formulations ILP (ILP-based forlumations) (Chen et al., 2005), l'utilisation des recherches Tabu (Gendron et al., 2003) et l'utilisation du ``Greedy Algorithm`` (Zhang, 2006). De plus, Canbolat et Wesolowsky (2010) ont proposé une nouvelle approche afin de résoudre le problème de Weber et ce, avec une méthode probabiliste. (MD. Noor-E-Alam, Andrew Mah, John Doucette, 2012)
 
-\chapter*{4. ILP Models for Grid-based Light Post Location Problem}
+\section*{4. ILP Models for Grid-based Light Post Location Problem}
 
 \bigskip
 
@@ -141,7 +139,7 @@ En conclusion, nous avons trois modèles différents nous permettant de savoir c
 En ce qui concerne les résultats, il a été constaté que ces modèles sont bien adapté pour résoudre des problèmes petits jusqu'à intermédiaires mais que pour les problèmes de grande envergure, le temps de calcul peut être très long et prendre des jours, voire des semaines. (MD. Noor-E-Alam, 2013)
 
 
-\chapter*{5. Aller plus loin}
+\section*{5. Aller plus loin}
 
 \bigskip
 
