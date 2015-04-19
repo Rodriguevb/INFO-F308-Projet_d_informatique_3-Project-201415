@@ -1,1 +1,174 @@
+ \chapter*{1. Introduction}
+\bigskip
  
+Afin d'avoir une meilleure vue globale de notre sujet, il nous a été demandé de réaliser un état de l'art. Ceci consiste en une analyse, suivie d'une synthèse de tout ce qui a déjà été fait comme recherches en lien avec notre sujet.
+
+\bigskip
+
+Pour ce faire, nous allons procéder par étapes. Premièrement, nous allons nous intéresser aux recherches les plus significatives en ce qui concerne les problèmes d'emplacement d'installations en général (Facility Location Problem). Dans un second temps, nous présenterons les divers modèles connus aujourd'hui afin de résoudre ces problèmes de localisations. Finalement, nous expliquerons de manière plus précise notre problème et la résolution proposée dans notre article de référence. Nous nous concentrerons donc sur la résolution d'un problème de localisation disposant de plusieurs sources ainsi que d'une demande hétérogène homogénéisée à l'aide d'un quadrillage, et ce, en utilisant la programmation linéaire.
+ 
+\clearpage
+ 
+\chapter*{2. Facility Location Problem}
+\bigskip
+
+Le problème d'emplacement d'installations consiste à placer un certains nombres d'installations de manière optimale, et ce, dans le but de minimiser les coûts associés.
+
+\bigskip
+
+Nous sommes amenés à faire face à ce problème dans un grand nombre de situations différentes, que ce soit dans le domaine économique aussi bien que dans le domaine médical. En effet, il est important de savoir où placer ses magasins par rapport à ceux de la concurrence, mais il est également extrêmement important de savoir où placer ses ambulances afin de pouvoir sauver un maximum de gens. Résoudre ce problème est bien souvent capital et, comme le dernier exemple nous le montre bien, cela peut même permettre de sauver des vies. Voilà pourquoi un grand nombre de recherches, en lien avec ce problème, ont déjà été entreprises. (MD. Noor-E-Alam, 2013)
+
+\bigskip
+
+Il est important de savoir qu'il existe deux types différents de modèle permettant de résoudre les problèmes d'emplacement. Il y a les analyses d'emplacement discrètes et les analyses d'emplacement continues. Cependant, la solution discrète est la plus fréquemment utilisée. (MD. Noor-E-Alam, Andrew Mah, John Doucette, 2012)
+
+\bigskip
+
+Les recherches les plus significatives ayant eu lieu, au cours des dernières décennies, sur ce sujet sont: Weber Problems (Cooper, 1963), Coverage Problems (Church and ReVelle, 1974) , Uncapacitated Facility Location Problems (Wolsey, 1998) et Capacitated Facility Location Problems (Wolsey, 1998). (MD. Noor-E-Alam, 2013)
+
+
+\section*{2.1. Weber Problem}
+
+\bigskip
+
+Une des études les plus significatives faite au jour d'aujourd'hui dans le domaine des problèmes d'emplacement est connue sous le nom du problème multi source de Weber et a été proposée en 1963 par Cooper. (MD. Noor-E-Alam, Andrew Mah, John Doucette, 2012)
+
+\bigskip
+
+Pour résumer ce problème en quelques mots, le but est de trouver un point n réel, tel que la somme des distances euclidiennes pondérées entre ce point et m points donnés soit la plus petite possible. Cet énoncé ne paraît pas d'une complexité extrême de prime abord, mais il ne faut pas s'y fier. En effet, un nombre impressionnant de scientifiques de tout domaine se sont intéressés au problème et ont tenter de le résoudre. (Zvi Drezner, Horst W. Hamacher, 2001)
+
+\bigskip
+
+Suite à l'article de Cooper, les recherches n'en sont pas restées là, bien au contraire. En effet, Francis (1964) a proposé un modèle d'installation à deux dimensions ayant pour idée principale de positionner de nouvelles installations tout en tenant compte des installations existantes. Ensuite Wesolowsky (1972) a proposé un modèle utilisant les distances rectilignes tandis que Katz et Cooper (1974) ont eu l'idée d'un problème de Weber multi installations probabiliste (probabilistic multi-facility Weber problem). Sherali et Noradi (1988) et Manzour-al-Ajdad et al. (2012) se sont, quant à eux, concentrés sur un problème de Weber à multi installation et avec capacité (capacitated multi-facility Weber problem). (MD. Noor-E-Alam, 2013)
+
+\section*{2.2. Coverage Problem}
+
+\bigskip
+
+Les problème de couvertures sont un type de problème un peu différent de ceux vu auparavant. En effet, il ne s'agit plus uniquement de trouver l'emplacement optimal pour un maximum de gens mais il s'agit de trouver l'emplacement afin que tout le monde puisse profiter de l'installation. Le but n'est plus de trouver le positionnement d'installations le moins coûteux possible mais il est maintenant de trouver un positionnement global tel que le plus de gens possibles ait accès au service ou à l'installation proposée.
+
+\bigskip
+
+Church et Revelle (1974) ont été les premiers à étudier ce type de problème. L'étude de cette question est très importante et nous touche bien plus que nous le pensons étant donné que sa résolution permet de placer de manière efficace les services d'urgence, les antennes pour téléphones portables ainsi que bien d'autres éléments capitaux. (MD. Noor-E-Alam, Andrew Mah, John Doucette, 2012)
+
+\section*{2.3. Uncapacitated Facility Location Problem}
+
+\bigskip
+
+Ce type de problème est similaire au problème de Weber hormis le fait que l'on considère les coûts de transports, ce qui n'était pas le cas auparavant. (Wolsey, 1994) 
+
+\section*{2.4. Capacitated Facility Location Problem}
+
+\bigskip
+
+La différence entre ce problème et le précédent réside dans le fait que l'offre n'est plus infinie et qu'une limite maximale est présente. (Ghiani et al., 2002) Si nous nous référons à notre exemple, cela voudrait dire qu'il y a une limite d'éclairage maximale, et qu'à partir d'un certain moment, on ne peut pas éclairer de manière plus puissante.
+
+\clearpage
+
+\chapter*{3. Différents Modèles}
+\addcontentsline{toc}{chapter}{3. Différents Modèles}% ajoute à la table des matières.
+
+\bigskip
+
+Différentes méthodes ont déjà été testées afin de trouver la solution optimale pour les problèmes d'emplacement. Voici une liste non exhaustive des différents modèles ou algorithmes proposés, avec pour chacun, une courte explication.
+
+\section*{3.1. Genetic Search Algorithm}
+
+\bigskip
+
+Trouver des solutions aux problèmes d'emplacement à l'aide de ce type d'algorithme a été proposé par Abdinnour-Helm et Venkataramanan (1998) et Taniguchi et al. (1999). Taniguchi a montré qu'un tel algorithme permet d'obtenir une solution quasi optimale pour les problèmes d'emplacement de terminaux logistiques tout en minimisant les coûts logistiques totaux. (MD. Noor-E-Alam, Andrew Mah, John Doucette, 2012)
+
+\section*{3.2. Genetic Algorithm}
+
+\bigskip
+
+Les algorithmes génétiques (GA) ont été utilisé afin de résoudre des problèmes d'emplacement afin de maximiser la couverture (maximum expected covering location problem). La caractéristique principale de ces problèmes étaient leur grande ampleur. Ces algorithmes permettent donc de résoudre des problèmes d'emplacement à grande échelle. (Aytug et Saydam, 2002) (MD. Noor-E-Alam, Andrew Mah, John Doucette, 2012)
+
+\section*{3.3. SPSA – FDG – VFSA}
+\addcontentsline{toc}{section}{3.3 SPSA – FDG – VFSA}% ajoute à la table de matières.
+
+\bigskip
+
+Bangerth et al. (2006) ont comparé et analysé l'efficacité ainsi que la fiabilité des méthodes SPSA (Simultaneous Perturbation Stochastic Approximation), FDG (Finite Difference Gradient) et VFSA (Very Fast Simulated Annealing). La conclusion était qu'aucune de ces méthodes ne peut garantir la solution optimale exacte mais que SPSA et VFSA permettent toutes les deux d'obtenir efficacement une solution quasi optimale, et ce, dans la plupart des cas. (MD. Noor-E-Alam, Andrew Mah, John Doucette, 2012)
+
+\section*{3.4. Autres méthodes}
+
+\bigskip
+
+D'autres méthodes existent également comme par exemple le modèle de gravité (Kubis et Hartmann, 2007), les formulations ILP (ILP-based forlumations) (Chen et al., 2005), l'utilisation des recherches Tabu (Gendron et al., 2003) et l'utilisation du ``Greedy Algorithm`` (Zhang, 2006). De plus, Canbolat et Wesolowsky (2010) ont proposé une nouvelle approche afin de résoudre le problème de Weber et ce, avec une méthode probabiliste. (MD. Noor-E-Alam, Andrew Mah, John Doucette, 2012)
+
+\chapter*{4. ILP Models for Grid-based Light Post Location Problem}
+
+\bigskip
+
+Si nous nous intéressons maintenant un peu plus spécifiquement à l'article nous ayant été donné comme référence, nous pouvons constater qu'il s'agit d'un article ayant pour vocation de présenter une nouvelle formulation d'un problème d'emplacement à multi sources. 
+
+\bigskip
+
+Concrètement, le problème étudié dans l'article est le positionnement optimal de lampadaires dans un parc municipal. 
+Le but est donc de déterminer le nombre d'installations (dans ce cas-ci, le nombre de lampadaires), l'emplacement de chacune de ces installations, ainsi que leurs caractéristiques. Chaque lampadaire peut éclairer avec une intensité différente mais, bien entendu, au plus le lampadaire éclaire, au plus il est coûteux. 
+La demande est représentée par une distribution hétérogène complexe et, pour la simplifier, ils utilisent un quadrillage à deux dimensions sur toute la zone concernée. Chaque case de ce quadrillage représente une partie homogène de cette demande. L'idée est donc de minimiser les cases où la demande n'est pas satisfaite et celle où l'offre est excessive, c'est-à-dire, minimiser les cases trop ou trop peu éclairées. (MD. Noor-E-Alam, Andrew Mah, John Doucette, 2012)
+
+\bigskip
+
+En ce qui concerne la demande, c'est-à-dire la quantité de lumière nécessaire dans une certaine case, celle-ci peut être obtenue de deux manières différentes. Dans le premier cas, nous disposons de seulement certaines données concernant la demande et, grâce à l'existence d'une relation entre les différentes cases du quadrillage, il nous est possible de trouver les données manquantes. En effet, ils utilisent la méthode des éléments finis avec comme lien le fait que les cases adjacentes sont censées  bénéficier de la même demande. Dans le deuxième cas, la demande est une donnée exhaustive, fournie initialement. (MD. Noor-E-Alam, Andrew Mah, John Doucette, 2012)
+
+\bigskip
+
+L'offre d'une case, c'est-à-dire la quantité de lumière atteignant une case, est un peu plus dur à calculer. En effet, celle-ci peut être calculée simplement comme étant l'intensité lumineuse de la lampe divisée par la distance au carré mais, il faut tenir compte de l'angle formé en comparaison avec l'axe vertical ou horizontal. En effet, au plus l'ange est grand, au plus la distance sera importante et au plus l'offre sera faible. De plus, il est dit que lorsque l'offre est à plus de deux unités de distances, cette dernière est négligeable.
+La quantité de lumière distribuée dans une case bien précise par un lampadaire bien précis est égale au minimum de la lumière distribuée par ce lampadaire lorsque l'on regarde verticalement et de la lumière distribuée lorsque l'on regarde horizontalement. Or cette quantité de lumière, verticale ou horizontale, peut être trouvée de manière très simple car l'angle entre le lampadaire et la case est très facilement déterminable à l'aide de leur coordonnée respective.
+Ensuite, pour obtenir l'offre de lumière dans une case mais ce pour tous les lampadaires confondus, il suffit d'additionner les valeurs obtenues pour chaque lampadaire. (MD. Noor-E-Alam, Andrew Mah, John Doucette, 2012)
+
+\bigskip
+
+L'équation à minimiser, les équations permettant de trouver l'offre de lumière et les contraintes sur les frontières constituent le modèle basique d'optimisation. Cependant, ce modèle contient des équations qui ne sont pas linéaires. Il faut donc, partir de ce modèle de base et le changer en un modèle équivalent de programmation linéaire. Pour ce faire, il faut linéariser une première fois les contraintes, ce qui nous donne quatorze if-then contraintes pour la distribution d'une lampe. Ensuite, il faut utiliser la méthode de Wiston et Venkataramanan sur chacune de ces contraintes, ce qui nous donne pour chacune d'entre elles, huit contraintes linéaires. Au total, nous arrivons à 112 contraintes linéaires pour chaque lampadaire. (MD. Noor-E-Alam, Andrew Mah, John Doucette, 2012)
+
+\bigskip
+
+Différents modèles sont proposés dans la suite du document. En effet, le modèle basique avait comme hypothèse que les cases adjacentes bénéficiaient de la même illumination. Or, dans la réalité, ce n'est pas le cas. Les deux modèles proposés par la suite prendront en compte ce paramètre. 
+
+\bigskip
+
+Hormis cela, le deuxième modèle a choisi de simplifier fortement le nombre de contraintes en définissant de manière beaucoup plus simple la région à étudier. Ce deuxième modèle ne dispose d'aucun moyen concret afin de contrôler le nombre de lampadaires mais ce problème peut être facilement court-circuiter en rajoutant un coût à chacun des lampadaires. (MD. Noor-E-Alam, 2013)
+
+\bigskip
+
+Le troisième modèle est simplement le deuxième modèle avec une petite amélioration. En effet, la solution, énoncée plus haut, consistant à avoir un système permettant de pouvoir contrôler le nombre de lampes y est implémentée.
+
+\bigskip
+
+En conclusion, nous avons trois modèles différents nous permettant de savoir combien de lampadaires placer, où les placer et à quelle puissance ces derniers doivent éclairer. Ici nous nous référons à notre sujet et au cas choisi d'être résolu dans notre article de référence mais ces modèles peuvent être utiliser afin de résoudre bien d'autres situations problématiques. 
+En ce qui concerne les résultats, il a été constaté que ces modèles sont bien adapté pour résoudre des problèmes petits jusqu'à intermédiaires mais que pour les problèmes de grande envergure, le temps de calcul peut être très long et prendre des jours, voire des semaines. (MD. Noor-E-Alam, 2013)
+
+
+\chapter*{5. Aller plus loin}
+
+\bigskip
+
+Nous venons de voir que les modèles proposés dans l'article de référence n'étaient pas adaptés aux problèmes à large échelle, cependant,  une amélioration est possible afin d'éliminer cette limitation. (MD. Noor-E-Alam, 2013)
+
+\bigskip
+
+Dans la thèse Advanced Integer Linear Programming Techniques for Large Scale Grid-Based Location Problems de MD. Noor-E-Alam (2013), deux modèles sont proposés afin de résoudre des problèmes d'emplacements à grande échelle. Le deuxième nous intéresse particulièrement étant donné qu'il utilise la programmation linéaire et le système de quadrillage.
+
+\bigskip
+
+La première possibilité consiste à mettre en place une approche RFBD (Relax and Fixed Based Decomposition). Après les tests appropriés, l'auteur arrive à la conclusion que cette approche permet de réduire drastiquement le temps de résolution tout en n'impactant pas de manière significative les résultats. Les temps de calcul sont encore meilleurs lorsque des restrictions logiques sont ajoutées et la perte de précision reste minime. (MD. Noor-E-Alam, 2013) 
+
+\bigskip
+
+La deuxième possibilité consiste à partir des modèles ILP (Integer Linear Programming) vus plus haut et des les améliorer afin qu'ils soient capables de résoudre des problèmes plus importants.
+La solution proposée est d'utiliser une PFBD (Partition and Fixed Based Decomposition). La conclusion, suite à toute une série de tests, est que cette approche permet de diminuer la complexité et donc de diminuer les temps de calcul tout en assurant une perte d'optimalité minime. (MD. Noor-E-Alam, 2013)
+
+\bigskip
+
+Une possibilité serait d'éventuellement combiner les deux approches afin de résoudre les problèmes d'emplacement à grande échelle de manière encore plus efficace. (MD. Noor-E-Alam, 2013)
+
+\bigskip
+
+Nous pourrions également proposer un autre algorithme qui consisterait à tester toutes les solutions sans exception, à les comparer
+et à finalement ne garder que la meilleure solution. Pour des problèmes de petites tailles, cela ne pose
+pas de problème mais pour des problèmes de plus grande envergure, les temps de calcul sont extrêmement longs. C'est pourquoi il existe
+également la possibilité de modifier l'algorithme afin que ce dernier s'arrête dès qu'une solution suffisamment bonne soit trouvée.
+Par exemple, lorsque l'offre correspond à 90 pourcents à la demande, le programme s'arrête et ne teste plus les autres solutions. Cela permet
+de réduire considérablement les temps de calcul.
