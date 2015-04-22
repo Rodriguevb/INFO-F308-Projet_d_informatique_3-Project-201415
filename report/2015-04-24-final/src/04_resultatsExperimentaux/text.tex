@@ -1,6 +1,6 @@
  \paragraph{} Les test ont été effectués sur des matrices 7x7 dus aux limitations de contraintes dans la version étudiant de AMPL avec le solveur knitro (300 contraintes maximum).  De ce fait, nous nous sommes limités également au premier modèlé décrit dans l'article pour AMPL.
 
-\paragraph{} Les résultats de la version mathématiques sont plus précis, mais plus lent (car la limite de contrainte nous empêche de l'optimiser). 
+\paragraph{} Les résultats de la version mathématiques sont plus précis, mais plus lent (car la limite de contrainte nous empêche de l'optimiser). De plus, le temps augmente expentionellement avec le nombre de lampadaires tandis que l'énumération exhaustive montre une progression linéaire. Cela peut être observé sur les graphiques ci-dessous.
 
 
 \begin{figure}
@@ -12,6 +12,8 @@
         \end{minipage}
 \end{figure}
 
+
+\paragraph{} Quant aux résultats, la puissance variable permet au mieux de se rapprocher de la demande. Ici, l'on peut voir les résultats pour les 3 algorithmes.
 
 \begin{figure}
         \begin{minipage}{.5\textwidth}
