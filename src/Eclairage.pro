@@ -13,14 +13,6 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        window.cpp \
-    homepage.cpp \
-    edge.cpp \
-    vertex.cpp \
-    myscene.cpp \
-    grid.cpp \
-    optiondialog.cpp \
-    gridcase.cpp \
     ampllauncher.cpp \
     ampllight.cpp \
     amplresult.cpp \
@@ -31,14 +23,7 @@ SOURCES += main.cpp\
     resultview.cpp \
     resultscene.cpp
 
-HEADERS  += window.hpp \
-    homepage.hpp \
-    edge.hpp \
-    vertex.hpp \
-    myscene.hpp \
-    grid.hpp \
-    optiondialog.hpp \
-    gridcase.hpp \
+HEADERS  += \
     ampllauncher.hpp \
     ampllight.hpp \
     amplresult.hpp \
